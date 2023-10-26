@@ -11,7 +11,22 @@ class siteController extends Controller
         return view('frontend.home');
     }
 
+    public function courses(){
+        return view('frontend.courses');
+    }
+
+    public function rpl(){
+        return view('frontend.rpl');
+    }
+
     public function contact(){
         return view('frontend.contact');
+    }
+
+
+
+
+    public function apply_course(){
+        return view('frontend.apply');
     }
 }

@@ -1,7 +1,41 @@
 @extends('frontend.components.layouts')
 @section('content')
+
+
 <div class="home_bg_X" style="overflow: hidden; background: url(images/cover_image_for_homepage.webp); background-repeat: no-repeat; background-size: 100% auto; background-position: center; padding: 20px 0 80px 0; position: relative;">
-    
+    <div class="container">
+        <div class="row">
+          <div class="col-md">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+     
+                <div class="item"><img src="images/1.jpg"  style="display: block; width: 100%; height: 350px;" alt="The Last of us"></div>
+                <div class="item"><img src="images/2.jpg"  style="display: block; width: 100%; height: 350px;" alt="GTA V"></div>
+                <div class="item"><img src="images/11.jpg"  style="display: block; width: 100%; height: 350px;" alt="The Last of us"></div>
+                <div class="item"><img src="images/4.jpg"  style="display: block; width: 100%; height: 350px;" alt="The Last of us"></div>
+                <div class="item"><img src="images/12.jpg"  style="display: block; width: 100%; height: 350px;" alt="GTA V"></div>
+                <div class="item"><img src="images/3.jpg"  style="display: block; width: 100%; height: 350px;" alt="Mirror Edge"></div>
+               
+              </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        $(document).ready(function() {
+         
+         $("#owl-demo").owlCarousel({
+             slideSpeed : 100,
+             paginationSpeed : 1000,
+             autoPlay: true,
+             items : 1, 
+             itemsDesktop : false,
+             itemsDesktopSmall : false,
+             itemsTablet: false,
+             itemsMobile : false
+        
+         });
+        
+        });
+        </script>
 </div>
 
 <div class="container" id="pencilbox_home_slider_down_counter">

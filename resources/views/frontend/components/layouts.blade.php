@@ -44,6 +44,17 @@
     <link rel="stylesheet" href="css/responsive.min.css" type="text/css">
     <link href="css/select2.min.css" rel="stylesheet" type="text/css">
     <script src="js/api.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <!-- Basic stylesheet -->
+<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+ 
+<!-- Default Theme -->
+<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+ 
+<!-- You can use latest version of jQuery  -->
+<script src="owl-carousel/jquery-1.9.1.min.js"></script>
+ 
+<!-- Include js plugin -->
+<script src="owl-carousel/owl.carousel.js"></script>
     <style>
             input[type='number'] {
                 -moz-appearance:textfield;
@@ -72,7 +83,7 @@
                 transition: width .3s ease-in-out;
             }
         </style>
-    
+        
     
     </head>
     <body>
@@ -281,7 +292,7 @@
     
     </style>
  
- @include('frontend.components.header');
+ @include('frontend.components.header')
     
     
     <style>

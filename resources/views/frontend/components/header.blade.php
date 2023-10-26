@@ -10,7 +10,7 @@
     <li><a href="tel:+88- 01714 121 719"><i class="fa fa-phone"></i></a>
     <strong><a href="tel:+880 1982 927790"> +880 1982 927790</a> <a href="tel:+880 1721 297490" class="mob-number-view">/ +880 1721 297490</a></strong>
     </li>
-    <li><a href="/cdn-cgi/l/email-protection#60090e060f2010050e03090c020f184e0504154e0204"><i class="fa fa-envelope"></i></a> <span></span><strong><a>sydtcnrsingdi@gmail.com</span></a></strong>
+    <li><a href="E-mail: sydtcnrsingdi@gmail.com"><i class="fa fa-envelope"></i></a> <span></span><strong><a>sydtcnrsingdi@gmail.com</span></a></strong>
     </li>
     </ul>
     </div>
@@ -320,15 +320,11 @@
     <div class="meinmenu">
     <nav id="mobile-menu">
     <ul>
-    <li><a class="{{ Request::routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">home</a></li>
-    <li><a class="" href="https://www.pencilbox.edu.bd/courses">courses</a></li>
-    <li><a class="" href="https://www.pencilbox.edu.bd/workshop">workshop</a></li>
-    <li><a class="" href="https://www.pencilbox.edu.bd/rpl">RPL</a></li>
+    <li><a class="{{ Request::routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">Home</a></li>
+    <li><a class="{{ Request::routeIs('courses') ? 'active' : '' }}" href="{{route('courses')}}">Courses</a></li>
+    <li><a class="{{ Request::routeIs('rpl') ? 'active' : '' }}" href="{{route('rpl')}}">RPL</a></li>
     
-    
-    
-    
-    <li><a class="" href="https://www.pencilbox.edu.bd/seip">
+    {{-- <li><a class="" href="https://www.pencilbox.edu.bd/seip">
     <span class="seip-pu">S</span>
     <span class="seip-bl">E</span>
     <span class="seip-pu">I</span>
@@ -340,8 +336,8 @@
                                             font-size: 17px;
                                             font-family: seipFont;
     ">P</span>
-    </a></li>
-    <li><a class="" href="https://www.pencilbox.edu.bd/blog">blog</a></li>
+    </a></li> --}}
+    <li><a class="{{ Request::routeIs('about') ? 'active' : '' }}" href="{{route('about')}}">About Us</a></li>
     <li><a class="{{ Request::routeIs('contact') ? 'active' : '' }}" href="{{route('contact')}}">contact</a></li>
     </ul>
     </nav>

@@ -18,6 +18,7 @@ Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 
 
 
+Route::get('/single', [siteController::class,'single_course'])->name('single');
 Route::get('/apply-course', [siteController::class,'apply_course'])->name('apply_course');
 
 

@@ -26,6 +26,10 @@ class siteController extends Controller
 
 
 
+    public function single_course(){
+        return view('frontend.single-course');
+    }
+
     public function apply_course(){
         return view('frontend.apply');
     }

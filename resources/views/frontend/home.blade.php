@@ -485,7 +485,7 @@ Skilled Trainer
     
     <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col_all">
     <div class="pb_single_course_box">
-    <a href="https://www.pencilbox.edu.bd/course/uiux-design">
+    <a href="{{route('single')}}">
     <img class="img-fluid" src="images/64d0907f7466a-2023-Aug-Mon-06-34-39.Web_1.webp" alt="Course_image">
     </a>
     <div class="pb_single_course_content">
@@ -535,14 +535,14 @@ Skilled Trainer
     </div>
     </span>
     </div>
-    <a href="https://www.pencilbox.edu.bd/course/uiux-design">
+    <a href="{{route('single')}}">
     <h6>UI/UX Design </h6>
     </a>
     <div class="d-flex justify-content-between align-items-center">
     <span class="pb_single_course_price">
     Course Fees :
     8000.00/- BDT</span>
-    <a class="pb_single_course_apply_button" href="https://www.pencilbox.edu.bd/course/uiux-design">
+    <a class="pb_single_course_apply_button" href="{{route('single')}}">
     See Details
     </a>
     </div>
@@ -551,7 +551,7 @@ Skilled Trainer
     </div>
     <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 24 pb_single_course_col_all">
     <div class="pb_single_course_box">
-    <a href="https://www.pencilbox.edu.bd/course/b2b-lead-generation-masterclass">
+    <a href="{{route('single')}}">
     <img class="img-fluid" src="images/64d1ea1de045d-2023-Aug-Tue-07-09-17.For%20web.webp" alt="Course_image">
     </a>
     <div class="pb_single_course_content">
@@ -568,7 +568,7 @@ Skilled Trainer
     <li>
     <i class="fas fa-user"></i>
     <span>Trainer Name :</span>
-    <a href="https://www.pencilbox.edu.bd/trainer-details/61/61">Md Labib Islam</a>
+    <a href="{{route('single')}}">Md Labib Islam</a>
     </li>
     <li>
     <i class="fas fa-stopwatch"></i>
@@ -601,14 +601,14 @@ Skilled Trainer
     </div>
     </span>
     </div>
-    <a href="https://www.pencilbox.edu.bd/course/b2b-lead-generation-masterclass">
+    <a href="{{route('single')}}">
     <h6>B2B Lead Generation Masterclass </h6>
     </a>
     <div class="d-flex justify-content-between align-items-center">
     <span class="pb_single_course_price">
     Course Fees :
     5000.00/- BDT</span>
-    <a class="pb_single_course_apply_button" href="https://www.pencilbox.edu.bd/course/b2b-lead-generation-masterclass">
+    <a class="pb_single_course_apply_button" href="{{route('single')}}">
     See Details
     </a>
     </div>
@@ -634,7 +634,7 @@ Skilled Trainer
     <li>
     <i class="fas fa-user"></i>
     <span>Trainer Name :</span>
-    <a href="https://www.pencilbox.edu.bd/trainer-details/15/15">Syed Tanvir ahmed</a>
+    <a href="{{route('single')}}">Syed Tanvir ahmed</a>
     </li>
     <li>
     <i class="fas fa-stopwatch"></i>
@@ -667,14 +667,14 @@ Skilled Trainer
     </div>
     </span>
     </div>
-    <a href="https://www.pencilbox.edu.bd/course/full-stack-flutter-building-dynamic-apps-games-with-firebase-spring-boot-and-flame-engine">
+    <a href="{{route('single')}}">
     <h6>Full Stack Flutter: Building Dynamic Apps &amp; Games with Firebase, Spring Boot and Flame Engine </h6>
     </a>
     <div class="d-flex justify-content-between align-items-center">
     <span class="pb_single_course_price">
     Course Fees :
     10000.00/- BDT</span>
-    <a class="pb_single_course_apply_button" href="https://www.pencilbox.edu.bd/apply-course/309">
+    <a class="pb_single_course_apply_button" href="{{route('single')}}">
     Apply Course
     </a>
     </div>
@@ -683,7 +683,7 @@ Skilled Trainer
     </div>
     <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 24 pb_single_course_col_all">
     <div class="pb_single_course_box">
-    <a href="https://www.pencilbox.edu.bd/course/digital-marketing-for-freelancing-level-4-nsda">
+    <a href="{{route('single')}}">
     <img class="img-fluid" src="images/650969040a5d3-2023-Sep-Tue-09-25-24.Digital-Marketing.webp" alt="Course_image">
     </a>
     <div class="pb_single_course_content">
@@ -727,14 +727,14 @@ Skilled Trainer
     </div>
     </span>
     </div>
-    <a href="https://www.pencilbox.edu.bd/course/digital-marketing-for-freelancing-level-4-nsda">
+    <a href="{{route('single')}}">
     <h6>Digital Marketing for Freelancing- Level 4 (NSDA) </h6>
     </a>
     <div class="d-flex justify-content-between align-items-center">
     <span class="pb_single_course_price">
     Certification Fees :
     3000.00/- BDT</span>
-    <a class="pb_single_course_apply_button" href="https://www.pencilbox.edu.bd/apply-course/320">
+    <a class="pb_single_course_apply_button" href="{{route('single')}}">
     Apply Course
     </a>
     </div>

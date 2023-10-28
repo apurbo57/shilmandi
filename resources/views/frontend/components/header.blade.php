@@ -337,6 +337,8 @@
                                             font-family: seipFont;
     ">P</span>
     </a></li> --}}
+    <li><a class="{{ Request::routeIs('gallery') ? 'active' : '' }}" href="{{route('gallery')}}">Gallery</a></li>
+    <li><a class="{{ Request::routeIs('notice') ? 'active' : '' }}" href="{{route('notice')}}">Notice</a></li>
     <li><a class="{{ Request::routeIs('about') ? 'active' : '' }}" href="{{route('about')}}">About Us</a></li>
     <li><a class="{{ Request::routeIs('contact') ? 'active' : '' }}" href="{{route('contact')}}">contact</a></li>
     </ul>

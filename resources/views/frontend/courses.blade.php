@@ -426,14 +426,14 @@
                 </div>
                 </span>
                 </div>
-                <a href="#">
+                <a href="{{route('single-course',$course->id)}}">
                 <h6>{{$course->course_name}}</h6>
                 </a>
                 <div class="d-flex justify-content-between align-items-center">
                 <span class="pb_single_course_price">
                 Course Fees :
                 {{$course->course_price}}/- BDT</span>
-                <a class="pb_single_course_apply_button" href="#">
+                <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
                 See Details
                 </a>
                 </div>
@@ -444,7 +444,7 @@
         @endforeach
         <div class="col-12">
         <div class="d-flex justify-content-center">
-        <a class="ViewMore" href="#">View More</a>
+        <a class="ViewMore" href="{{route('single-course',$course->id)}}">View More</a>
         </div>
         </div>
         </div>
@@ -458,10 +458,10 @@
         <div class="wrapper">
         <div class="row">
                 @foreach ($courses as $course)
-                @if ($course->reg_date >= date('Y-m-d'))
+                @if ($course->reg_date >= date('Y-m-d') && $course->course_type == 1)
                 <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col">
                     <div class="pb_single_course_box">
-                    <a href="#">
+                    <a href="{{route('single-course',$course->id)}}">
                     <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
                     </a>
                     <div class="pb_single_course_content">
@@ -511,14 +511,14 @@
                     </div>
                     </span>
                     </div>
-                    <a href="#">
+                    <a href="{{route('single-course',$course->id)}}">
                     <h6>{{$course->course_name}}</h6>
                     </a>
                     <div class="d-flex justify-content-between align-items-center">
                     <span class="pb_single_course_price">
                     Course Fees :
                     {{$course->course_price}}/- BDT</span>
-                    <a class="pb_single_course_apply_button" href="#">
+                    <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
                     See Details
                     </a>
                     </div>
@@ -540,10 +540,10 @@
         <div class="wrapper">
         <div class="row">
                 @foreach ($courses as $course)
-                @if ($course->reg_date <= date('Y-m-d'))
+                @if ($course->reg_date <= date('Y-m-d') && $course->course_type == 1)
                 <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col_ongoing">
                     <div class="pb_single_course_box">
-                    <a href="#">
+                    <a href="{{route('single-course',$course->id)}}">
                     <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
                     </a>
                     <div class="pb_single_course_content">
@@ -593,14 +593,14 @@
                     </div>
                     </span>
                     </div>
-                    <a href="#">
+                    <a href="{{route('single-course',$course->id)}}">
                     <h6>{{$course->course_name}}</h6>
                     </a>
                     <div class="d-flex justify-content-between align-items-center">
                     <span class="pb_single_course_price">
                     Course Fees :
                     {{$course->course_price}}/- BDT</span>
-                    <a class="pb_single_course_apply_button" href="#">
+                    <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
                     See Details
                     </a>
                     </div>
@@ -625,7 +625,7 @@
                 @if ($upcoming->course_type==2)
                 <div class="col-12  col-md-6 col-lg-4 pb_single_course_col_old">
                     <div class="pb_single_course_box">
-                    <a href="#">
+                    <a href="{{route('single-course',$upcoming->id)}}">
                     <img class="img-fluid" src="{{ asset('uploads/course/'. $upcoming->image) }}" alt="Course_image">
                     </a>
                     <div class="pb_single_course_content">
@@ -672,14 +672,14 @@
                     </div>
                     </span>
                     </div>
-                    <a href="#">
+                    <a href="{{route('single-course',$upcoming->id)}}">
                     <h6>{{$upcoming->course_name}}</h6>
                     </a>
                     <div class="d-flex justify-content-between align-items-center">
                     <span class="pb_single_course_price">
                     Course Fees :
                     {{$upcoming->course_price}}/- BDT</span>
-                    <a class="pb_single_course_apply_button" href="#">
+                    <a class="pb_single_course_apply_button" href="{{route('single-course',$upcoming->id)}}">
                     Apply Course
                     </a>
                     </div>

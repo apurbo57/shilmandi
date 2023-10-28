@@ -14,14 +14,15 @@ use Illuminate\Support\Facades\Route;
 
 //Fornten Rote//
 Route::get('/', [siteController::class,'index'])->name('home');
-Route::get('/courses', [siteController::class,'courses'])->name('courses');
-Route::get('/rpl', [siteController::class,'rpl'])->name('rpl');
+Route::get('/gallery', [siteController::class,'contact'])->name('gallery');
+Route::get('/notice', [siteController::class,'contact'])->name('notice');
 Route::get('/about-us', [siteController::class,'contact'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 
-
+Route::get('/rpl', [siteController::class,'rpl'])->name('rpl');
+Route::get('/courses', [siteController::class,'courses'])->name('courses');
 Route::get('/single-course/{id}', [siteController::class,'single_course'])->name('single-course');
-Route::get('/apply-course', [siteController::class,'apply_course'])->name('apply_course');
+Route::get('/course/apply-course', [siteController::class,'apply_course'])->name('apply_course');
 
 
 

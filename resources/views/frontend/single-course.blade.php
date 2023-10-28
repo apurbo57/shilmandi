@@ -24,29 +24,29 @@
                                     }
                                 </style>
         
-        <h1 class="h3 font-weight-bold text-center"> Computer Operation- Level 03 (NSDA)</h1>
+        <h1 class="h3 font-weight-bold text-center">{{ $course->course_name }}</h1>
         <h2 class="d-none"> NTVQF, BTEB, NSDA, RPL, Certification, Computer Operation, BNQF, Digital Marketing, Graphics Design, PencilBox, Assessment, Certificate</h2>
         <p class="text-center" style="font-size: 20px;font-weight: 700;color: white;margin: 15px 0;line-height: 1.4;"> RPL Mode Assessment</p>
         <div class="row">
         <div class="col-sm-6">
         <ul>
         <li>
-        <i class="fa fa-calendar"></i><span>Assessment Date :</span> 21/11/2023
+        <i class="fa fa-calendar"></i><span>Assessment Date :</span> {{ $course->ass_date }}
         </li>
         <li><i class="fab fa-trello"></i><span>Duration :</span> 8
         Hours
         </li>
         <li>
-        <i class="fas fa-stopwatch"></i><span>No. of Classes/ Sessions :</span> 1
+        <i class="fas fa-stopwatch"></i><span>No. of Classes/ Sessions :</span> {{ $course->classes }}
         </li>
         <li>
-        <i class="far fa-clock"></i><span>Registration Deadline :</span> 11/11/2023
+        <i class="far fa-clock"></i><span>Registration Deadline :</span> {{ $course->reg_date }}
         </li>
         </ul>
         </div>
         <div class="col-sm-6">
         <ul>
-        <li><i class="fa fa-users" aria-hidden="true" style="margin-right: 13px;"></i></i><span>Batch No : 16</span></li>
+        <li><i class="fa fa-users" aria-hidden="true" style="margin-right: 13px;"></i></i><span>Batch No : {{ $course->batch_no }}</span></li>
         <li><i class="fas fa-calendar-check"></i><span>Assessment Schedule :</span>
         <li>
         <div class="trainig-details-line">Wed (09:00 AM-06:00 PM) </div>
@@ -66,11 +66,10 @@
         <div class="row">
         <div class="col-xl-8 col-lg-8 col-md-12">
         <div class="traning-content">
-        <img src="../batch-images/main/6533c7d6604ee-2023-Oct-Sat-12-45-10.Computer%20Operation.webp" alt="Computer Operation- Level 03 (NSDA)" loading="lazy">
+        <img src="{{ asset('uploads/course/'. $course->image) }}" alt="Computer Operation- Level 03 (NSDA)" loading="lazy">
         <a type="button" class="btn mobile-fixed-btn small-text" href="#mobile-fixed">apply</a>
         <h4>Introduction</h4>
-        <div>মূলত আমাদের মাঝে অনেকেই Basic Computer এ অনেক দক্ষ। কিন্তু তাদের কম্পিউটারের কোন সরকারী সার্টিফিকেট নেই। তাদের দক্ষতা যাচাই পূর্বক সার্টিফিকেট দেয়ার কার্যক্রম শুরু করেছে প্রধানমন্ত্রীর কার্যালয়ের তত্বাবধানে জাতীয় দক্ষতা উন্নয়ন কর্তৃপক্ষ বা National Skills Development Authority (NSDA). Assessment (পরিক্ষায়) অংশগ্রহণ করতে করে সার্টিফিকেট প্রদানের লক্ষ্যে PencilBox Training Institute শুরু করতে যাচ্ছে Computer Operation – Level 03 এর Assessment.
-        আপনার ভর্তি কনফার্ম করে স্কিল অনলাইন অরিয়েন্টেশণ ও সরাসরি অ্যাসেসমেন্ট (২+১)=০৩ দিনের প্রোগ্রামে অংশগ্রহন করতে আজই রেজিষ্ট্রেশন করুন।</div>
+        <div>{{ $course->course_description }}</div>
         <h5><span>Prerequisites :</span> MS Word, MS Excel, MS PowerPoint, Basic Internet, Basic Computer.</h5>
         <h5><span>Training Modules :</span></h5>
         <div class="faq">
@@ -223,7 +222,7 @@
         <h6 class>
         Certification Fees :
         <span>
-        TK. 3000.00
+        TK. {{ $course->course_price }}
         </span>
         (Non-Refundable)
         </h6>

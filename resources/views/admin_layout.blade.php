@@ -6,7 +6,7 @@
 	
 	<!-- start: Meta -->
 	<meta charset="utf-8">
-	<title>Metro Admin Template - Metro UI Style Bootstrap Admin Template</title>
+	<title>Shilmandi Youth Development Training Center</title>
 	<meta name="description" content="Metro Admin Template.">
 	<meta name="author" content="Łukasz Holeczek">
 	<meta name="keyword" content="Metro, Metro UI, Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
@@ -54,7 +54,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</a>
-				<a class="brand" href="index.html"><span>Metro</span></a>
+				<a class="brand" href="{{route('dashboard')}}"><span>Shilmandi Youth Development Training Center</span></a>
 								
 				<!-- start: Header Menu -->
 				<div class="nav-no-collapse header-nav">
@@ -341,15 +341,15 @@
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Slider</span></a>
 							<ul>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Sliders</span></a></li>
+							<li><a class="submenu" href="{{route('admin.add-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
+								<li><a class="submenu" href="{{route('admin.manage-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Sliders</span></a></li>
 							</ul>	
                         </li>
 						<li>
-							<a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Gellagry</span></a>
+							<a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a>
 							<ul>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Image</span></a></li>
-								<li><a class="submenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Images</span></a></li>
+								<li><a class="submenu" href="{{route('admin.add-gallery')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Image</span></a></li>
+								<li><a class="submenu" href="{{route('admin.manage-gallery')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Images</span></a></li>
 							</ul>	
                         </li>
                         <li>

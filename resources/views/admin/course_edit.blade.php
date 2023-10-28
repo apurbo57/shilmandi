@@ -26,6 +26,7 @@
         <div class="box-content">
         <form class="form-horizontal" action="{{route('admin.update-course',$course->id)}}" method="post" enctype="multipart/form-data">
           @csrf;
+          @method('put')
               <fieldset>
                 <div class="control-group">
                   <label class="control-label" for="typeahead">Course Name</label>
@@ -80,12 +81,12 @@
                   <label class="control-label">Course Type</label>
                   <div class="controls">
                     <label class="radio">
-                    <input type="radio" name="course_type" id="optionsRadios1" value="1" checked="">
+                    <input type="radio" name="course_type" id="optionsRadios1" value="1" {{ ($course->course_type=="1")? "checked" : "" }}>
                     Regular
                     </label>
                     <div style="clear:both"></div>
                     <label class="radio">
-                    <input type="radio" name="course_type" id="optionsRadios2" value="2">
+                    <input type="radio" name="course_type" id="optionsRadios2" value="2" {{ ($course->course_type=="2")? "checked" : "" }}>
                     RPL
                     </label>
                   </div>

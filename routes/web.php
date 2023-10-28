@@ -3,6 +3,8 @@
 use App\Http\Controllers\Forntend\siteController;
 use App\Http\Controllers\adminController;
 use App\Http\Controllers\Backend\courseController;
+use App\Http\Controllers\Backend\sliderController;
+use App\Http\Controllers\Backend\galleryController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,9 +20,7 @@ Route::get('/about-us', [siteController::class,'contact'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 
 
-
-
-Route::get('/single', [siteController::class,'single_course'])->name('single');
+Route::get('/single-course', [siteController::class,'single_course'])->name('single-course');
 Route::get('/apply-course', [siteController::class,'apply_course'])->name('apply_course');
 
 
@@ -32,13 +32,25 @@ Route::get('/logout',[adminController::class,'logout'])->name('logout');
 
 
 // Backend Route
+
 // slider route 
-// Route::group(['prefix'=>'sliders'],function(){
-//     Route::get('/add-slider', 'sliderController@addslider')->name('add-slider');
-//     Route::post('/save-slider', 'sliderController@saveslider')->name('save-slider');
-//     Route::get('/manage-slider', 'sliderController@manageslider')->name('manage-slider');
-//     Route::get('/delete-slider/{id}', 'sliderController@deleteslider')->name('delete-slider');
-// });
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-slider', [sliderController::class,'create'])->name('add-slider');
+    Route::post('/save-slider', [sliderController::class,'store'])->name('save-slider');
+    Route::get('/manage-slider', [sliderController::class,'index'])->name('manage-slider');
+    Route::get('/edit-slider/{id}', [sliderController::class,'edit'])->name('edit-slider');
+    Route::put('/update-slider/{id}', [sliderController::class,'update'])->name('update-slider');
+    Route::delete('/delete-slider/{id}', [sliderController::class,'destroy'])->name('delete-slider');
+});
+// Gallery route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-gallery', [galleryController::class,'create'])->name('add-gallery');
+    Route::post('/save-gallery', [galleryController::class,'store'])->name('save-gallery');
+    Route::get('/manage-gallery', [galleryController::class,'index'])->name('manage-gallery');
+    Route::get('/edit-gallery/{id}', [galleryController::class,'edit'])->name('edit-gallery');
+    Route::put('/update-gallery/{id}', [galleryController::class,'update'])->name('update-gallery');
+    Route::delete('/delete-gallery/{id}', [galleryController::class,'destroy'])->name('delete-gallery');
+});
 
 // Course route 
 Route::prefix('admin')->name('admin.')->group(function () {

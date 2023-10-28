@@ -24,8 +24,9 @@
             </div>
         </div>
         <div class="box-content">
-        <form class="form-horizontal" action="{{route('update-slider')}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('admin.update-slider',$data->id)}}" method="post" enctype="multipart/form-data">
           @csrf;
+          @method('put');
               <fieldset>
                 
                 <div class="control-group">
@@ -35,41 +36,17 @@
                     <input type="text" class="span6 typeahead" name="title" value="{{ $data->title }}" id="typeahead" >
                   </div>
                 </div>   
-                <div class="control-group">
-                    <label class="control-label" for="typeahead">Sub Title</label>
-                    <div class="controls">
-                      <input type="text" class="span6 typeahead" name="sub_title" value="{{ $data->sub_title }}" id="typeahead" >
-                    </div>
-                  </div> 
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">URL</label>
-                    <div class="controls">
-                      <input type="text" class="span6 typeahead" name="url" value="{{ $data->url }}" id="typeahead" >
-                    </div>
+                <div class="control-group hidden-phone">
+                  <label class="control-label" for="textarea2">Description</label>
+                  <div class="controls">
+                    <textarea class="cleditor" name="description" id="textarea2" rows="2">{{ $data->description }}</textarea>
                   </div>
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">Start Date</label>
-                    <div class="controls">
-                      <input type="date" class="span6 typeahead" name="start" value="{{ $data->start }}" placeholder="00.00" id="typeahead" >
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">End Date</label>
-                    <div class="controls">
-                      <input type="date" class="span6 typeahead" name="end" value="{{ $data->end }}" placeholder="00.00" id="typeahead" >
-                    </div>
-                  </div>
+                </div>
                   <div class="control-group">
                     <label class="control-label" for="typeahead">Slider Image</label>
                     <div class="controls">
                         <img src="{{ asset('uploads/slider/'. $data->image) }}" width="300px" height="120px" alt="Image"> <br>
                       <input type="file" class="span6 typeahead" name="image" id="typeahead" >
-                    </div>
-                  </div>
-                <div class="control-group">
-                    <label class="control-label" for="date01">Status</label>
-                    <div class="controls">
-                      <input type="checkbox" name="product_status" id="date01" value="1">
                     </div>
                   </div>
                 <div class="form-actions">

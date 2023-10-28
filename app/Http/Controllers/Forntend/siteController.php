@@ -3,16 +3,21 @@
 namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
+use App\Models\course;
+use App\Models\slider;
 use Illuminate\Http\Request;
 
 class siteController extends Controller
 {
     public function index(){
-        return view('frontend.home');
+        $sliders = slider::all();
+        $courses = course::latest()->get();
+        return view('frontend.home',compact('sliders','courses'));
     }
 
     public function courses(){
-        return view('frontend.courses');
+        $courses = course::latest()->get();
+        return view('frontend.courses',compact('courses'));
     }
 
     public function rpl(){
@@ -26,8 +31,9 @@ class siteController extends Controller
 
 
 
-    public function single_course(){
-        return view('frontend.single-course');
+    public function single_course()
+    {
+        return view('frontend.single');
     }
 
     public function apply_course(){

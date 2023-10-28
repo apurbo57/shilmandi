@@ -24,7 +24,7 @@
             </div>
         </div>
         <div class="box-content">
-        <form class="form-horizontal" action="{{route('save-slider')}}" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal" action="{{route('admin.save-slider')}}" method="post" enctype="multipart/form-data">
           @csrf;
               <fieldset>
                 
@@ -34,40 +34,16 @@
                     <input type="text" class="span6 typeahead" name="title" value="{{Request::old('title')}}" id="typeahead" >
                   </div>
                 </div>   
-                <div class="control-group">
-                    <label class="control-label" for="typeahead">Sub Title</label>
-                    <div class="controls">
-                      <input type="text" class="span6 typeahead" name="sub_title" id="typeahead" >
-                    </div>
-                  </div> 
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">URL</label>
-                    <div class="controls">
-                      <input type="text" class="span6 typeahead" name="url" id="typeahead" >
-                    </div>
+                <div class="control-group hidden-phone">
+                  <label class="control-label" for="textarea2">Description</label>
+                  <div class="controls">
+                    <textarea class="cleditor" name="description" id="textarea2" rows="2">{{Request::old('description')}}</textarea>
                   </div>
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">Start Date</label>
-                    <div class="controls">
-                      <input type="date" class="span6 typeahead" name="start" placeholder="00.00" id="typeahead" >
-                    </div>
-                  </div>
-                  <div class="control-group">
-                    <label class="control-label" for="typeahead">End Date</label>
-                    <div class="controls">
-                      <input type="date" class="span6 typeahead" name="end" placeholder="00.00" id="typeahead" >
-                    </div>
-                  </div>
+                </div>
                   <div class="control-group">
                     <label class="control-label" for="typeahead">Slider Image</label>
                     <div class="controls">
                       <input type="file" class="span6 typeahead" name="image" id="typeahead" >
-                    </div>
-                  </div>
-                <div class="control-group">
-                    <label class="control-label" for="date01">Status</label>
-                    <div class="controls">
-                      <input type="checkbox" name="product_status" id="date01" value="1">
                     </div>
                   </div>
                 <div class="form-actions">

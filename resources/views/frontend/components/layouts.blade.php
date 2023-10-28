@@ -24,37 +24,37 @@
     
     
     
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
     
-    <link rel="stylesheet" type="text/css" href="css/slick.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/slick.css') }}">
     
-    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}" type="text/css">
     
-    <link rel="stylesheet" href="css/magnific-popup.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/magnific-popup.min.css') }}" type="text/css">
     
-    <link rel="stylesheet" href="css/fontawesome-all.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/fontawesome-all.min.css') }}" type="text/css">
     
-    <link rel="stylesheet" href="css/meanmenu.min.css" type="text/css">
-    <link href="css/datepicker.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/meanmenu.min.css') }}" type="text/css">
+    <link href="{{ asset('css/datepicker.min.css') }}" rel="stylesheet" type="text/css">
     
-    <link rel="stylesheet" href="css/style2.min.css" type="text/css">
+    <link rel="stylesheet" href="{{ asset('css/style2.min.css') }}" type="text/css">
     
-    <link rel="stylesheet" href="css/responsive.min.css" type="text/css">
-    <link href="css/select2.min.css" rel="stylesheet" type="text/css">
-    <script src="js/api.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <link rel="stylesheet" href="{{ asset('css/responsive.min.css') }}" type="text/css">
+    <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" type="text/css">
+    <script src="{{ asset('js/api.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     <!-- Basic stylesheet -->
-<link rel="stylesheet" href="owl-carousel/owl.carousel.css">
+<link rel="stylesheet" href="{{ asset('owl-carousel/owl.carousel.css') }}">
  
 <!-- Default Theme -->
-<link rel="stylesheet" href="owl-carousel/owl.theme.css">
+<link rel="stylesheet" href="{{ asset('owl-carousel/owl.theme.css') }}">
  
 <!-- You can use latest version of jQuery  -->
-<script src="owl-carousel/jquery-1.9.1.min.js"></script>
+<script src="{{ asset('owl-carousel/jquery-1.9.1.min.js') }}"></script>
  
 <!-- Include js plugin -->
-<script src="owl-carousel/owl.carousel.js"></script>
+<script src="{{ asset('owl-carousel/owl.carousel.js') }}"></script>
     <style>
             input[type='number'] {
                 -moz-appearance:textfield;
@@ -404,42 +404,42 @@
     
     
     
-    <script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/jquery-1.12.4.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script data-cfasync="false" src="{{ asset('js/email-decode.min.js') }}"></script><script src="{{ asset('js/jquery-1.12.4.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/popper.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/popper.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/bootstrap.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/owl.carousel.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/owl.carousel.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/isotope.pkgd.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/isotope.pkgd.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/jquery.meanmenu1.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/jquery.meanmenu1.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/ajax-form.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/ajax-form.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/wow.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/wow.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/waypoints.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
-    <script src="js/jquery.counterup.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/waypoints.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/jquery.counterup.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/imagesloaded.pkgd.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/imagesloaded.pkgd.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/jquery.magnific-popup.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/jquery.magnific-popup.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/skill.bars.jquery.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/skill.bars.jquery.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
     
-    <script src="js/plugins.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/plugins.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/jquery.validate.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/jquery.validate.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/main1.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/main1.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     
-    <script src="js/select2.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
-    <script src="js/datepicker.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
-    <script src="js/sweetalert.min.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
-    <script type="e464e61f0656f3579a4b2934-text/javascript" src="js/slick.min.js"></script>
+    <script src="{{ asset('js/select2.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/datepicker.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/sweetalert.min.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script type="e464e61f0656f3579a4b2934-text/javascript" src="{{ asset('js/slick.min.js') }}"></script>
     <script type="e464e61f0656f3579a4b2934-text/javascript">
     
         $("input[name=payment_type]" ).on( "click", function() {
@@ -2224,7 +2224,7 @@
                         });
                     });
                 </script>
-    <script src="js/jquery-ui.js" type="e464e61f0656f3579a4b2934-text/javascript"></script>
+    <script src="{{ asset('js/jquery-ui.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     <script type="e464e61f0656f3579a4b2934-text/javascript">
                     // --------------scripts for course page--------------
                     $(document).ready(function () {
@@ -2379,6 +2379,6 @@
                         });
                     });
                 </script>
-    <script src="js/rocket-loader.min.js" data-cf-settings="e464e61f0656f3579a4b2934-|49" defer=""></script>
+    <script src="{{ asset('js/rocket-loader.min.js') }}" data-cf-settings="e464e61f0656f3579a4b2934-|49" defer=""></script>
     
     </body></html>

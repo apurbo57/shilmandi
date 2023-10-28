@@ -473,7 +473,7 @@ Skilled Trainer
         @if ($course->course_type == 1)
         <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col_all">
             <div class="pb_single_course_box">
-            <a href="{{route('single-course')}}">
+            <a href="{{route('single-course',$course->id)}}">
             <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
             </a>
             <div class="pb_single_course_content">
@@ -523,14 +523,14 @@ Skilled Trainer
             </div>
             </span>
             </div>
-            <a href="{{route('single-course')}}">
+            <a href="{{route('single-course',$course->id)}}">
             <h6>{{$course->course_name}}</h6>
             </a>
             <div class="d-flex justify-content-between align-items-center">
             <span class="pb_single_course_price">
             Course Fees :
             {{$course->course_price}}/- BDT</span>
-            <a class="pb_single_course_apply_button" href="{{route('single-course')}}">
+            <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
             See Details
             </a>
             </div>
@@ -558,7 +558,7 @@ Skilled Trainer
             @if ($course->reg_date >= date('Y-m-d'))
             <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col">
                 <div class="pb_single_course_box">
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$course->id)}}">
                 <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
                 </a>
                 <div class="pb_single_course_content">
@@ -608,14 +608,14 @@ Skilled Trainer
                 </div>
                 </span>
                 </div>
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$course->id)}}">
                 <h6>{{$course->course_name}}</h6>
                 </a>
                 <div class="d-flex justify-content-between align-items-center">
                 <span class="pb_single_course_price">
                 Course Fees :
                 {{$course->course_price}}/- BDT</span>
-                <a class="pb_single_course_apply_button" href="{{route('single-course')}}">
+                <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
                 See Details
                 </a>
                 </div>
@@ -640,7 +640,7 @@ Skilled Trainer
             @if ($course->reg_date <= date('Y-m-d'))
             <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col_ongoing">
                 <div class="pb_single_course_box">
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$course->id)}}">
                 <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
                 </a>
                 <div class="pb_single_course_content">
@@ -690,14 +690,14 @@ Skilled Trainer
                 </div>
                 </span>
                 </div>
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$course->id)}}">
                 <h6>{{$course->course_name}}</h6>
                 </a>
                 <div class="d-flex justify-content-between align-items-center">
                 <span class="pb_single_course_price">
                 Course Fees :
                 {{$course->course_price}}/- BDT</span>
-                <a class="pb_single_course_apply_button" href="{{route('single-course')}}">
+                <a class="pb_single_course_apply_button" href="{{route('single-course',$course->id)}}">
                 See Details
                 </a>
                 </div>
@@ -722,7 +722,7 @@ Skilled Trainer
             @if ($upcoming->course_type==2)
             <div class="col-12  col-md-6 col-lg-4 pb_single_course_col_old">
                 <div class="pb_single_course_box">
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$upcoming->id)}}">
                 <img class="img-fluid" src="{{ asset('uploads/course/'. $upcoming->image) }}" alt="Course_image">
                 </a>
                 <div class="pb_single_course_content">
@@ -769,14 +769,14 @@ Skilled Trainer
                 </div>
                 </span>
                 </div>
-                <a href="{{route('single-course')}}">
+                <a href="{{route('single-course',$upcoming->id)}}">
                 <h6>{{$upcoming->course_name}}</h6>
                 </a>
                 <div class="d-flex justify-content-between align-items-center">
                 <span class="pb_single_course_price">
                 Course Fees :
                 {{$upcoming->course_price}}/- BDT</span>
-                <a class="pb_single_course_apply_button" href="{{route('single-course')}}">
+                <a class="pb_single_course_apply_button" href="{{route('single-course',$upcoming->id)}}">
                 Apply Course
                 </a>
                 </div>

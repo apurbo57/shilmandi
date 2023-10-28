@@ -36,7 +36,7 @@
     <div class="modal-dialog modal-dialog-centered pencilbox-modal" role="document">
     <div class="modal-content" style="padding: 19px;">
     <div class="modal-header" style="padding: 0 !important;">
-    <img class="pencilbox-modal-logo" src="images/pencilbox_modal_logo.png" alt="logo" loading="lazy">
+    <img class="pencilbox-modal-logo" src="{{ asset('images/pencilbox_modal_logo.png')}}" alt="logo" loading="lazy">
     <button type="button" class="close modal-btn-bg" data-dismiss="modal" aria-label="Close" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('zIndexId').classList.remove('zIndexClass')" data-cf-modified-e464e61f0656f3579a4b2934-=""><span aria-hidden="true">Ã—</span></button>
     </div>
     <div class="modal-body" style="margin-top: -15px;">
@@ -85,7 +85,7 @@
     <div class="modal-dialog modal-dialog-centered pencilbox-modal" role="document">
     <div class="modal-content" style="padding: 19px;">
     <div class="modal-header" style="padding: 0 !important;">
-    <img class="pencilbox-modal-logo" src="images/pencilbox_modal_logo.png" alt="logo" loading="lazy">
+    <img class="pencilbox-modal-logo" src="{{ asset('images/pencilbox_modal_logo.png')}}" alt="logo" loading="lazy">
     <button type="button" class="close modal-btn-bg" data-dismiss="modal" aria-label="Close" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('zIndexId').classList.remove('zIndexClass')" data-cf-modified-e464e61f0656f3579a4b2934-=""><span aria-hidden="true">Ã—</span></button>
     </div>
     <div class="modal-body" style="margin-top: -15px;">
@@ -123,7 +123,7 @@
     <div class="modal-dialog modal-dialog-centered pencilbox-modal" role="document">
     <div class="modal-content" style="padding: 19px;">
     <div class="modal-header" style="padding: 0 !important;">
-    <img class="pencilbox-modal-logo" src="images/pencilbox_modal_logo.png" alt="logo" loading="lazy">
+    <img class="pencilbox-modal-logo" src="{{ asset('images/pencilbox_modal_logo.png')}}" alt="logo" loading="lazy">
     <button type="button" class="close modal-btn-bg" data-dismiss="modal" aria-label="Close" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('zIndexId').classList.remove('zIndexClass')" data-cf-modified-e464e61f0656f3579a4b2934-=""><span aria-hidden="true">Ã—</span></button>
     </div>
     <div class="modal-body" style="margin-top: -15px;">
@@ -201,7 +201,7 @@
     <div class="modal-dialog modal-dialog-centered pencilbox-modal" role="document">
     <div class="modal-content" style="padding: 19px;">
     <div class="modal-header" style="padding: 0 !important;">
-    <img class="pencilbox-modal-logo" src="images/pencilbox_modal_logo.png" alt="logo" loading="lazy">
+    <img class="pencilbox-modal-logo" src="{{ asset('images/pencilbox_modal_logo.png')}}" alt="logo" loading="lazy">
     <button type="button" class="close modal-btn-bg" data-dismiss="modal" aria-label="Close" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('zIndexId').classList.remove('zIndexClass')" data-cf-modified-e464e61f0656f3579a4b2934-=""><span aria-hidden="true">Ã—</span></button>
     </div>
     <div class="modal-body">
@@ -233,7 +233,7 @@
     <div class="modal-dialog modal-dialog-centered pencilbox-modal" role="document">
     <div class="modal-content" style="padding: 19px;">
     <div class="modal-header" style="padding: 0 !important;">
-    <img class="pencilbox-modal-logo" src="images/pencilbox_modal_logo.png" alt="logo" loading="lazy">
+    <img class="pencilbox-modal-logo" src="{{ asset('images/pencilbox_modal_logo.png')}}" alt="logo" loading="lazy">
     <button type="button" class="close modal-btn-bg" data-dismiss="modal" aria-label="Close" onclick="if (!window.__cfRLUnblockHandlers) return false; document.getElementById('zIndexId').classList.remove('zIndexClass')" data-cf-modified-e464e61f0656f3579a4b2934-=""><span aria-hidden="true">Ã—</span></button>
     </div>
     <div class="modal-body">
@@ -313,7 +313,7 @@
     <div class="row">
     <div class="col-xl-2 col-lg-2 col-md-2">
     <div class="logo">
-    <a href="https://www.pencilbox.edu.bd"><img src="images/logo.webp" alt="logo" loading="lazy"></a>
+    <a href="https://www.pencilbox.edu.bd"><img src="{{ asset('images/logo.webp')}}" alt="logo" loading="lazy"></a>
     </div>
     </div>
     <div class="col-xl-9 col-lg-9 col-md-8 text-right">

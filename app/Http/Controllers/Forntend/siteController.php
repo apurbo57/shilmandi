@@ -31,9 +31,10 @@ class siteController extends Controller
 
 
 
-    public function single_course()
-    {
-        return view('frontend.single');
+    public function single_course(string $id)
+    {   
+        $course = course::find($id);
+        return view('frontend.single-course',compact('course'));
     }
 
     public function apply_course(){

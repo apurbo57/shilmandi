@@ -376,7 +376,7 @@
             @if ($course->course_type == 1)
             <div class="col-12  col-md-6 col-lg-4 all_course_filter_item_ 15 pb_single_course_col_all">
                 <div class="pb_single_course_box">
-                <a href="#">
+                <a href="{{route('single-course',$course->id)}}">
                 <img class="img-fluid" src="{{ asset('uploads/course/'. $course->image) }}" alt="Course_image">
                 </a>
                 <div class="pb_single_course_content">

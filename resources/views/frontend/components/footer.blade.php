@@ -5,7 +5,7 @@
     <div class="subscribe-content text-center">
     <h3>Subscribe to our Newsletter</h3>
     <h6>Do not miss any exciting offers by Shilmandi </h6>
-    <form action="https://www.pencilbox.edu.bd/subscribe" method="post" id="basic-form2" class="basic-form2">
+    <form action="#" method="post" id="basic-form2" class="basic-form2">
     <input type="hidden" name="_token" value="RJdnBUw4qYHMuuUvVEQfNWg9mbqNqzcriVFpHe5v"> <div class="g-recaptcha" data-sitekey="6LfuM44bAAAAALOjqfAtsvtLa2HHgZDhVZogGtLq" data-callback="onSubmit" data-size="invisible"></div>
     <input type="email" name="subscribe" placeholder="enter your e-mail address" required="">
     <button type="submit">subscribe</button>
@@ -23,7 +23,7 @@
     <div class="col-xl-3 col-lg-3 col-md-6">
     <div class="single-widget">
     <div class="footer-logo">
-    <a href="https://www.pencilbox.edu.bd"><img src="images/logo.webp" alt="logo" loading="lazy"></a>
+    <a href="#"><img src="{{ asset('images/logo.webp')}}" alt="logo" loading="lazy"></a>
     </div>
     <p style="margin-left: 0px;">We are Shilmandi Youth Development Training Center. We provide training in IT sector. Our mission is to provide international standard training in Bangladesh's IT sector and thereby helping the society to build up a skilled workforce.</p>
     <br>
@@ -56,7 +56,7 @@
     </div>
     <div class="footer-love-image">
     <a href="https://www.pencilbox.edu.bd">
-    <img width="100%" height="50px" src="images/Web-Footer.jpeg" alt="footer-love-img" loading="lazy">
+    <img width="100%" height="50px" src="{{ asset('images/Web-Footer.jpeg')}}" alt="footer-love-img" loading="lazy">
     </a>
     </div>
     </div>
@@ -75,7 +75,7 @@
     </div>
     </div>
     <div style="margin-bottom: -50px;">
-    <img width="100%" height="30px" src="images/footer-ipay.webp" alt="footer-img" class="img-fluid" loading="lazy">
+    <img width="100%" height="30px" src="{{ asset('images/footer-ipay.webp')}}" alt="footer-img" class="img-fluid" loading="lazy">
     </div>
     </div>
     

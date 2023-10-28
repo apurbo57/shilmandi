@@ -20,7 +20,7 @@ Route::get('/about-us', [siteController::class,'contact'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 
 
-Route::get('/single-course', [siteController::class,'single_course'])->name('single-course');
+Route::get('/single-course/{id}', [siteController::class,'single_course'])->name('single-course');
 Route::get('/apply-course', [siteController::class,'apply_course'])->name('apply_course');
 
 

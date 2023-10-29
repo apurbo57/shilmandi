@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
 use App\Models\course;
+use App\Models\gallery;
 use App\Models\slider;
 use Illuminate\Http\Request;
 use PDF;
@@ -24,6 +25,11 @@ class siteController extends Controller
     public function rpl(){
         $courses = course::where('course_type',2)->latest()->get();
         return view('frontend.rpl',compact('courses'));
+    }
+
+    public function gallery(){
+        $galleries = gallery::latest()->get();
+        return view('frontend.gallery',compact('galleries'));
     }
 
     public function contact(){
@@ -50,15 +56,14 @@ class siteController extends Controller
 
     public function enroll_course(Request $request)
     {
-        $pdf = PDF::loadView('frontend.components.apply-form');
-        // return $pdf->download('Shilmandi_Training_institiute_center_apply_form ');
-        $name = $request->name;
-        $id = 1;
-        return view('frontend.thank-you',compact('name','id'));
+        $name = $request->nameE;
+        return view('frontend.thank-you',compact('name'));
     }
 
-    public function form_download()
+    public function form_download($key)
     {
-        return "test";
+        $pdf = PDF::loadView('frontend.components.apply-form');
+        return $pdf->download('Shilmandi_Training_institiute_center_apply_form ');
+        // return $pdf->stream();
     }
 }

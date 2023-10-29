@@ -65,6 +65,10 @@
             input::-webkit-inner-spin-button {
                 -webkit-appearance: none;
             }
+            a {
+                text-decoration: none;
+                color: black;
+            }
         </style>
     <style>
             #mobile-menu ul li{

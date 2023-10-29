@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 //Fornten Rote//
 Route::get('/', [siteController::class,'index'])->name('home');
-Route::get('/gallery', [siteController::class,'contact'])->name('gallery');
+Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
 Route::get('/notice', [siteController::class,'contact'])->name('notice');
 Route::get('/about-us', [siteController::class,'contact'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
@@ -24,7 +24,7 @@ Route::get('/courses', [siteController::class,'courses'])->name('courses');
 Route::get('/single-course/{id}', [siteController::class,'single_course'])->name('single-course');
 Route::get('/course/apply-course/{id}', [siteController::class,'apply_course'])->name('apply_course');
 Route::post('/course/enroll-this-course', [siteController::class,'enroll_course'])->name('enroll_course');
-Route::get('/course/form-download', [siteController::class,'form_download'])->name('form-download');
+Route::get('/course/form-download/{key}', [siteController::class,'form_download'])->name('form-download');
 
 
 

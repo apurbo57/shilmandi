@@ -16,7 +16,7 @@
                             <div class="text-center">
                                 <h1>Thank You !</h1>
                                 <p><p class="font-weight-bold">{{ $name }}</p> for Applying Our Course. We've send the Apply form Download link to you. Please Download it and Visit Our Office. </p>
-                                <a class="btn btn-outline-success" href="{{route('form-download'/$name)}}">Download Form</a>
+                                <a class="btn btn-outline-success" href="{{route('form-download',[$name])}}">Download Form</a>
                             </div>
                         </div>
                     </div>

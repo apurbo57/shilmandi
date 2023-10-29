@@ -22,7 +22,8 @@ Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 Route::get('/rpl', [siteController::class,'rpl'])->name('rpl');
 Route::get('/courses', [siteController::class,'courses'])->name('courses');
 Route::get('/single-course/{id}', [siteController::class,'single_course'])->name('single-course');
-Route::get('/course/apply-course', [siteController::class,'apply_course'])->name('apply_course');
+Route::get('/course/apply-course/{id}', [siteController::class,'apply_course'])->name('apply_course');
+Route::post('/course/enroll-this-course', [siteController::class,'enroll_course'])->name('enroll_course');
 
 
 

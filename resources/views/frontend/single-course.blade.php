@@ -24,33 +24,24 @@
                                     }
                                 </style>
         
-        <h1 class="h3 font-weight-bold text-center">{{ $course->course_name }}</h1>
-        <h2 class="d-none"> NTVQF, BTEB, NSDA, RPL, Certification, Computer Operation, BNQF, Digital Marketing, Graphics Design, PencilBox, Assessment, Certificate</h2>
-        <p class="text-center" style="font-size: 20px;font-weight: 700;color: white;margin: 15px 0;line-height: 1.4;"> RPL Mode Assessment</p>
+        <h1 class="h2 font-weight-bold text-center">{{ $course->course_name }}</h1>
         <div class="row">
         <div class="col-sm-6">
         <ul>
+            <li>
+            <i class="far fa-clock"></i><span>Registration Deadline :</span> {{ $course->reg_date }}
+            </li>
         <li>
         <i class="fa fa-calendar"></i><span>Assessment Date :</span> {{ $course->ass_date }}
-        </li>
-        <li><i class="fab fa-trello"></i><span>Duration :</span> 8
-        Hours
-        </li>
-        <li>
-        <i class="fas fa-stopwatch"></i><span>No. of Classes/ Sessions :</span> {{ $course->classes }}
-        </li>
-        <li>
-        <i class="far fa-clock"></i><span>Registration Deadline :</span> {{ $course->reg_date }}
         </li>
         </ul>
         </div>
         <div class="col-sm-6">
         <ul>
         <li><i class="fa fa-users" aria-hidden="true" style="margin-right: 13px;"></i></i><span>Batch No : {{ $course->batch_no }}</span></li>
-        <li><i class="fas fa-calendar-check"></i><span>Assessment Schedule :</span>
         <li>
-        <div class="trainig-details-line">Wed (09:00 AM-06:00 PM) </div>
-        </li>
+                <i class="fas fa-stopwatch"></i><span>No. of Classes/ Sessions :</span> {{ $course->classes }}
+                </li>
         </ul>
         </div>
         </div>
@@ -69,10 +60,12 @@
         <img src="{{ asset('uploads/course/'. $course->image) }}" alt="Computer Operation- Level 03 (NSDA)" loading="lazy">
         <a type="button" class="btn mobile-fixed-btn small-text" href="#mobile-fixed">apply</a>
         <h4>Introduction</h4>
-        <div>{{ $course->course_description }}</div>
-        <h5><span>Prerequisites :</span> MS Word, MS Excel, MS PowerPoint, Basic Internet, Basic Computer.</h5>
-        <h5><span>Training Modules :</span></h5>
-        <div class="faq">
+        <div>@php echo html_entity_decode($course->course_description) @endphp</div>
+
+
+        {{-- <h5><span>Prerequisites :</span> MS Word, MS Excel, MS PowerPoint, Basic Internet, Basic Computer.</h5>
+        <h5><span>Training Modules :</span></h5> --}}
+        {{-- <div class="faq">
         <div class="accordion" id="accordionExample">
         <div class="card">
         <div class="card-header" id="heading3823">
@@ -95,7 +88,7 @@
         </div>
         </div>
         </div>
-        </div>
+        </div> --}}
         
         </div>
         <style>
@@ -198,7 +191,7 @@
         <div class="col-xl-4 col-lg-4 col-md-12" id="mobile-fixed">
         <div class="sidebar-details"></div>
         <div class="pricing-details form-sticky" style="background: none" id="myHeader">
-        <div class="trainer-border text-center d-none" style="margin-bottom: 20px; padding: 5px;">
+        {{-- <div class="trainer-border text-center d-none" style="margin-bottom: 20px; padding: 5px;">
         <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="trainer-image text-center">
@@ -216,7 +209,7 @@
         </div>
         </div>
         </div>
-        </div>
+        </div> --}}
         <div style="background: #E6E6E6">
         <div class="price">
         <h6 class>
@@ -233,7 +226,7 @@
         
          
         </div>
-        <a href="{{route('apply_course')}}" style="color: white; text-decoration: none;">
+        <a href="{{route('apply_course',$course->id)}}" style="color: white; text-decoration: none;">
             <button type="button" class="btn btn-primary apply-btn">
             Apply Now
             </button>
@@ -243,9 +236,9 @@
         
         
         <div class="single-widget padding-extra">
-        <p><i class="fas fa-mobile-alt"></i><span>+88 01714 121719</span></p>
-        <p><i class="fas fa-phone"></i>+88 02 41010090</p>
-        <p><i class="fas fa-envelope"></i><a href="../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="dfb6b1b9b09fafbab1bcb6b3bdb0a7f1babbaaf1bdbb">[email&#160;protected]</a></p>
+        <p><i class="fas fa-mobile-alt"></i><span>+880 1982-927790</span></p>
+        <p><i class="fas fa-phone"></i>+880 1721-297490</p>
+        <p><i class="fas fa-envelope"></i>sydtcnrsingdi@gmail.com</p>
         </div>
         </div>
         </div>

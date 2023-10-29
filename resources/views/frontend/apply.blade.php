@@ -76,15 +76,12 @@
             </style>
         <div class="col-12 m-auto m-2">
         <div class="card p-2">
-        <form id="stform" action="" method="">
+        <form id="stform" action="{{route('enroll_course')}}" method="post">
         <div class="row">
         <div class="col-md-12">
         <label for="course_name">COURSE NAME:*</label>
         <select name="course_name" id="course_name" class="form-control" value>
-        <option value>---Select Course---</option>
-        <option value="IT Sales">Computer Application</option>
-        <option value="IT Sales">Driving</option>
-        <option value="IT Sales">Plumbing</option>
+        <option value>{{$course->course_name}}</option>
         </select>
         <span style="color:red;" id="course_name_error"></span>
         </div>
@@ -341,7 +338,7 @@
         </div>
 
         <div class="row mb-3">
-                <div class="col-md-12 text-center"><button type="button" id="seip_student_form_submit" class="student_info_btn text-cencter">Submit</button></div>
+                <div class="col-md-12 text-center"><button type="submit" id="seip_student_form_submit" class="student_info_btn text-cencter">Submit</button></div>
         </div>
         </form>
         </div>

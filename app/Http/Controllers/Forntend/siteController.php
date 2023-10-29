@@ -41,7 +41,14 @@ class siteController extends Controller
         return redirect()->back();
     }
 
-    public function apply_course(){
-        return view('frontend.apply');
+    public function apply_course(string $id)
+    {
+        $course = course::find($id);
+        return view('frontend.apply',compact('course'));
+    }
+
+    public function enroll_course(Request $request)
+    {
+        return 'ok';
     }
 }

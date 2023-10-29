@@ -77,11 +77,12 @@
         <div class="col-12 m-auto m-2">
         <div class="card p-2">
         <form id="stform" action="{{route('enroll_course')}}" method="post">
+            @csrf
         <div class="row">
         <div class="col-md-12">
         <label for="course_name">COURSE NAME:*</label>
-        <select name="course_name" id="course_name" class="form-control" value>
-        <option value>{{$course->course_name}}</option>
+        <select name="course_name" id="course_name" class="form-control" >
+        <option value="{{$course->course_name}}">{{$course->course_name}}</option>
         </select>
         <span style="color:red;" id="course_name_error"></span>
         </div>
@@ -97,12 +98,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="nameE">Name (English): *</label>
-        <input class="form-control" value name="nameE" id="nameE" placeholder="Enter Your Full Name" type="Text" ">
+        <input class="form-control" name="nameE" id="nameE" placeholder="Enter Your Full Name" type="Text" ">
         <span style="color:red;" id="nameE"></span>
         </div>
         <div class="col-md-6">
         <label for="nameB">Name (Bangla): *</label>
-        <input type="email" name="nameB" value class="form-control" id="nameB" placeholder="আপনার পুরো নাম লিখুন">
+        <input type="text" name="nameB" class="form-control" id="nameB" placeholder="আপনার পুরো নাম লিখুন">
         <span style="color:red;" id="nameB"></span>
         </div>
         </div>
@@ -110,12 +111,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="fatherNameE">Father Name (English): *</label>
-        <input class="form-control" value name="fatherNameE" id="fatherNameE" placeholder="Enter Your Father Full Name" type="Text" ">
+        <input class="form-control" name="fatherNameE" id="fatherNameE" placeholder="Enter Your Father Full Name" type="Text">
         <span style="color:red;" id="fatherNameE"></span>
         </div>
         <div class="col-md-6">
         <label for="fatherNameB">Father Name (Bangla): *</label>
-        <input type="text" name="fatherNameB" value class="form-control" id="fatherNameB" placeholder="আপনার বাবার পুরো নাম লিখুন">
+        <input type="text" name="fatherNameB" class="form-control" id="fatherNameB" placeholder="আপনার বাবার পুরো নাম লিখুন">
         <span style="color:red;" id="fatherNameB"></span>
         </div>
         </div>
@@ -123,12 +124,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="MotherNameE">Mother Name (English): *</label>
-        <input class="form-control" value name="MotherNameE" id="MotherNameE" placeholder="Enter Your Mother Full Name" type="Text" ">
+        <input class="form-control" name="MotherNameE" id="MotherNameE" placeholder="Enter Your Mother Full Name" type="Text">
         <span style="color:red;" id="MotherNameE"></span>
         </div>
         <div class="col-md-6">
         <label for="MotherNameB">Mother Name (Bangla): *</label>
-        <input type="text" name="MotherNameB" value class="form-control" id="MotherNameB" placeholder="আপনার মায়ের পুরো নাম লিখুন">
+        <input type="text" name="MotherNameB" class="form-control" id="MotherNameB" placeholder="আপনার মায়ের পুরো নাম লিখুন">
         <span style="color:red;" id="MotherNameB"></span>
         </div>
         </div>
@@ -136,12 +137,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="phone">MOBILE NUMBER: *</label>
-        <input class="form-control" value name="phone" id="phone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
+        <input class="form-control" name="phone" id="phone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
         <span style="color:red;" id="phone_error"></span>
         </div>
         <div class="col-md-6">
             <label for="Gphone">Gurdian MOBILE NUMBER: *</label>
-            <input class="form-control" value name="Gphone" id="Gphone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
+            <input class="form-control" name="Gphone" id="Gphone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
             <span style="color:red;" id="phone_error"></span>
             </div>
         </div>
@@ -149,7 +150,7 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="email">Email Address: *</label>
-        <input type="email" name="email" value class="form-control" id="email" placeholder="name@example.com">
+        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
         <span style="color:red;" id="email_error"></span>
         </div>
         <div class="col-md-6">
@@ -168,7 +169,7 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="religion">RELIGION:*</label>
-        <select name="religion" id="religion" value class="form-control">
+        <select name="religion" id="religion"class="form-control">
         <option disabled selected value>
         ---Select Religion---
         </option>
@@ -229,7 +230,7 @@
         <div class="row mb-3">
         <div class="col-12">
         <label for="present_address">Address: *</label>
-        <input class="form-control" value name="present_address" class="form-control" id="present_address" placeholder="Address" type="text" />
+        <input class="form-control"name="present_address" class="form-control" id="present_address" placeholder="Address" type="text" />
         <span style="color:red;" id="present_address_error"></span>
         </div>
         </div>
@@ -237,13 +238,13 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="present_city">City: *</label>
-        <input name="present_city" value class="form-control" id="present_city" placeholder="City" type="text" />
+        <input name="present_city"class="form-control" id="present_city" placeholder="City" type="text" />
         <span style="color:red;" id="present_city_error"></span>
         </div>
         <div class="col-md-6">
         <label for="present_postal_code">Postal Code:
         *</label>
-        <input class="form-control" value name="present_postal_code" id="present_postal_code" placeholder="Postal Code" type="number" maxlength="4" minlength="4" />
+        <input class="form-control" name="present_postal_code" id="present_postal_code" placeholder="Postal Code" type="number" maxlength="4" minlength="4" />
         <span style="color:red;" id="present_postal_code_error"></span>
         </div>
         </div>
@@ -251,7 +252,7 @@
         <div class="row mb-3">
         <div class="col-md-4">
         <label for="present_division">Division: *</label>
-        <select value class="form-control" name="present_division" id="present_division">
+        <select class="form-control" name="present_division" id="present_division">
         <option disabled selected value>Select Division </option>
         <option value="Barisal">Barisal</option>
         <option value="Chittagong">Chittagong</option>
@@ -273,7 +274,7 @@
         <div class="col-md-4">
         <label for="present_sub_district">Sub-District:
         </label>
-        <input type="text" class="form-control" name="present_sub_district" id="present_sub_district" value placeholder="Sub-District" />
+        <input type="text" class="form-control" name="present_sub_district" id="present_sub_district" placeholder="Sub-District" />
         <span style="color:red;" id="present_sub_district_error"></span>
         </div>
         </div>
@@ -311,7 +312,7 @@
         </div>
         <div class="col-md-6">
         <label for="institute_name">Institute/Borad: *</label>
-        <input name="institute_name" id="institute_name" id="institute_name" placeholder="Write Institute Name" value class="form-control" type="text" />
+        <input name="institute_name" id="institute_name" id="institute_name" placeholder="Write Institute Name" class="form-control" type="text" />
         <span style="color:red;" id="institute_name_error"></span>
         </div>
         </div>
@@ -319,12 +320,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label class="subject">Subject: *</label>
-        <input name="subject" class="form-control" id="subject" value placeholder="Subject" type="text" />
+        <input name="subject" class="form-control" id="subject"placeholder="Subject" type="text" />
         <span style="color:red;" id="subject_error"></span>
         </div>
         <div class="col-md-6">
         <label class="passing_year">Passing Year: *</label>
-        <input name="passing_year" value class="form-control" id="passing_year" placeholder="Year" minlength="4" type="number" />
+        <input name="passing_year" class="form-control" id="passing_year" placeholder="Year" minlength="4" type="number" />
         <span style="color:red;" id="passing_year_error"></span>
         </div>
         </div>

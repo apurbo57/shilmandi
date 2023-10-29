@@ -49,6 +49,6 @@ class siteController extends Controller
 
     public function enroll_course(Request $request)
     {
-        return 'ok';
+        return dd($request);
     }
 }

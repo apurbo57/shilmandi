@@ -6,7 +6,7 @@
     <h3>Subscribe to our Newsletter</h3>
     <h6>Do not miss any exciting offers by Shilmandi </h6>
     <form action="#" method="post" id="basic-form2" class="basic-form2">
-    <input type="hidden" name="_token" value="RJdnBUw4qYHMuuUvVEQfNWg9mbqNqzcriVFpHe5v"> <div class="g-recaptcha" data-sitekey="6LfuM44bAAAAALOjqfAtsvtLa2HHgZDhVZogGtLq" data-callback="onSubmit" data-size="invisible"></div>
+    <input type="hidden" name="_token" value="RJdnBUw4qYHMuuUvVEQfNWg9mbqNqzcriVFpHe5v"> 
     <input type="email" name="subscribe" placeholder="enter your e-mail address" required="">
     <button type="submit">subscribe</button>
     </form>
@@ -23,7 +23,7 @@
     <div class="col-xl-3 col-lg-3 col-md-6">
     <div class="single-widget">
     <div class="footer-logo">
-    <a href="#"><img src="{{ asset('images/logo.webp')}}" alt="logo" loading="lazy"></a>
+    <a href="#"><img src="{{ asset('images/logo.png')}}" alt="logo" loading="lazy"></a>
     </div>
     <p style="margin-left: 0px;">We are Shilmandi Youth Development Training Center. We provide training in IT sector. Our mission is to provide international standard training in Bangladesh's IT sector and thereby helping the society to build up a skilled workforce.</p>
     <br>

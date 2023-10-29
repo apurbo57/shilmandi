@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\course;
 use App\Models\slider;
 use Illuminate\Http\Request;
+use PDF;
 
 class siteController extends Controller
 {
@@ -49,6 +50,15 @@ class siteController extends Controller
 
     public function enroll_course(Request $request)
     {
-        return dd($request);
+        $pdf = PDF::loadView('frontend.components.apply-form');
+        // return $pdf->download('Shilmandi_Training_institiute_center_apply_form ');
+        $name = $request->name;
+        $id = 1;
+        return view('frontend.thank-you',compact('name','id'));
+    }
+
+    public function form_download()
+    {
+        return "test";
     }
 }

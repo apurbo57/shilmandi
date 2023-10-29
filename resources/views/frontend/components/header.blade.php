@@ -313,7 +313,7 @@
     <div class="row">
     <div class="col-xl-2 col-lg-2 col-md-2">
     <div class="logo">
-    <a href="https://www.pencilbox.edu.bd"><img src="{{ asset('images/logo.webp')}}" alt="logo" loading="lazy"></a>
+    <a href="{{route('home')}}"><img src="{{ asset('images/logo.png')}}" alt="logo" loading="lazy"></a>
     </div>
     </div>
     <div class="col-xl-9 col-lg-9 col-md-8 text-right">

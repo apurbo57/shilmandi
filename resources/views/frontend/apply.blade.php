@@ -1,6 +1,14 @@
 @extends('frontend.components.layouts')
 @section('content')
 <div class="container">
+        @if($errors->any())
+        @foreach($errors->all() as $error)
+        <div class="alert alert-danger fade in">
+            <a href="#" class="close" data-dismiss="alert">×</a>
+            <strong>{{ $error }}</strong>
+        </div>
+        @endforeach
+    @endif
         <div class="row">
         <style>
                 input[type=number]::-webkit-inner-spin-button,
@@ -76,7 +84,7 @@
             </style>
         <div class="col-12 m-auto m-2">
         <div class="card p-2">
-        <form id="stform" action="{{route('enroll_course')}}" method="post">
+        <form id="stform" action="{{route('enroll_course')}}" method="post" enctype="multipart/form-data">
             @csrf
         <div class="row">
         <div class="col-md-12">
@@ -98,12 +106,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="nameE">Name (English): *</label>
-        <input class="form-control" name="nameE" id="nameE" placeholder="Enter Your Full Name" type="Text" ">
+        <input class="form-control" name="nameE" id="nameE" placeholder="Enter Your Full Name" type="Text" required>
         <span style="color:red;" id="nameE"></span>
         </div>
         <div class="col-md-6">
         <label for="nameB">Name (Bangla): *</label>
-        <input type="text" name="nameB" class="form-control" id="nameB" placeholder="আপনার পুরো নাম লিখুন">
+        <input type="text" name="nameB" class="form-control" id="nameB" placeholder="আপনার পুরো নাম লিখুন" required>
         <span style="color:red;" id="nameB"></span>
         </div>
         </div>
@@ -111,12 +119,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="fatherNameE">Father Name (English): *</label>
-        <input class="form-control" name="fatherNameE" id="fatherNameE" placeholder="Enter Your Father Full Name" type="Text">
+        <input class="form-control" name="fatherNameE" id="fatherNameE" placeholder="Enter Your Father Full Name" type="Text" required>
         <span style="color:red;" id="fatherNameE"></span>
         </div>
         <div class="col-md-6">
         <label for="fatherNameB">Father Name (Bangla): *</label>
-        <input type="text" name="fatherNameB" class="form-control" id="fatherNameB" placeholder="আপনার বাবার পুরো নাম লিখুন">
+        <input type="text" name="fatherNameB" class="form-control" id="fatherNameB" placeholder="আপনার বাবার পুরো নাম লিখুন" required>
         <span style="color:red;" id="fatherNameB"></span>
         </div>
         </div>
@@ -124,12 +132,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="MotherNameE">Mother Name (English): *</label>
-        <input class="form-control" name="MotherNameE" id="MotherNameE" placeholder="Enter Your Mother Full Name" type="Text">
+        <input class="form-control" name="motherNameE" id="MotherNameE" placeholder="Enter Your Mother Full Name" type="Text" required>
         <span style="color:red;" id="MotherNameE"></span>
         </div>
         <div class="col-md-6">
         <label for="MotherNameB">Mother Name (Bangla): *</label>
-        <input type="text" name="MotherNameB" class="form-control" id="MotherNameB" placeholder="আপনার মায়ের পুরো নাম লিখুন">
+        <input type="text" name="motherNameB" class="form-control" id="MotherNameB" placeholder="আপনার মায়ের পুরো নাম লিখুন" required>
         <span style="color:red;" id="MotherNameB"></span>
         </div>
         </div>
@@ -137,12 +145,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="phone">MOBILE NUMBER: *</label>
-        <input class="form-control" name="phone" id="phone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
+        <input class="form-control" name="phone" required id="phone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
         <span style="color:red;" id="phone_error"></span>
         </div>
         <div class="col-md-6">
             <label for="Gphone">Gurdian MOBILE NUMBER: *</label>
-            <input class="form-control" name="Gphone" id="Gphone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
+            <input class="form-control" name="Gphone" required id="Gphone" placeholder="EX: 01xxxxxxxxx" type="number" minlength="11" maxlength="11" pattern="[0-9]{11}">
             <span style="color:red;" id="phone_error"></span>
             </div>
         </div>
@@ -150,12 +158,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="email">Email Address: *</label>
-        <input type="email" name="email" class="form-control" id="email" placeholder="name@example.com">
+        <input type="email" name="email" required class="form-control" id="email" placeholder="name@example.com">
         <span style="color:red;" id="email_error"></span>
         </div>
         <div class="col-md-6">
             <label for="shift">Shift: *</label>
-            <select name="shift" class="form-control" id="shift">
+            <select name="shift" required class="form-control" id="shift">
             <option disabled selected value>Select
             Shift
             </option>
@@ -169,7 +177,7 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="religion">RELIGION:*</label>
-        <select name="religion" id="religion"class="form-control">
+        <select name="religion" required id="religion"class="form-control">
         <option disabled selected value>
         ---Select Religion---
         </option>
@@ -184,7 +192,7 @@
         </div>
         <div class="col-md-6">
         <label for="gender">Gender: *</label>
-        <select name="gender" class="form-control" id="gender">
+        <select name="gender" required class="form-control" id="gender">
         <option disabled selected value>Select
         Gender
         </option>
@@ -199,12 +207,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="birthday">Date of Birth: *</label>
-        <input name="birthday" value class="form-control" id="birthday" placeholder="Date of Birth" type="date" />
+        <input name="birthday" required value class="form-control" id="birthday" placeholder="Date of Birth" type="date" />
         <span style="color:red;" id="birthday_error"></span>
         </div>
         <div class="col-md-6">
         <label for="national_id">National ID / Birth Cirtificate *</label>
-        <input value name="national_id" class="form-control" id="national_id" placeholder="National ID or Birth Cirtificate" type="number" />
+        <input value name="national_id" required class="form-control" id="national_id" placeholder="National ID or Birth Cirtificate" type="number" />
         <span style="color:red;" id="national_id_error"></span>
         </div>
         </div>
@@ -212,7 +220,7 @@
         <div class="row mb-3" style="margin-top:50px;">
         <div class="col-12">
         <label for="employment_status">Employment Status:*</label>
-        <select id="employment_status" onchange="if (!window.__cfRLUnblockHandlers) return false; employment_status_show()" class="form-control" name="employment_status" id="employment_status" data-cf-modified-109e00ff9346427207673ffd->
+        <select id="employment_status" required onchange="if (!window.__cfRLUnblockHandlers) return false; employment_status_show()" class="form-control" name="employment_status" id="employment_status" data-cf-modified-109e00ff9346427207673ffd->
         <option disabled selected value>Select Employment Status </option>
         <option value="Student">Student</option>
         <option value="Freelancer">Freelancer</option>
@@ -230,7 +238,7 @@
         <div class="row mb-3">
         <div class="col-12">
         <label for="present_address">Address: *</label>
-        <input class="form-control"name="present_address" class="form-control" id="present_address" placeholder="Address" type="text" />
+        <input class="form-control"name="present_address" required class="form-control" id="present_address" placeholder="Address" type="text" />
         <span style="color:red;" id="present_address_error"></span>
         </div>
         </div>
@@ -238,13 +246,13 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label for="present_city">City: *</label>
-        <input name="present_city"class="form-control" id="present_city" placeholder="City" type="text" />
+        <input name="present_city" required class="form-control" id="present_city" placeholder="City" type="text" />
         <span style="color:red;" id="present_city_error"></span>
         </div>
         <div class="col-md-6">
         <label for="present_postal_code">Postal Code:
         *</label>
-        <input class="form-control" name="present_postal_code" id="present_postal_code" placeholder="Postal Code" type="number" maxlength="4" minlength="4" />
+        <input class="form-control" name="present_postal_code" required id="present_postal_code" placeholder="Postal Code" type="number" maxlength="4" minlength="4" />
         <span style="color:red;" id="present_postal_code_error"></span>
         </div>
         </div>
@@ -252,7 +260,7 @@
         <div class="row mb-3">
         <div class="col-md-4">
         <label for="present_division">Division: *</label>
-        <select class="form-control" name="present_division" id="present_division">
+        <select class="form-control" required name="present_division" id="present_division">
         <option disabled selected value>Select Division </option>
         <option value="Barisal">Barisal</option>
         <option value="Chittagong">Chittagong</option>
@@ -268,13 +276,13 @@
         <div class="col-md-4">
         <label for="present_per_district">District:
         *</label>
-        <input type="text" id="present_per_district" value class="form-control" name="present_per_district" placeholder="District" />
+        <input type="text" id="present_per_district" required class="form-control" name="present_per_district" placeholder="District" />
         <span style="color:red;" id="present_per_district_error"></span>
         </div>
         <div class="col-md-4">
         <label for="present_sub_district">Sub-District:
         </label>
-        <input type="text" class="form-control" name="present_sub_district" id="present_sub_district" placeholder="Sub-District" />
+        <input type="text" class="form-control" required name="present_sub_district" id="present_sub_district" placeholder="Sub-District" />
         <span style="color:red;" id="present_sub_district_error"></span>
         </div>
         </div>
@@ -283,7 +291,7 @@
         <div class="col-md-6">
         <label for="lavel_of_education">Level of Education:
         *</label>
-        <select id="lavel_of_education" class="form-control" name="lavel_of_education">
+        <select id="lavel_of_education" class="form-control" required name="lavel_of_education">
         <option disabled selected value>Select
         Level of Education</option>
         <option value="SSC/Dakhil/Equivalent">
@@ -312,7 +320,7 @@
         </div>
         <div class="col-md-6">
         <label for="institute_name">Institute/Borad: *</label>
-        <input name="institute_name" id="institute_name" id="institute_name" placeholder="Write Institute Name" class="form-control" type="text" />
+        <input name="institute_name" required id="institute_name" placeholder="Write Institute Name" class="form-control" type="text" />
         <span style="color:red;" id="institute_name_error"></span>
         </div>
         </div>
@@ -320,12 +328,12 @@
         <div class="row mb-3">
         <div class="col-md-6">
         <label class="subject">Subject: *</label>
-        <input name="subject" class="form-control" id="subject"placeholder="Subject" type="text" />
+        <input name="subject" required class="form-control" id="subject"placeholder="Subject" type="text" />
         <span style="color:red;" id="subject_error"></span>
         </div>
         <div class="col-md-6">
         <label class="passing_year">Passing Year: *</label>
-        <input name="passing_year" class="form-control" id="passing_year" placeholder="Year" minlength="4" type="number" />
+        <input name="passing_year" required class="form-control" id="passing_year" placeholder="Year" minlength="4" type="number" />
         <span style="color:red;" id="passing_year_error"></span>
         </div>
         </div>
@@ -333,7 +341,7 @@
         <div class="row">
         <div class="col-md-6">
         <label for="photo"> Upload Your Photo: (Optional) </label>
-        <input class="form-control" name="photo" type="file" id="photo">
+        <input class="form-control" name="image" type="file" id="photo">
         <span style="color:red;" id="photo_error"></span>
         </div>
         </div>

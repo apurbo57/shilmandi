@@ -47,7 +47,7 @@
     </li>
     </li>
     </ul>
-    <a href="#" class="btn-primary p-1">See More</a>
+    <a href="{{route('notice')}}" class="btn-primary p-1">See More</a>
     </div>
     </div>
     </div>

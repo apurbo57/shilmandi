@@ -28,6 +28,11 @@ Route::get('/course/form-download/{key}', [siteController::class,'form_download'
 
 
 
+Route::get('lang/home', [siteController::class, 'index']);
+Route::get('lang/change', [siteController::class, 'change'])->name('changeLang');
+
+
+
 Route::get('/admin',[adminController::class,'index']);
 Route::post('/admin-dashboard',[adminController::class,'dashboard'])->name('admin-dashboard');
 Route::get('/dashboard',[adminController::class,'show_dash'])->name('dashboard');

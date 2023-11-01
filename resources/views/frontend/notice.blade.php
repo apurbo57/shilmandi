@@ -67,30 +67,30 @@ element.style {
     <main>
         <div class="main-contentxt-wrapper">
             <div class="notice-board-main-wrapper">
-				<h1>নোটিশ <span>বোর্ড</span></h1>
+				<h1>নোটিশ<span>বোর্ড</span></h1>
 				<!-- start notice board -->
 				<div class="notice-bord-table-wrapper">
 					<!-- notice header -->
 					<div class="notice-body notice-board-header">
 						<div class="notice-date-div">
-							তারিখ
+                            তারিখ
 						</div>
 						<div class="notice-title-div">
-							নোটিশ
+                            নোটিশ
 						</div>
 						<div class="notice-read-div">
-							লিঙ্ক
+                            লিঙ্ক
 						</div>
 					</div>
 					
-					        <!-- start notice body -->
+        <!-- start notice body -->
         <div class="notice-body">
             <div class="notice-date-div">
                 ২৪ সেপ্টেম্বর ২০২৩            </div>
             <div class="notice-title-div">
-                বৃহত্তর ছাত্র-ছাত্রীদের সহযোগিতা ও সহযোগিনী প্রশংসা সম্পর্কিত            </div>
+                বৃহত্তর ছাত্র-ছাত্রীদের সহযোগিতা ও সহযোগিনী প্রশংসা সম্পর্কিত          </div>
             <div class="notice-read-div">
-                <a href="#">বিজ্ঞপ্তিটি পড়ুন</a>
+                <a href="#">আরো পড়ুন</a>
             </div>
         </div>
         <!-- end notice body -->
@@ -101,7 +101,7 @@ element.style {
             <div class="notice-title-div">
                 শ্রদ্ধাশ্রদ্ধ ছাত্র-ছাত্রীদের জন্য নোটিশ            </div>
             <div class="notice-read-div">
-                <a href="#">বিজ্ঞপ্তিটি পড়ুন</a>
+                <a href="#">আরো পড়ুন</a>
             </div>
         </div>
         <!-- end notice body -->
@@ -112,7 +112,7 @@ element.style {
             <div class="notice-title-div">
                 নোটিশের প্রসঙ্গে            </div>
             <div class="notice-read-div">
-                <a href="#">বিজ্ঞপ্তিটি পড়ুন</a>
+                <a href="#">আরো পড়ুন</a>
             </div>
         </div>
         <!-- end notice body -->
@@ -123,7 +123,7 @@ element.style {
             <div class="notice-title-div">
                 ছাত্রীদের দ্বিতীয় সেমেস্টার পরীক্ষা            </div>
             <div class="notice-read-div">
-                <a href="#">বিজ্ঞপ্তিটি পড়ুন</a>
+                <a href="#">আরো পড়ুন</a>
             </div>
         </div>
         <!-- end notice body -->
@@ -140,4 +140,11 @@ element.style {
         </div>
     </main>
 </div>
+
+<script type="text/javascript">
+    var url = "{{ route('changeLang') }}";
+    $(".changeLang").change(function(){
+        window.location.href = url + "?lang="+ $(this).val();
+    });
+</script>
 @endsection

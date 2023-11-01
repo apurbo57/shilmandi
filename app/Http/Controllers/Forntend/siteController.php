@@ -7,6 +7,7 @@ use App\Models\course;
 use App\Models\gallery;
 use App\Models\slider;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 use PDF;
 
 class siteController extends Controller
@@ -43,6 +44,14 @@ class siteController extends Controller
     public function contact(){
         return view('frontend.contact');
     }
+
+    // public function change(Request $request)
+    // {
+    //     App::setLocale($request->lang);
+    //     session()->put('locale', $request->lang);
+  
+    //     return redirect()->back();
+    // }
 
 
 

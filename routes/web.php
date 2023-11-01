@@ -15,8 +15,8 @@ use Illuminate\Support\Facades\Route;
 //Fornten Rote//
 Route::get('/', [siteController::class,'index'])->name('home');
 Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
-Route::get('/notice', [siteController::class,'contact'])->name('notice');
-Route::get('/about-us', [siteController::class,'contact'])->name('about');
+Route::get('/notice', [siteController::class,'notice'])->name('notice');
+Route::get('/about-us', [siteController::class,'about_us'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 
 Route::get('/rpl', [siteController::class,'rpl'])->name('rpl');

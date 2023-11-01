@@ -32,6 +32,14 @@ class siteController extends Controller
         return view('frontend.gallery',compact('galleries'));
     }
 
+    public function notice(){
+        return view('frontend.notice');
+    }
+
+    public function about_us(){
+        return view('frontend.about-us');
+    }
+
     public function contact(){
         return view('frontend.contact');
     }

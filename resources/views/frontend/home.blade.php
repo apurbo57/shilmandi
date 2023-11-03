@@ -5,12 +5,85 @@
 <div class="home_bg_X" style="overflow: hidden; background: url(images/cover_image_for_homepage.webp); background-repeat: no-repeat; background-size: 100% auto; background-position: center; padding: 20px 0 80px 0; position: relative;">
     <div class="container">
         <div class="row">
-          <div class="col-md">
-            <div id="owl-demo" class="owl-carousel owl-theme">
+          <div class="col-md-8">
+            <div id="owl-demo" class="owl-carousel owl-theme ">
                 @foreach ($sliders as $slider)
-                <div class="item"><img src="{{ asset('uploads/slider/'. $slider->image) }}"  style="display: block; width: 100%; height: 350px;" alt="The Last of us"></div>
+                <div class="item"><img class="rounded" src="{{ asset('uploads/slider/'. $slider->image) }}"  style="display: block; width: 100%; height: 300px;" alt="The Last of us"></div>
                 @endforeach               
               </div>
+          </div>
+          <div class="col-md-4">
+              <style>
+                  .two-profile-wrapper {
+                        width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr;
+                        row-gap: 20px;
+                        box-sizing: border-box;
+                    }
+              .profile-wrapper {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 2.5fr;
+                    column-gap: 15px;
+                    align-items: center;
+                    background: #F5F4F4;
+                    overflow: hidden;
+                    border-radius: 14px;
+                    box-shadow: 1px 1px 7px -6px #000;
+                }
+                .profile-image {
+                    width: 100%;
+                    overflow: hidden;
+                }
+                .profile-image> img {
+                    width: 100%;
+                    margin-bottom: -11px;
+                }
+                .profile-details {
+                    width: 100%;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding: 7px;
+                }
+                span.designation {
+                    display: block;
+                    font-size: 22px;
+                    color: #FF5722;
+                    font-weight: bold;
+                }
+                span.profile-name {
+                    font-size: 16px;
+                }
+                span.read-profile-about> a {
+                    display: block;
+                    text-decoration: none;
+                    color: blue;
+                }
+              </style>
+            <div class="two-profile-wrapper">
+							
+                    <div class="profile-wrapper">
+                        <div class="profile-image">
+                        <img src="{{asset('images/kuddos.jpg')}}">
+                        </div>
+                        <div class="profile-details">
+                        <span class="designation">Chairman</span>
+                        <span class="profile-name">Abdul Kader</span>
+                        <span class="read-profile-about"><a href="#">Read More...</a></span>
+                        </div>
+                        </div>
+                             <div class="profile-wrapper">
+                            <div class="profile-image">
+                            <img src="{{asset('images/kader.jpg')}}">
+                            </div>
+                            <div class="profile-details">
+                            <span class="designation">Principle</span>
+                            <span class="profile-name">Kuddos Ahmed</span>
+                            <span class="read-profile-about"><a href="#">Read More...</a></span>
+                            </div>
+                            </div>
+                    </div>
           </div>
         </div>
       </div>

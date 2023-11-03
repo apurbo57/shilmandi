@@ -39,6 +39,10 @@ class siteController extends Controller
         return redirect()->back();
     }
 
+    public function download(){
+        return view('frontend.download');
+    }
+
     public function about_us(){
         return view('frontend.about-us');
     }

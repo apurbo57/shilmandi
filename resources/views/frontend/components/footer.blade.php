@@ -1,20 +1,4 @@
-<div class="subscribe-area section-padding" id="subscribes">
-    <div class="container">
-    <div class="row">
-    <div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-8 offset-md-2 col-12">
-    <div class="subscribe-content text-center">
-    <h3>Subscribe to our Newsletter</h3>
-    <h6>Do not miss any exciting offers by Shilmandi </h6>
-    <form action="#" method="post" id="basic-form2" class="basic-form2">
-    <input type="hidden" name="_token" value="RJdnBUw4qYHMuuUvVEQfNWg9mbqNqzcriVFpHe5v"> 
-    <input type="email" name="subscribe" placeholder="enter your e-mail address" required="">
-    <button type="submit">subscribe</button>
-    </form>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
+
     
     
     <div class="footer-area section-padding">

@@ -18,10 +18,10 @@
     <div class="col-xl-3 col-lg-3 col-md-3 d-flex justify-content-center text-right mobile-social1">
     <div class="header-social wow fadeInDown">
     <ul>
-    <li><a href="https://www.facebook.com/PencilBoxTraining" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-    <li><a href="https://www.instagram.com/pencilboxtraining" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.linkedin.com/company/pencilboxtraining" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-    <li><a href="https://www.youtube.com/channel/UCC6nCMUuzYlpJQNd87euwmw" target="_blank"><i class="fab fa-youtube"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
     </ul>
     </div>
     </div>
@@ -289,24 +289,6 @@
             font-family: 'seipFont';
             src: url('fonts/typewriter-serial-extrabold-regular.ttf')  format('truetype');
         }
-        .seip-pu {
-            background-color: #1DB78D;
-            padding: 0 3px 0 3px;
-            color: #fff;
-            font-weight: bold;
-            margin-right: -3.5px;
-            font-size: 17px;
-            font-family: seipFont;
-        }
-        .seip-bl {
-            background-color: #524FA1;
-            padding: 0 3px 0 3px;
-            color: #fff;
-            font-weight: bold;
-            margin-right: -3.5px;
-            font-size: 17px;
-            font-family: seipFont;
-        }
     </style>
     <div id="zIndexId" class="header-area header-sticky">
     <div class="container">
@@ -323,22 +305,19 @@
     <li><a class="{{ Request::routeIs('home') ? 'active' : '' }}" href="{{route('home')}}">Home</a></li>
     <li><a class="{{ Request::routeIs('courses') ? 'active' : '' }}" href="{{route('courses')}}">Courses</a></li>
     <li><a class="{{ Request::routeIs('rpl') ? 'active' : '' }}" href="{{route('rpl')}}">RPL</a></li>
-    
-    {{-- <li><a class="" href="https://www.pencilbox.edu.bd/seip">
-    <span class="seip-pu">S</span>
-    <span class="seip-bl">E</span>
-    <span class="seip-pu">I</span>
-    <span style="
-                                            background-color: #524FA1;
-                                            padding: 0 3px 0 3px;
-                                            color: #fff;
-                                            font-weight: bold;
-                                            font-size: 17px;
-                                            font-family: seipFont;
-    ">P</span>
-    </a></li> --}}
-    <li><a class="{{ Request::routeIs('gallery') ? 'active' : '' }}" href="{{route('gallery')}}">Gallery</a></li>
     <li><a class="{{ Request::routeIs('notice') ? 'active' : '' }}" href="{{route('notice')}}">Notice</a></li>
+    <li class="dropdown">
+        <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            Download
+            </a>
+        <ul class="dropdown-menu">
+            <li><a href="#">Regular</a></li>
+            <li><a href="#">RPL cer.</a></li>
+            <li><a href="#">Academic</a></li>
+
+        </ul>
+    </li>
+    <li><a class="{{ Request::routeIs('gallery') ? 'active' : '' }}" href="{{route('gallery')}}">Gallery</a></li>
     <li><a class="{{ Request::routeIs('about') ? 'active' : '' }}" href="{{route('about')}}">About Us</a></li>
     <li><a class="{{ Request::routeIs('contact') ? 'active' : '' }}" href="{{route('contact')}}">contact</a></li>
     </ul>
@@ -353,7 +332,17 @@
     </div>
     </div>
 
-
+<script>
+$(document).ready(function() {
+      $('.dropdown').hover(function() {
+        $(this).addClass('show');
+        $(this).find('.dropdown-menu').addClass('show');
+      }, function() {
+        $(this).removeClass('show');
+        $(this).find('.dropdown-menu').removeClass('show');
+      });
+});
+</script>
 
 
 

@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 //Forntend Route//
 Route::get('/', [siteController::class,'index'])->name('home');
+Route::get('/download', [siteController::class,'download'])->name('download');
 Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
 Route::get('/notice', [siteController::class,'notice'])->name('notice');
 Route::get('/single-notice/{id}', [siteController::class,'single_notice'])->name('single-notice');
@@ -36,13 +37,13 @@ Route::get('/course/form-download/{key}', [ForntendCourseController::class,'form
 // Route::get('lang/home', [siteController::class, 'index']);
 // Route::get('lang/change', [siteController::class, 'change'])->name('changeLang');
 
-
+// Route::middleware(['auth'])->group(function(){
 
 Route::get('/admin',[adminController::class,'index']);
+Route::get('/login',[adminController::class,'login'])->name('login');
 Route::post('/admin-dashboard',[adminController::class,'dashboard'])->name('admin-dashboard');
 Route::get('/dashboard',[adminController::class,'show_dash'])->name('dashboard');
 Route::get('/logout',[adminController::class,'logout'])->name('logout');
-
 
 // Backend Route
 // Notice route 
@@ -90,4 +91,4 @@ Route::prefix('admin')->name('admin.')->group(function () {
 });
 
 
-
+// });

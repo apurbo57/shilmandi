@@ -33,6 +33,7 @@
             </div>
         </div>
     @endforeach
+    {{ $galleries->links('pagination::bootstrap-4') }}
     </div>
     </div>
     </div>

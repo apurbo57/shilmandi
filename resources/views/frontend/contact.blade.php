@@ -64,8 +64,11 @@
 <div class="contact-form">
 <h3 class="text-center font-weight-bold">Send Us a Message</h3>
 <br>
-<form action="" method="post" id="basic-form6" class="basic-form2">
-<input type="hidden" name="_token" value="4X79KHp0By600fbUJ00NB4jp81u5k3Ls9fhftt9D"> <div class="g-recaptcha" data-sitekey="6LfuM44bAAAAALOjqfAtsvtLa2HHgZDhVZogGtLq" data-callback="onSubmit" data-size="invisible"></div>
+@if (Session('success'))
+    <h4 style="color:green;">Message Send Successfully</h4>
+@endif
+<form action="{{route('contact-form')}}" method="post" id="basic-form6" class="basic-form2">
+@csrf
 <div class="row">
 <div class="col-xl-6">
 <input type="text" name="first_name" placeholder="First name" required>

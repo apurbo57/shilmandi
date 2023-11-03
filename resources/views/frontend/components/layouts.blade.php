@@ -44,6 +44,8 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.min.css') }}" type="text/css">
     <link href="{{ asset('css/select2.min.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/thankyou.min.css') }}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
+
     <script src="{{ asset('js/api.js') }}" type="e464e61f0656f3579a4b2934-text/javascript"></script>
     <!-- Basic stylesheet -->
 <link rel="stylesheet" href="{{ asset('owl-carousel/owl.carousel.css') }}">
@@ -99,6 +101,7 @@
             font-family: 'pencilboxModalFont';
             src: url('fonts/Montserrat-Bold.ttf')  format('truetype');
         }
+
     
         .pencilbox-modal {
             width: 405px !important;

@@ -67,84 +67,41 @@ element.style {
     <main>
         <div class="main-contentxt-wrapper">
             <div class="notice-board-main-wrapper">
-				<h1>নোটিশ<span>বোর্ড</span></h1>
+				<h1>Notice<span>Board</span></h1>
 				<!-- start notice board -->
 				<div class="notice-bord-table-wrapper">
 					<!-- notice header -->
 					<div class="notice-body notice-board-header">
 						<div class="notice-date-div">
-                            তারিখ
+                            Date
 						</div>
 						<div class="notice-title-div">
-                            নোটিশ
+                            Notice
 						</div>
 						<div class="notice-read-div">
-                            লিঙ্ক
+                            Link
 						</div>
 					</div>
+                </div>
+            </div>
 					
         <!-- start notice body -->
+        @foreach ($data as $datas)
         <div class="notice-body">
-            <div class="notice-date-div">
-                ২৪ সেপ্টেম্বর ২০২৩            </div>
-            <div class="notice-title-div">
-                বৃহত্তর ছাত্র-ছাত্রীদের সহযোগিতা ও সহযোগিনী প্রশংসা সম্পর্কিত          </div>
+            <div class="notice-date-div">{{ $datas->created_at->format('d-m-Y') }} </div>
+            <div class="notice-title-div">{{ $datas->title }}</div>
             <div class="notice-read-div">
-                <a href="#">আরো পড়ুন</a>
+                <a href="{{route('single-notice',$datas->id)}}">Read More</a>
             </div>
         </div>
+        @endforeach
         <!-- end notice body -->
-        <!-- start notice body -->
-        <div class="notice-body">
-            <div class="notice-date-div">
-                ২৪ সেপ্টেম্বর ২০২৩            </div>
-            <div class="notice-title-div">
-                শ্রদ্ধাশ্রদ্ধ ছাত্র-ছাত্রীদের জন্য নোটিশ            </div>
-            <div class="notice-read-div">
-                <a href="#">আরো পড়ুন</a>
-            </div>
-        </div>
-        <!-- end notice body -->
-        <!-- start notice body -->
-        <div class="notice-body">
-            <div class="notice-date-div">
-                ২৪ সেপ্টেম্বর ২০২৩            </div>
-            <div class="notice-title-div">
-                নোটিশের প্রসঙ্গে            </div>
-            <div class="notice-read-div">
-                <a href="#">আরো পড়ুন</a>
-            </div>
-        </div>
-        <!-- end notice body -->
-        <!-- start notice body -->
-        <div class="notice-body">
-            <div class="notice-date-div">
-                ২৪ সেপ্টেম্বর ২০২৩            </div>
-            <div class="notice-title-div">
-                ছাত্রীদের দ্বিতীয় সেমেস্টার পরীক্ষা            </div>
-            <div class="notice-read-div">
-                <a href="#">আরো পড়ুন</a>
-            </div>
-        </div>
-        <!-- end notice body -->
-    <!-- Pagination -->
-    <div class="pagination">
-            </div>
-
-					
-				</div>
-				<!-- end notice board -->
-				
+            <!-- Pagination -->
+            <div class="pagination">
+                    <div class="align-center">{{ $data->links('pagination::bootstrap-4') }} </div>
 			</div>
 
         </div>
     </main>
 </div>
-
-<script type="text/javascript">
-    var url = "{{ route('changeLang') }}";
-    $(".changeLang").change(function(){
-        window.location.href = url + "?lang="+ $(this).val();
-    });
-</script>
 @endsection

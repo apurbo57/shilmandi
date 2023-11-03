@@ -34,6 +34,8 @@
 	<!--[if IE 9]>
 		<link id="ie9style" href="{{asset('backend/css/ie9.css')}}" rel="stylesheet">
 	<![endif]-->
+	<link href="https://fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
+
 		
 	<!-- start: Favicon -->
 	<link rel="shortcut icon" href="{{asset('backend/img/favicon.ico')}}">
@@ -45,6 +47,12 @@
 </head>
 
 <body>
+
+	<style>
+		body {
+            font-family: 'SiyamRupali', Arial, sans-serif !important;
+        }
+	</style>
 		<!-- start: Header -->
 	<div class="navbar">
 		<div class="navbar-inner">
@@ -339,16 +347,24 @@
                         <li><a href="{{ route('dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
                         
 						<li>
+							<a class="dropmenu" href="#"><i class="icon-pushpin"></i><span class="hidden-tablet"> Notice</span></a>
+							<ul>
+							<li><a class="submenu" href="{{route('admin.add-notice')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Notice</span></a></li>
+								<li><a class="submenu" href="{{route('admin.manage-notice')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Notice</span></a></li>
+							</ul>	
+                        </li>
+                        
+						<li>
 							<a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Slider</span></a>
 							<ul>
-							<li><a class="submenu" href="{{route('admin.add-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Slider</span></a></li>
+							<li><a class="submenu" href="{{route('admin.add-slider')}}"><i class="icon-camera"></i><span class="hidden-tablet"> Add Slider</span></a></li>
 								<li><a class="submenu" href="{{route('admin.manage-slider')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Sliders</span></a></li>
 							</ul>	
                         </li>
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a>
 							<ul>
-								<li><a class="submenu" href="{{route('admin.add-gallery')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Image</span></a></li>
+								<li><a class="submenu" href="{{route('admin.add-gallery')}}"><i class="icon-camera"></i><span class="hidden-tablet"> Add Image</span></a></li>
 								<li><a class="submenu" href="{{route('admin.manage-gallery')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Images</span></a></li>
 							</ul>	
                         </li>
@@ -359,7 +375,7 @@
 								<li><a class="submenu" href="{{route('admin.manage-course')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Courses</span></a></li>
 							</ul>	
 						</li>
-						<li><a href="#"><i class="icon-edit"></i><span class="hidden-tablet"> Manage Order</span></a></li>
+						<li><a href="{{route('admin.message')}}"><i class="icon-envelope"></i><span class="hidden-tablet">Message</span></a></li>
 						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
 						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>
 						<li><a href="icon.html"><i class="icon-star"></i><span class="hidden-tablet"> Icons</span></a></li>

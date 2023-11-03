@@ -5,6 +5,8 @@ use App\Http\Controllers\adminController;
 use App\Http\Controllers\Backend\courseController;
 use App\Http\Controllers\Backend\sliderController;
 use App\Http\Controllers\Backend\galleryController;
+use App\Http\Controllers\Backend\messageController;
+use App\Http\Controllers\Backend\noticeController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -12,12 +14,14 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-//Fornten Rote//
+//Forntend Rote//
 Route::get('/', [siteController::class,'index'])->name('home');
 Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
 Route::get('/notice', [siteController::class,'notice'])->name('notice');
+Route::get('/single-notice/{id}', [siteController::class,'single_notice'])->name('single-notice');
 Route::get('/about-us', [siteController::class,'about_us'])->name('about');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
+Route::post('/contact-form', [siteController::class,'contact_form'])->name('contact-form');
 
 Route::get('/rpl', [siteController::class,'rpl'])->name('rpl');
 Route::get('/courses', [siteController::class,'courses'])->name('courses');
@@ -41,6 +45,15 @@ Route::get('/logout',[adminController::class,'logout'])->name('logout');
 
 // Backend Route
 
+// Notice route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-notice', [noticeController::class,'create'])->name('add-notice');
+    Route::post('/save-notice', [noticeController::class,'store'])->name('save-notice');
+    Route::get('/manage-notice', [noticeController::class,'index'])->name('manage-notice');
+    Route::get('/edit-notice/{id}', [noticeController::class,'edit'])->name('edit-notice');
+    Route::put('/update-notice/{id}', [noticeController::class,'update'])->name('update-notice');
+    Route::delete('/delete-notice/{id}', [noticeController::class,'destroy'])->name('delete-notice');
+});
 // slider route 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/add-slider', [sliderController::class,'create'])->name('add-slider');
@@ -68,6 +81,12 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/edit-course/{id}', [courseController::class,'edit'])->name('edit-course');
     Route::put('/update-course/{id}', [courseController::class,'update'])->name('update-course');
     Route::delete('/delete-course/{id}', [courseController::class,'destroy'])->name('delete-course');
+});
+
+// Message route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/message', [messageController::class,'index'])->name('message');
+    Route::delete('/delete-message/{id}', [messageController::class,'destroy'])->name('delete-message');
 });
 
 

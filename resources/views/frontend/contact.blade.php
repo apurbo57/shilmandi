@@ -28,7 +28,7 @@
 </div>
 </div>
 </div>
-<p><strong class="text-secondary">Address:</strong>Near Nasringdi Polytechnic Institute, Police Lines, Narsingdi Sadar, Narsingdi.</p>
+<p><strong class="text-secondary">Address:</strong> Near Nasringdi Polytechnic Institute, Police Lines, Narsingdi Sadar, Narsingdi.</p>
 </div>
 </li>
 <li class="wow animated fadeInDown" data-wow-duration="2s">

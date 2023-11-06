@@ -47,6 +47,10 @@ class siteController extends Controller
         return view('frontend.about-us');
     }
 
+    public function single_teacher(){
+        return view('frontend.single_teacher');
+    }
+
     public function contact(){
         return view('frontend.contact');
     }

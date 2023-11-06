@@ -104,6 +104,14 @@
         
         });
         </script>
+        <div class="container ">
+                <div class="row">
+                    <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
+                    <strong><i class="fa fa-warning"></i> News!</strong> <marquee><p style="font-family: Impact, siyamrupali; font-size: 18pt; padding:5px;">Shilmandi Training Institiute Norshingdi শিলমান্দী যুব উন্নয়ন প্রশিক্ষন কেন্দ্র , নরসিংদি। সকল ধরনের কোর্স এখানে করানো হয়। Shilmandi Training Institiute Norshingdi</p></marquee>
+                    </div>
+                </div>
+            </div>
 </div>
 
 <div class="container" id="pencilbox_home_slider_down_counter">
@@ -152,7 +160,84 @@ Skilled Trainer
 </div>
 </div>
 
+{{-- client area --}}
+<style>
 
+#clients {
+    padding: 60px 0;
+    
+}
+#clients .clients-wrap {
+    border-top: 1px solid #d6eaff;
+    border-left: 1px solid #d6eaff;
+    margin-bottom: 30px;
+}
+
+#clients .client-logo {
+    padding: 64px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    border-right: 1px solid #d6eaff;
+    border-bottom: 1px solid #d6eaff;
+    overflow: hidden;
+    background: #fff;
+    height: 160px;
+}
+
+#clients img {
+    transition: all 0.4s ease-in-out;
+}
+
+</style>
+<section id="clients" class="section-bg">
+
+        <div class="container">
+  
+          <div class="section-header">
+            <h2>Our CLients</h2>
+          </div>
+  
+          <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+  
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt="">
+              </div>
+            </div>
+          
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt="">
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-4 col-xs-6">
+              <div class="client-logo">
+                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt="">
+              </div>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </section>
 
     {{-- courses  --}}
        
@@ -495,6 +580,9 @@ Skilled Trainer
     </style>
     <section class="all_courses_tab">
     <div class="container">
+            <div class="section-header">
+                    <h2>Courses</h2>
+                  </div>
     <div class="row justify-content-center">
     <div class="col-12 col-md-7">
     <div class="all_course_tab_content">

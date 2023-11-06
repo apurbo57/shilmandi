@@ -22,6 +22,7 @@ Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
 Route::get('/notice', [siteController::class,'notice'])->name('notice');
 Route::get('/single-notice/{id}', [siteController::class,'single_notice'])->name('single-notice');
 Route::get('/about-us', [siteController::class,'about_us'])->name('about');
+Route::get('/single-techer', [siteController::class,'single_teacher'])->name('single-teacher');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 Route::post('/contact-form', [siteController::class,'contact_form'])->name('contact-form');
 //Frontend Course Route//

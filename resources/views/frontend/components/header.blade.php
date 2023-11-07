@@ -3,7 +3,7 @@
     <div class="row">
         <div class="col-md-12 col-sm-12">
             <div class="top_img " style="width:100%; height:auto; margin:0 auto;">
-                    <img src="images/contact-bg.jpg" alt="" style="width:100%; height:150px;">
+                    <img src="{{asset('images/contact-bg.jpg')}}" alt="" style="width:100%; height:150px;">
             </div>
         </div>
     </div>

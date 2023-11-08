@@ -115,42 +115,42 @@
 </div>
 
 <div class="container" id="pencilbox_home_slider_down_counter">
-<div class="row text-center d_none_md" style="padding: 0 91px; margin-top: -88px;">
-<div class="col-3 per-call" style="transition: margin-top 1s;">
+<div class="row text-center " style="padding: 0 91px; margin-top: -50px;">
+<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s; margin-bottom: 10px;">
 <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
 <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
 
-<p class="per-count"><span class="count_homepage">213</span>+</p>
+<p class="per-count"><span class="count_homepage">{{$count->batches}}</span>+</p>
 </div>
 <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
 Batches
 </div>
 </div>
 </div>
-<div class="col-3 per-call" style="transition: margin-top 1s;">
+<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
 <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
 <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">2704</span>+</p>
+<p class="per-count"><span class="count_homepage">{{$count->student}}</span>+</p>
 </div>
-<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
+<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;margin-bottom: 10px;">
 Student
 </div>
 </div>
 </div>
-<div class="col-3 per-call" style="transition: margin-top 1s;">
+<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
 <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
 <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">1350</span>+</p>
+<p class="per-count"><span class="count_homepage">{{$count->jobplacement}}</span>+</p>
 </div>
 <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
 Job Placement
 </div>
 </div>
 </div>
-<div class="col-3 per-call" style="transition: margin-top 1s;">
+<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
 <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
 <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">31</span>+</p>
+<p class="per-count"><span class="count_homepage">{{$count->trainer}}</span>+</p>
 </div>
 <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
 Skilled Trainer

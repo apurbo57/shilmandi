@@ -25,8 +25,8 @@
         </div>
         <div class="box-content">
         <form class="form-horizontal" action="{{route('admin.update-slider',$data->id)}}" method="post" enctype="multipart/form-data">
-          @csrf;
-          @method('put');
+          @csrf
+          @method('put')
               <fieldset>
                 
                 <div class="control-group">

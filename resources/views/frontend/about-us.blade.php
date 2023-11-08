@@ -223,143 +223,35 @@ margin-bottom:10px;
                         </div>
                    
                    <div class="col-md-12">
-                        <div id="blogCarousel" class="carousel slide" data-ride="carousel">
-            
-                            <ol class="invisible carousel-indicators">
-                                <li data-target="#blogCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#blogCarousel" data-slide-to="1"></li>
-                            </ol>
             
                             <!-- Carousel items -->
                             <div class="carousel-inner">
             
                                 <div class="carousel-item active">
                                     <div class="row">
-            
+                                        @foreach ($data as $item)
                                         <div class="col-lg-3 col-md-6 col-sm-6">
                                             <div class="our-team">
                                                 <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
+                                                    <img src="{{asset('uploads/teacher/'. $item->image)}}">
                                                 </div>
                                                 <div class="team-content">
-                                                    <h3 class="title">Sophia Lee</h3>
-                                                    <span class="post">Customer Support</span>
+                                                    <h3 class="title">{{$item->name}}</h3>
+                                                    {{-- <span class="post">Customer Support</span> --}}
                                                 </div>
                                                 <ul class="social">
                                                     <li>
-                                                        <a href="{{route('single-teacher')}}" class="fa fa-user-circle"> See More</a>
+                                                        <a href="{{route('single-teacher',$item->id)}}" class="fa fa-user-circle"> See More</a>
                                                     </li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Sophia Lee</h3>
-                                                    <span class="post">Customer Support</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="{{route('single-teacher')}}" class="fa fa-user-circle"> See More</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Sophia Lee</h3>
-                                                    <span class="post">Customer Support</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="{{route('single-teacher')}}" class="fa fa-user-circle"> See More</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
+                                        @endforeach
                                     </div>
                                     <!--.row-->
                                 </div>
                                 <!--.item-->
-            
-                                <div class="carousel-item">
-                                    <div class="row">
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Ted Robbins</h3>
-                                                    <span class="post">Law Expert</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="#" class="fa fa-envelope"></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-            
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Noel Flantier</h3>
-                                                    <span class="post">Marketing Consultant</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="#" class="fa fa-envelope"></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Ernesto Appia</h3>
-                                                    <span class="post">Team Leader</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="#" class="fa fa-envelope"></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-            
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="https://i.ibb.co/L8Pj1mg/o6EuTCT6.jpg">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">Rosita Jimenez</h3>
-                                                    <span class="post">Marketing Consultant</span>
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="#" class="fa fa-envelope"></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--.row-->
-                                </div>
+                                
                                 <!--.item-->
             
                             </div>
@@ -368,21 +260,9 @@ margin-bottom:10px;
                         <!--.Carousel-->
             
                     </div>
-                </div>
+                    <div class="pagination">
+                            <div class="align-center">{{ $data->links('pagination::bootstrap-4') }} </div>
+                    </div>
             </div>
         <!-- End Our Team Section -->
-
-{{-- map  --}}
-<div class="contact-map-area">
-    <div class="container-fluid">
-    <div class="row">
-    <div class="col-xl-12 col-lg-12 padding-remove-map">
-    <div class="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.904481118056!2d90.39119511429693!3d23.750785394680015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bd549fb345%3A0x7742bff894bdacaf!2sPencilBox%20Training%20%26%20Consultancy!5e0!3m2!1sen!2sbd!4v1575785492401!5m2!1sen!2sbd" width="100%" height="460" frameborder="0" style="border:0;" allowfullscreen>
-                            </iframe>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
 @endsection

@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\Forntend\siteController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\Backend\CountDownController;
 use App\Http\Controllers\Backend\courseController;
 use App\Http\Controllers\Backend\sliderController;
 use App\Http\Controllers\Backend\galleryController;
 use App\Http\Controllers\Backend\messageController;
 use App\Http\Controllers\Backend\noticeController;
+use App\Http\Controllers\Backend\TeacherController;
 use App\Http\Controllers\Forntend\CourseController as ForntendCourseController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,7 +24,7 @@ Route::get('/gallery', [siteController::class,'gallery'])->name('gallery');
 Route::get('/notice', [siteController::class,'notice'])->name('notice');
 Route::get('/single-notice/{id}', [siteController::class,'single_notice'])->name('single-notice');
 Route::get('/about-us', [siteController::class,'about_us'])->name('about');
-Route::get('/single-techer', [siteController::class,'single_teacher'])->name('single-teacher');
+Route::get('/single-techer/{id}', [siteController::class,'single_teacher'])->name('single-teacher');
 Route::get('/contact-us', [siteController::class,'contact'])->name('contact');
 Route::post('/contact-form', [siteController::class,'contact_form'])->name('contact-form');
 //Frontend Course Route//
@@ -47,6 +49,11 @@ Route::get('/dashboard',[adminController::class,'show_dash'])->name('dashboard')
 Route::get('/logout',[adminController::class,'logout'])->name('logout');
 
 // Backend Route
+// Count Down route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-countdown', [CountDownController::class,'index'])->name('add-countdown');
+    Route::put('/update-countdown/{id}', [CountDownController::class,'update'])->name('update-countdown');
+});
 // Notice route 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/add-notice', [noticeController::class,'create'])->name('add-notice');
@@ -83,6 +90,16 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/edit-course/{id}', [courseController::class,'edit'])->name('edit-course');
     Route::put('/update-course/{id}', [courseController::class,'update'])->name('update-course');
     Route::delete('/delete-course/{id}', [courseController::class,'destroy'])->name('delete-course');
+});
+
+// Teacher route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-teacher', [TeacherController::class,'create'])->name('add-teacher');
+    Route::post('/save-teacher', [TeacherController::class,'store'])->name('save-teacher');
+    Route::get('/manage-teacher', [TeacherController::class,'index'])->name('manage-teacher');
+    Route::get('/edit-teacher/{id}', [TeacherController::class,'edit'])->name('edit-teacher');
+    Route::put('/update-teacher/{id}', [TeacherController::class,'update'])->name('update-teacher');
+    Route::delete('/delete-teacher/{id}', [TeacherController::class,'destroy'])->name('delete-teacher');
 });
 
 // Message route 

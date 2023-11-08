@@ -25,8 +25,8 @@
         </div>
         <div class="box-content">
         <form class="form-horizontal" action="{{route('admin.update-notice',$data->id)}}" method="post">
-          @csrf;
-          @method('put');
+          @csrf
+          @method('put')
               <fieldset>
                   <div class="control-group">
                       <label class="control-label" for="typeahead">Title</label>

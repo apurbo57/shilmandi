@@ -4,10 +4,12 @@ namespace App\Http\Controllers\Forntend;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactUs;
+use App\Models\Countdown;
 use App\Models\course;
 use App\Models\gallery;
 use App\Models\notice;
 use App\Models\slider;
+use App\Models\teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -17,7 +19,8 @@ class siteController extends Controller
     public function index(){
         $sliders = slider::all();
         $courses = course::latest()->get();
-        return view('frontend.home',compact('sliders','courses'));
+        $count = Countdown::find(1);
+        return view('frontend.home',compact('sliders','courses','count'));
     }
 
     public function gallery(){
@@ -44,11 +47,17 @@ class siteController extends Controller
     }
 
     public function about_us(){
-        return view('frontend.about-us');
+        $data = teacher::paginate(8);
+        return view('frontend.about-us',compact('data'));
     }
 
-    public function single_teacher(){
-        return view('frontend.single_teacher');
+    public function single_teacher(string $id){
+        $notices = notice::latest()->take(5)->get();
+        $teacher = teacher::find($id);
+        if ($teacher) {
+            return view('frontend.single_teacher',compact('teacher','notices'));
+        }
+        return redirect()->back();
     }
 
     public function contact(){

@@ -25,7 +25,7 @@
         </div>
         <div class="box-content">
         <form class="form-horizontal" action="{{route('admin.update-course',$course->id)}}" method="post" enctype="multipart/form-data">
-          @csrf;
+          @csrf
           @method('put')
               <fieldset>
                 <div class="control-group">

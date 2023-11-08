@@ -344,7 +344,8 @@
 			<div id="sidebar-left" class="span2">
 				<div class="nav-collapse sidebar-nav">
 					<ul class="nav nav-tabs nav-stacked main-menu">
-                        <li><a href="{{ route('dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
+						<li><a href="{{ route('dashboard')}}"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+						<li><a href="{{route('admin.add-countdown')}}"><i class="icon-refresh"></i><span class="hidden-tablet">Count Down</span></a></li>	
                         
 						<li>
 							<a class="dropmenu" href="#"><i class="icon-pushpin"></i><span class="hidden-tablet"> Notice</span></a>
@@ -373,6 +374,13 @@
 							<ul>
 								<li><a class="submenu" href="{{route('admin.add-course')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> Add Course</span></a></li>
 								<li><a class="submenu" href="{{route('admin.manage-course')}}"><i class="icon-file-alt"></i><span class="hidden-tablet"> All Courses</span></a></li>
+							</ul>	
+						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-user"></i><span class="hidden-tablet"> Teacher</span></a>
+							<ul>
+								<li><a class="submenu" href="{{route('admin.add-teacher')}}"><i class="icon-user"></i><span class="hidden-tablet"> Add Teacher</span></a></li>
+								<li><a class="submenu" href="{{route('admin.manage-teacher')}}"><i class="icon-user"></i><span class="hidden-tablet"> All Teacher</span></a></li>
 							</ul>	
 						</li>
 						<li><a href="{{route('admin.message')}}"><i class="icon-envelope"></i><span class="hidden-tablet">Message</span></a></li>

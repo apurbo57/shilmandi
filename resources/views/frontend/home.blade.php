@@ -1,20 +1,41 @@
 @extends('frontend.components.layouts')
 @section('content')
+<style>
+    .item{
+        position: relative;
+    }
+    .owl-carousel .caption{
+        background-color: #ffffffa3;
+        position: absolute;
+        margin: -90px 0 0 0;
+        padding: 5px;
+        width: 100%;
+        height: 100px;
+        display: inline-block;
+        overflow: hidden;
+        line-height: 1em;
+        }
+</style>
 
-
-<div class="home_bg_X" style="overflow: hidden; background: url(images/cover_image_for_homepage.webp); background-repeat: no-repeat; background-size: 100% auto; background-position: center; padding: 20px 0 80px 0; position: relative;">
     <div class="container">
         <div class="row">
           <div class="col-md-8">
             <div id="owl-demo" class="owl-carousel owl-theme ">
                 @foreach ($sliders as $slider)
-                <div class="item"><img class="rounded" src="{{ asset('uploads/slider/'. $slider->image) }}"  style="display: block; width: 100%; height: 300px;" alt="The Last of us"></div>
-                @endforeach               
+                <div class="item"><img class="rounded" src="{{ asset('uploads/slider/'. $slider->image) }}"  style="display: block; width: 100%; height: 350px;" alt="The Last of us">
+                    <div class="caption">
+                            <h5>{{$slider->title}}</h5>
+                            <p>@php
+                                echo html_entity_decode($slider->description);
+                            @endphp</p>    
+                        </div>
+                </div>
+                @endforeach            
               </div>
           </div>
           <div class="col-md-4">
               <style>
-                  .two-profile-wrapper {
+                  /* .two-profile-wrapper {
                         width: 100%;
                         display: grid;
                         grid-template-columns: 1fr;
@@ -59,9 +80,89 @@
                     display: block;
                     text-decoration: none;
                     color: blue;
+                } */
+
+
+                .profile-wrapper {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 2.5fr;
+                    column-gap: 15px;
+                    align-items: center;
+                    background: #F5F4F4;
+                    overflow: hidden;
+                    border-radius: 14px;
+                    box-shadow: 1px 1px 7px -6px #000;
+                }
+
+                .inner-profile {
+                    width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 2.5fr;
+                    column-gap: 15px;
+                    padding: 25px 10px 10px 40px;
+                }
+
+                .profile-image {
+                    width: 100px;
+                    height: 100px;
+                    overflow: hidden;
+                    box-shadow: -6px -10px 0px 0px rgba(208,2,27,1),
+                                -7px -10px 0px 0px rgba(208,2,27,1),
+                                -8px -10px 0px 0px rgba(208,2,27,1),
+                                -9px -10px 0px 0px rgba(208,2,27,1),
+                                -10px -10px 0px 0px rgba(208,2,27,1);
+                }
+
+                .profile-image> img {
+                    width: 100%;
+                    margin-bottom: -11px;
+                }
+
+                .profile-details {
+                    width: 250px;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding: 7px;
+                }
+                span.designation {
+                    display: block;
+                    font-size: 22px;
+                    color: #FF5722;
+                    font-weight: bold;
+                }
+                span.profile-name {
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: #000;
+                }
+                span.read-profile-about> p {
+                    display: block;
+                    font-size: 12px;
+                    line-height: 1;
                 }
               </style>
-            <div class="two-profile-wrapper">
+                <div class="profile-wrapper">
+                    <div class="inner-profile">
+                        <div class="profile-image">
+                            <img src="{{asset('images/kuddos.jpg')}}">
+                            </div>
+                            <div class="profile-details">
+                            <span class="designation">Chairman</span>
+                            <span class="profile-name">Abdul Kader</span>
+                            <span class="read-profile-about"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p></span>
+                            </div>
+                                <div class="profile-image">
+                                <img src="{{asset('images/kader.jpg')}}">
+                                </div>
+                                <div class="profile-details">
+                                <span class="designation">Principle</span>
+                                <span class="profile-name">Kuddos Ahmed</span>
+                                <span class="read-profile-about"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p></span>
+                            </div>
+                    </div>
+                    </div>
+            {{-- <div class="two-profile-wrapper">
 							
                     <div class="profile-wrapper">
                         <div class="profile-image">
@@ -83,7 +184,7 @@
                             <span class="read-profile-about"><a href="#">Read More...</a></span>
                             </div>
                             </div>
-                    </div>
+                    </div> --}}
           </div>
         </div>
       </div>
@@ -104,140 +205,60 @@
         
         });
         </script>
-        <div class="container ">
+        <div class="container mb-5">
                 <div class="row">
-                    <div class="alert alert-danger alert-dismissible" role="alert">
+                    <div class="alert alert-info alert-dismissible" role="alert">
                     <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
                     <strong><i class="fa fa-warning"></i> News!</strong> <marquee><p style="font-family: Impact, siyamrupali; font-size: 18pt; padding:5px;">Shilmandi Training Institiute Norshingdi শিলমান্দী যুব উন্নয়ন প্রশিক্ষন কেন্দ্র , নরসিংদি। সকল ধরনের কোর্স এখানে করানো হয়। Shilmandi Training Institiute Norshingdi</p></marquee>
                     </div>
                 </div>
             </div>
-</div>
 
 <div class="container" id="pencilbox_home_slider_down_counter">
-<div class="row text-center " style="padding: 0 91px; margin-top: -50px;">
-<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s; margin-bottom: 10px;">
-<div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
-<div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
+    <div class="row text-center " style="padding: 0 91px; margin-top: -50px;">
+    <div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s; margin-bottom: 10px;">
+    <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
+    <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
 
-<p class="per-count"><span class="count_homepage">{{$count->batches}}</span>+</p>
-</div>
-<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
-Batches
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
-<div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
-<div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">{{$count->student}}</span>+</p>
-</div>
-<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;margin-bottom: 10px;">
-Student
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
-<div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
-<div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">{{$count->jobplacement}}</span>+</p>
-</div>
-<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
-Job Placement
-</div>
-</div>
-</div>
-<div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
-<div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
-<div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
-<p class="per-count"><span class="count_homepage">{{$count->trainer}}</span>+</p>
-</div>
-<div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
-Skilled Trainer
-</div>
-</div>
-</div>
-</div>
-</div>
-
-{{-- client area --}}
-<style>
-
-#clients {
-    padding: 60px 0;
-    
-}
-#clients .clients-wrap {
-    border-top: 1px solid #d6eaff;
-    border-left: 1px solid #d6eaff;
-    margin-bottom: 30px;
-}
-
-#clients .client-logo {
-    padding: 64px;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -webkit-justify-content: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
-    align-items: center;
-    border-right: 1px solid #d6eaff;
-    border-bottom: 1px solid #d6eaff;
-    overflow: hidden;
-    background: #fff;
-    height: 160px;
-}
-
-#clients img {
-    transition: all 0.4s ease-in-out;
-}
-
-</style>
-<section id="clients" class="section-bg">
-
-        <div class="container">
-  
-          <div class="section-header">
-            <h2>Our CLients</h2>
-          </div>
-  
-          <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-  
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt="">
-              </div>
+    <p class="per-count"><span class="count_homepage">{{$count->batches}}</span>+</p>
+    </div>
+    <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
+    Batches
+    </div>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
+    <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
+    <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
+    <p class="per-count"><span class="count_homepage">{{$count->student}}</span>+</p>
+    </div>
+    <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;margin-bottom: 10px;">
+    Student
+    </div>
+    </div>
+    </div>
+    <div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
+    <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
+    <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
+    <p class="per-count"><span class="count_homepage">{{$count->jobplacement}}</span>+</p>
+    </div>
+    <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
+    Job Placement
+    </div>
+    </div>
+    </div>
+        <div class="col-xl-3 col-lg-3 col-md-12 per-call" style="transition: margin-top 1s;margin-bottom: 10px;">
+            <div class="card per-card" style="background: #F5F4F4; height: 120px; border-radius: 10px; box-shadow: 0px 3px 6px #888888;">
+            <div class="card-header" style="background: none; border: 0; padding-bottom: 0; padding-top: 15px;">
+            <p class="per-count"><span class="count_homepage">{{$count->trainer}}</span>+</p>
             </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt="">
-              </div>
+            <div class="card-body" style="padding: 0 25px; font-weight: bold; font-size: 20px;">
+            Skilled Trainer
             </div>
-          
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt="">
-              </div>
             </div>
-            
-            <div class="col-lg-3 col-md-4 col-xs-6">
-              <div class="client-logo">
-                <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt="">
-              </div>
-            </div>
-  
-          </div>
-  
         </div>
-  
-      </section>
+    </div>
+</div>
 
     {{-- courses  --}}
        
@@ -651,7 +672,7 @@ Skilled Trainer
             <li>
             <i class="fas fa-user"></i>
             <span>Trainer Name :</span>
-            <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+            <a href="#">A.H.M Mohsin</a>
             </li>
             <li>
             <i class="fas fa-stopwatch"></i>
@@ -736,7 +757,7 @@ Skilled Trainer
                 <li>
                 <i class="fas fa-user"></i>
                 <span>Trainer Name :</span>
-                <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+                <a href="#">A.H.M Mohsin</a>
                 </li>
                 <li>
                 <i class="fas fa-stopwatch"></i>
@@ -962,6 +983,87 @@ Skilled Trainer
     </div>
     </div>
     </div>
-    </section>
+    </section> 
+    {{-- course section end --}}
+
+    
+{{-- client area --}}
+<style>
+
+    #clients {
+        padding: 60px 0;
+        
+    }
+    #clients .clients-wrap {
+        border-top: 1px solid #d6eaff;
+        border-left: 1px solid #d6eaff;
+        margin-bottom: 30px;
+    }
+    
+    #clients .client-logo {
+        padding: 64px;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        border-right: 1px solid #d6eaff;
+        border-bottom: 1px solid #d6eaff;
+        overflow: hidden;
+        background: #fff;
+        height: 160px;
+    }
+    
+    #clients img {
+        transition: all 0.4s ease-in-out;
+    }
+    
+    </style>
+    <section id="clients" class="section-bg">
+    
+            <div class="container">
+      
+              <div class="section-header">
+                <h2>MoU Signed Companies</h2>
+              </div>
+      
+              <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
+      
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+              
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                  <div class="client-logo">
+                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt="">
+                  </div>
+                </div>
+      
+              </div>
+      
+            </div>
+      
+          </section>
 
 @endsection

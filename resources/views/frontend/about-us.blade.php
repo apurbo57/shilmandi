@@ -1,6 +1,6 @@
 @extends('frontend.components.layouts')
 @section('content')
-<h1 class="d-none">contact</h1>
+{{-- <h1 class="d-none">contact</h1>
 <h3 class="d-none">Shilmandi Youth Development Training Center</h3>
 <div class="contact-area-bradcome">
 <div class="container">
@@ -12,257 +12,181 @@
 </div>
 </div>
 </div>
-</div>
+</div> --}}
 
 
-<div class="blog-list-area section-padding">
+<div class="blog-list-area">
     <div class="container">
     <div class="row">
-    <div class="col-xl-8 col-lg-8 col-md-12">
+        <div class="section-header">
+            <h2>Our Institute Campus</h2>
+        </div>
+    <div class="col-xl-7 col-lg-7 col-md-12">
     <div class="about-content single-sidebar">
-    <h4>What we are?</h4>
     <img src="images/about-us.jpg" alt="about-us -image">
-    <p>SYDTC Training Institute. We are helping people to develop their skills over the last 5 years. We know every skill is learnable and we make it easy for our students. Our main objective is to help our students in a platform where excellence and skills are the key points. We help with all our experiences &amp; learning strategies, which help to develop today's young talents.<br>Providing international standard training in Bangladesh and helping society to build up a skilled workforce. We encourage them to build themselves as self-reliant. Eventually, the culture is important for us and it forms our foundation.So make a wise choice and get to the future with our institution and have a hands-on learning experience today! </p>
     </div>
     </div>
-    <div class="col-xl-4 col-lg-4 col-md-12">
-    <div class="blog-right ">
-    <div class="widget widget-thumb single-sidebar blog-single">
-    <h3>Latest Notice</h3>
-    <ul class="thumb_post">
-    <li>
-    <img src="images/64d1e6ef03e2c-2023-Aug-Tue-06-55-43.For%20web.webp" alt="Full Stack Flutter: Building Dynamic Apps &amp; Games with Firebase, Spring Boot and Flame Engine">
-    <h4><a href="https://www.pencilbox.edu.bd/training/309/full-stack-flutter-building-dynamic-apps-games-with-firebase-spring-boot-and-flame-engine">Full Stack Flutter: Building Dynamic Apps &amp; Games with Firebase, Spring Boot and Flame Engine Batch No : 1</a></h4>
-    <p class="post-date">15 Nov, 2023</p>
-    </li>
-    <li>
-    <img src="images/650969040a5d3-2023-Sep-Tue-09-25-24.Digital-Marketing.webp" alt="Digital Marketing for Freelancing- Level 4 (NSDA)">
-    <h4><a href="https://www.pencilbox.edu.bd/training/320/digital-marketing-for-freelancing-level-4-nsda">Digital Marketing for Freelancing- Level 4 (NSDA) Batch No : 2</a></h4>
-    <p class="post-date">21 Nov, 2023</p>
-    </li>
-    <li>
-    <img src="images/6533c7d6604ee-2023-Oct-Sat-12-45-10.Computer%20Operation.webp" alt="Computer Operation- Level 03 (NSDA)">
-    <h4><a href="https://www.pencilbox.edu.bd/training/324/computer-operation-level-03-nsda">Computer Operation- Level 03 (NSDA) Batch No : 16</a></h4>
-    <p class="post-date">21 Nov, 2023</p>
-    </li>
-    </li>
-    </ul>
-    <a href="{{route('notice')}}" class="btn-primary p-1">See More</a>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    </div>
-    
-    
-        <!-- ======= Our Team Section ======= -->
-        <style>
-/* PROFIL */
-.blog .carousel-indicators {
-	left: 0;
-	top: auto;
-    bottom: -40px;
+      <div class="col-xl-5 col-lg-5 col-md-12">
+        <div class="blog-right ">
+          <div class="widget widget-thumb single-sidebar blog-single">
+            <p>SYDTC Training Institute. We are helping people to develop their skills over the last 5 years. We know every skill is learnable and we make it easy for our students. Our main objective is to help our students in a platform where excellence and skills are the key points. We help with all our experiences &amp; learning strategies, which help to develop today's young talents.<br>Providing international standard training in Bangladesh and helping society to build up a skilled workforce. We encourage them to build themselves as self-reliant. Eventually, the culture is important for us and it forms our foundation.So make a wise choice and get to the future with our institution and have a hands-on learning experience today! </p>
+            <p>SYDTC Training Institute. We are helping people to develop their skills over the last 5 years. We know every skill is learnable and we make it easy for our students. Our main objective is to help our students in a platform where excellence and skills are the key points. We help with all our experiences &amp; learning strategies, which help to develop today's young talents.<br>Providing international standard training in Bangladesh and helping society to build up a skilled workforce. We encourage them to build themselves as self-reliant. Eventually, the culture is important for us and it forms our foundation.So make a wise choice and get to the future with our institution and have a hands-on learning experience today! </p>
 
-}
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+    <style>
+      .profile-wrapper {
+                    width: 100%;
+                    column-gap: 15px;
+                    display: block;
+                    align-items: center;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    width: 100%;
+                }
 
-/* The colour of the indicators */
-.blog .carousel-indicators li {
-    background: #a3a3a3;
-    border-radius: 50%;
-    width: 8px;
-    height: 8px;
-    margin-bottom:10px;
-    
-}
+                .inner-profile {
+                    width: 100%;
+                    column-gap: 15px;
+                    padding: 25px 10px 10px 40px;
+                    position: relative;
+                    text-align: center;
+                }
 
-.blog .carousel-indicators .active {
-background: #707070;
-margin-bottom:10px;
-}
+                .profile-image {
+                    width: 135px;
+                    height: 150px;
+                    margin: 0 auto;
+                    overflow: hidden;
+                    box-shadow: -6px -10px 0px 0px rgba(208,2,27,1),
+                                -7px -10px 0px 0px rgba(208,2,27,1),
+                                -8px -10px 0px 0px rgba(208,2,27,1),
+                                -9px -10px 0px 0px rgba(208,2,27,1),
+                                -10px -10px 0px 0px rgba(208,2,27,1);
+                }
 
-.our-team-section {
-  position: relative;
-  padding-top: 40px;
-  padding-bottom: 40px;
-}
-.our-team-section:before {
-  position: absolute;
-  top: -0;
-  left: 0;
-  content: " ";
-  background: url(img/service-section-bottom.png);
-  background-size: 100% 100px;
-  width: 100%;
-  height: 100px;
-  float: left;
-  z-index: 99;
-}
-.our-team {
-  padding: 0 0 40px;
-  background: #f9f9f9;
-  text-align: center;
-  overflow: hidden;
-  position: relative;
-  border-bottom: 5px solid #00325a;
-}
-.our-team:hover {
-  border-bottom: 5px solid #2f2f2f;
-}
+                .profile-image> img {
+                    width: 100%;
+                    margin-bottom: -11px;
+                }
 
-.our-team .pic {
-  display: inline-block;
-  width: 130px;
-  height: 130px;
-  margin-bottom: 50px;
-  z-index: 1;
-  position: relative;
-}
-.our-team .pic:before {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #00325a;
-  position: absolute;
-  bottom: 135%;
-  right: 0;
-  left: 0;
-  opacity: 1;
-  transform: scale(3);
-  transition: all 0.3s linear 0s;
-}
-.our-team:hover .pic:before {
-  height: 100%;
-  background: #2f2f2f;
-}
-.our-team .pic:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  background: #ffffff00;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  transition: all 0.3s linear 0s;
-}
-.our-team:hover .pic:after {
-  background: #145889;
-}
-.our-team .pic img {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  transform: scale(1);
-  transition: all 0.9s ease 0s;
-  box-shadow: 0 0 0 14px #f7f5ec;
-  transform: scale(0.7);
-  position: relative;
-  z-index: 2;
-}
-.our-team:hover .pic img {
-  box-shadow: 0 0 0 14px #f7f5ec;
-  transform: scale(0.7);
-}
-.our-team .team-content {
-  margin-bottom: 30px;
-}
-.our-team .title {
-  font-size: 22px;
-  font-weight: 700;
-  color: #4e5052;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin-bottom: 5px;
-}
-.our-team .post {
-  display: block;
-  font-size: 15px;
-  color: #4e5052;
-  text-transform: capitalize;
-}
-.our-team .social {
-  width: 100%;
-  padding-top: 10px;
-  margin: 0;
-  background: #2f2f2f;
-  position: absolute;
-  bottom: -100px;
-  left: 0;
-  transition: all 0.5s ease 0s;
-}
-.our-team:hover .social {
-  bottom: 0;
-}
-.our-team .social li {
-  display: inline-block;
-}
-.our-team .social li a {
-  display: block;
-  padding-top: 6px;
-  font-size: 15px;
-  color: #fff;
-  transition: all 0.3s ease 0s;
-}
-.our-team .social li a:hover {
-  color: #145889;
-  background: #f7f5ec;
-}
-@media only screen and (max-width: 990px) {
-  .our-team {
-    margin-bottom: 10px;
-  }
-}
-        </style>
-        <div class="container">
-                <div class="row blog">
-                        <div class="section-header">
-                            <h2>Our Team</h2>
+                .profile-details {
+                    width: 100%;
+                    overflow: hidden;
+                    box-sizing: border-box;
+                    padding: 7px;
+                    margin: 0 auto;
+                }
+                span.profile-name {
+                    display: block;
+                    font-size: 18px;
+                    color: #FF5722;
+                    font-weight: bold;
+                }
+                span.designation {
+                    font-size: 14px;
+                    font-weight: bold;
+                    color: #000;
+                }
+    </style>
+    <div class="container">
+        <div class="section-header">
+            <h2>Board of Director</h2>
+        </div>
+        <div class="row blog">
+            @foreach ($data as $item)
+            @if ($item->designation == 'Chairman')
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="profile-wrapper">
+                    <div class="inner-profile">
+                        <div class="profile-image">
+                            <img src="{{asset('uploads/teacher/'. $item->image)}}">
                         </div>
-                   
-                   <div class="col-md-12">
-            
-                            <!-- Carousel items -->
-                            <div class="carousel-inner">
-            
-                                <div class="carousel-item active">
-                                    <div class="row">
-                                        @foreach ($data as $item)
-                                        <div class="col-lg-3 col-md-6 col-sm-6">
-                                            <div class="our-team">
-                                                <div class="pic">
-                                                    <img src="{{asset('uploads/teacher/'. $item->image)}}">
-                                                </div>
-                                                <div class="team-content">
-                                                    <h3 class="title">{{$item->name}}</h3>
-                                                    {{-- <span class="post">Customer Support</span> --}}
-                                                </div>
-                                                <ul class="social">
-                                                    <li>
-                                                        <a href="{{route('single-teacher',$item->id)}}" class="fa fa-user-circle"> See More</a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        @endforeach
-                                    </div>
-                                    <!--.row-->
-                                </div>
-                                <!--.item-->
-                                
-                                <!--.item-->
-            
-                            </div>
-                            <!--.carousel-inner-->
+                          <div class="profile-details">
+                            <span class="profile-name">{{$item->name}}</span>
+                            <span class="designation">Chairman</span>
+                          </div>
+                    </div>
+                </div>
+             </div>
+            @endif
+           @endforeach
+        </div>
+        <div class="row blog">
+            @foreach ($data as $item)
+            @if ($item->designation == 'Director'||$item->designation == 'Director (Admin)'||$item->designation == 'Director (Training)'||$item->designation == 'Director (Finance)')
+            <div class="col-xl-4 col-lg-4 col-md-12">
+                <div class="profile-wrapper">
+                    <div class="inner-profile">
+                        <div class="profile-image">
+                            <img src="{{asset('uploads/teacher/'. $item->image)}}">
                         </div>
-                        <!--.Carousel-->
+                          <div class="profile-details">
+                            <span class="profile-name">{{$item->name}}</span>
+                            <span class="designation">{{$item->designation}}</span>
+                          </div>
+                    </div>
+                </div>
+             </div>
+            @endif
+           @endforeach
+         </div>
+    </div>
+
+    {{-- instructo pannel --}}
+    <div class="container">
+        <div class="section-header">
+            <h2>Instructor's Pannel</h2>
+        </div>
+        <div class="row blog">
+            @foreach ($data as $item)
+            @if ($item->designation == 'Principal')
+            <div class="col-xl-12 col-lg-12 col-md-12">
+                <div class="profile-wrapper">
+                    <div class="inner-profile">
+                        <div class="profile-image">
+                            <img src="{{asset('uploads/teacher/'. $item->image)}}">
+                        </div>
+                          <div class="profile-details">
+                            <span class="profile-name">{{$item->name}}</span>
+                            <span class="designation">Principle</span>
+                          </div>
+                    </div>
+                </div>
+             </div>
+            @endif
+           @endforeach
+        </div>
+        <div class="row blog">
+            @foreach ($data as $item)
+            @if ($item->designation == 'Chairman'||$item->designation == 'Principal'||$item->designation == 'Director'||$item->designation == 'Director (Admin)'||$item->designation == 'Director (Training)'||$item->designation == 'Director (Finance)')
             
-                    </div>
-                    <div class="pagination">
-                            <div class="align-center">{{ $data->links('pagination::bootstrap-4') }} </div>
-                    </div>
-            </div>
-        <!-- End Our Team Section -->
+            @else
+            <div class="col-xl-3 col-lg-3 col-md-12">
+              <div class="profile-wrapper float-right">
+                <a href="{{route('single-teacher',$item->id)}}">
+                  <div class="inner-profile">
+                      <div class="profile-image">
+                          <img src="{{asset('uploads/teacher/'. $item->image)}}">
+                      </div>
+                        <div class="profile-details">
+                          <span class="profile-name">{{$item->name}}</span>
+                          <span class="designation">{{$item->designation}}</span>
+                        </div>
+                     </div>
+                   </a>
+                 </div>
+           </div>
+            @endif
+            @endforeach
+         </div>
+         <div class="pagination">
+            <div class="align-center">{{ $data->links('pagination::bootstrap-4') }} </div>
+    </div>
+    </div>
+
 @endsection

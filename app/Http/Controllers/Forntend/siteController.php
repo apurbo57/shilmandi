@@ -18,9 +18,11 @@ class siteController extends Controller
 {
     public function index(){
         $sliders = slider::all();
+        $chairman = teacher::where('designation', '=', 'Chairman')->get();
+        $principal = teacher::where('designation', '=', 'Principal')->get();
         $courses = course::latest()->get();
         $count = Countdown::find(1);
-        return view('frontend.home',compact('sliders','courses','count'));
+        return view('frontend.home',compact('sliders','courses','count','chairman','principal'));
     }
 
     public function gallery(){
@@ -47,7 +49,7 @@ class siteController extends Controller
     }
 
     public function about_us(){
-        $data = teacher::paginate(8);
+        $data = teacher::paginate(20);
         return view('frontend.about-us',compact('data'));
     }
 

@@ -33,6 +33,18 @@
                     <input type="text" class="span6 typeahead" name="course_name" value="{{Request::old('course_name')}}" id="typeahead" >
                   </div>
                 </div>
+                <div class="control-group">
+                    <label class="control-label" for="typeahead">Trainer Name</label>
+                    <div class="controls">
+                      <select class="form_control" name="teacher_id" id="">
+                          <option value="#">Select Your Trainer</option>
+                          @foreach ($teachers as $teacher)
+                            <option value="{{ $teacher->id }}">{{ $teacher->name }} , {{ $teacher->designation }}</option>
+                          @endforeach
+                          
+                      </select> 
+                    </div>
+                </div> 
                 <div class="control-group hidden-phone">
                   <label class="control-label" for="textarea2">Course Description</label>
                   <div class="controls">

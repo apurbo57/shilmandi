@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Forntend;
 use App\Http\Controllers\Controller;
 use App\Models\course;
 use Illuminate\Http\Request;
-use PDF;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\teacher;
 
 class CourseController extends Controller
 {
@@ -29,7 +30,7 @@ class CourseController extends Controller
      */
     public function show(string $id)
     {
-        $course = course::find($id);
+        $course = course::with('teacher')->find($id);
         if ($course) {
             return view('frontend.single-course',compact('course'));
         }
@@ -115,6 +116,36 @@ class CourseController extends Controller
     {
         $pdf = PDF::loadView('frontend.components.apply-form');
         return $pdf->download('Shilmandi_Training_institiute_center_apply_form ');
-        // return $pdf->stream();
+    }
+    /**
+     * PDF Generate.
+     */
+    public function generate_pdf()
+    {   
+        $data = 'Anowar Hossain Apurbo';
+        $pdf  = Pdf::loadView( 'frontend.components.certificate' )
+            ->setPaper( 'a4', 'landscape' )
+            ->setOption( ['dpi' => 350, 'defaultFont' => 'sans-serif'] );
+
+        return $pdf->stream( 'generate-invoice.pdf' );
+    }
+    /**
+     * PDF Download.
+     */
+    public function download_pdf()
+    {   
+        // $pdf = app('dompdf.wrapper');
+        // $contxt = stream_context_create([
+        //     'ssl' => [
+        //         'verify_peer' => FALSE,
+        //         'verify_peer_name' => FALSE,
+        //         'allow_self_signed' => TRUE,
+        //     ]
+        // ]);
+        // $pdf = PDF::setOptions(['isHTML5ParserEnabled' => true, 'isRemoteEnabled' => true]);
+        // $pdf->getDomPDF()->setHttpContext($contxt);
+        // $pdf->loadView('frontend.components.certificate');
+        // return $pdf->download('certificate_download ');
+        return view('frontend.components.certificate');
     }
 }

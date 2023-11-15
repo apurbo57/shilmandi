@@ -33,6 +33,7 @@ class TeacherController extends Controller
     {
         $request->validate([
             'name' => 'required',
+            'designation' => 'required',
             'description' => 'required',
             'phone' => 'required|max:11',
             'email' => 'required',
@@ -50,6 +51,7 @@ class TeacherController extends Controller
 
             $course = new teacher();
             $course->name = $request->name;
+            $course->designation = $request->designation;
             $course->description = $request->description;
             $course->phone = $request->phone;
             $course->email = $request->email;
@@ -90,6 +92,7 @@ class TeacherController extends Controller
         if ($request->course_image) {
             $request->validate([
                 'name' => 'required',
+                'designation' => 'required',
                 'description' => 'required',
                 'phone' => 'required|max:11',
                 'email' => 'required',
@@ -109,6 +112,7 @@ class TeacherController extends Controller
                 $course = teacher::find($id);
                 unlink(public_path('uploads/teacher/') . $course->image);
                 $course->name = $request->name;
+                $course->designation = $request->designation;
                 $course->description = $request->description;
                 $course->phone = $request->phone;
                 $course->email = $request->email;
@@ -123,6 +127,7 @@ class TeacherController extends Controller
             }
             $request->validate([
                 'name' => 'required',
+                'designation' => 'required',
                 'description' => 'required',
                 'phone' => 'required|max:11',
                 'email' => 'required',
@@ -131,6 +136,7 @@ class TeacherController extends Controller
     
                 $course = teacher::find($id);
                 $course->name = $request->name;
+                $course->designation = $request->designation;
                 $course->description = $request->description;
                 $course->phone = $request->phone;
                 $course->email = $request->email;

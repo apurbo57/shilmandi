@@ -34,6 +34,12 @@
                   </div>
                 </div>
                 <div class="control-group">
+                  <label class="control-label" for="typeahead">Designation</label>
+                  <div class="controls">
+                    <input type="text" class="span6 typeahead" name="designation" value="{{Request::old('designation')}}" id="typeahead" >
+                  </div>
+                </div>
+                <div class="control-group">
                   <label class="control-label" for="typeahead">Phone</label>
                   <div class="controls">
                     <input type="number" class="span6 typeahead" name="phone" value="{{Request::old('phone')}}" id="typeahead" >

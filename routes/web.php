@@ -34,6 +34,8 @@ Route::get('/single-course/{id}', [ForntendCourseController::class,'show'])->nam
 Route::get('/course/apply-course/{id}', [ForntendCourseController::class,'apply_course'])->name('apply_course');
 Route::post('/course/enroll-this-course', [ForntendCourseController::class,'enroll_course'])->name('enroll_course');
 Route::get('/course/form-download/{key}', [ForntendCourseController::class,'form_download'])->name('form-download');
+Route::get('/generate-pdf', [ForntendCourseController::class,'generate_pdf'])->name('generate-pdf');
+Route::get('/download-pdf', [ForntendCourseController::class,'download_pdf'])->name('download-pdf');
 
 
 

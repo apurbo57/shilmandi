@@ -35,6 +35,12 @@
                   </div>
                 </div>
                 <div class="control-group">
+                  <label class="control-label" for="typeahead">Designation</label>
+                  <div class="controls">
+                    <input type="text" class="span6 typeahead" name="designation" value="{{$teacher->designation}}" id="typeahead" >
+                  </div>
+                </div>
+                <div class="control-group">
                         <label class="control-label" for="typeahead">Phone</label>
                         <div class="controls">
                           <input type="number" class="span6 typeahead" name="phone" value="{{$teacher->phone}}" id="typeahead" >

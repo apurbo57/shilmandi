@@ -12,10 +12,10 @@
     <p style="margin-left: 0px;">We are Shilmandi Youth Development Training Center. We provide training in IT sector. Our mission is to provide international standard training in Bangladesh's IT sector and thereby helping the society to build up a skilled workforce.</p>
     <br>
     <div class="footer-social">
-    <a href="https://www.facebook.com/PencilBoxTraining" target="_blank"><i class="fab fa-facebook-f"></i></a>
-    <a href="https://www.instagram.com/pencilboxtraining" target="_blank"><i class="fab fa-instagram"></i></a>
-    <a href="https://www.linkedin.com/in/pencilboxtraining/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-    <a href="https://www.youtube.com/channel/UCC6nCMUuzYlpJQNd87euwmw" target="_blank"><i class="fab fa-youtube"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
     </div>
     </div>
     </div>
@@ -26,14 +26,11 @@
     <ul>
     <li><a href="{{route('courses')}}">Course</a></li>
     <li><a href="{{route('about')}}">Workshop</a></li>
-    <li><a href="#">Event</a></li>
     <li><a href="#">Industrial Attachment</a></li>
     <li><a href="{{route('about')}}">About Us</a></li>
     <li><a href="#">Our Vision &amp; Mission</a></li>
-    <li><a href="#">Trainer</a></li>
-    <li><a href="#">Image Album</a></li>
-    <li><a href="#">Career</a></li>
-    <li><a href="#">FAQ</a></li>
+    <li><a href="{{route('about')}}">Trainer</a></li>
+    <li><a href="{{route('gallery')}}">Image Album</a></li>
     <li><a href="#">Privacy &amp; Policy</a></li>
     <li><a href="#">Terms &amp; Conditions</a></li>
     </ul>
@@ -89,11 +86,17 @@
     <div class="copyright-area" style="padding: 6px 0 !important;">
     <div class="container">
     <div class="row">
-    <div class="col-xl-6 offset-xl-3" style="box-sizing:content-box">
-    <div class="copyright-content" >
-    <p>Copyright {{ date('Y') }} © <a href="https://ssti.edu.bd" target="_blank"> Shilmandi Youth Development Training Center.</a> All Rights Reserved. </p>
+    <div class="col-lg-10 col-xl-8 col-md-12" style="box-sizing:content-box; margin:0 auto;">
+    <div class="copyright-content " >
+    <p>Copyright {{ date('Y') }} © <a href="https://ssti.edu.bd" target="_blank"> Shilmandi Youth Development Training Center Narsingdi.</a> All Rights Reserved. </p>
+    <p>is registered as a Skills Training Provider under section 16 (1) of NSDA Act, 2018. Certificate No: STP-NAR-000223</p>
     </div>
     </div>
+    <div class="col-lg-2 col-xl-3 col-md-12" style="box-sizing:content-box;margin: 10px auto;">
+        <div class="copyright-content " >
+        <p>Developed By: <a href="https://ssti.edu.bd" target="_blank">Anowar Hossain Apurbo</a></p>
+        </div>
+        </div>
     </div>
     </div>
     </div>

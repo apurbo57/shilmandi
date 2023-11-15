@@ -22,7 +22,7 @@ element.style {
 }
 .notice-body.notice-board-header {
     border-bottom: 0px;
-    background: linear-gradient(40deg, #FF5722, #FF9800, #FF5722);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(24,211,250,1) 100%);
     color: #fff;
 }
 .notice-body {

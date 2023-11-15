@@ -14,13 +14,12 @@
     
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PencilBox Training Institute provide training in IT sector. Their Our mission is to provide international standard training in Bangladesh's IT sector.">
-    <meta name="keywords" content="Pencilbox, Training, Institute, IT, Bangladesh Training, Web Development, Graphics Design, International Training, Pencilbox Training Institute, ASP.Net, PHP, Laravel, Full-Free Women Course">
-    <meta name="csrf-token" content="RJdnBUw4qYHMuuUvVEQfNWg9mbqNqzcriVFpHe5v">
+    <meta name="description" content="Shilmandi Youth Development Training Institute provide training in IT sector. Their Our mission is to provide international standard training in Bangladesh's IT sector.">
+    <meta name="keywords" content="shilmandi, Training, Institute, IT, Bangladesh Training, Web Development, Graphics Design, International Training, Pencilbox Training Institute, ASP.Net, PHP, Laravel, Full-Free Women Course">
     <title>    Shilmandi Youth Development Training Center
     </title>
     <link rel="manifest" href="site.webmanifest">
-    <link rel="shortcut icon" type="image/x-icon" href="images/pencilbox-06b.png">
+    <link rel="shortcut icon" type="image/x-icon" href="{{asset('images/sttilogo.png')}}">
     
     
     

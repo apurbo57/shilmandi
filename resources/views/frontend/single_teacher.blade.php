@@ -10,7 +10,7 @@
           <p>@php echo html_entity_decode($teacher->description) @endphp</p>
           
           <a href="#" class=""><i class="fa fa-phone"></i>(+880) {{$teacher->phone}}</a>
-          <a href="#" class=""><i class="fa fa-envelope"></i> {{$teacher->name}}</a>
+          <a href="#" class=""><i class="fa fa-envelope"></i> {{$teacher->email}}</a>
         </div>
       </div>
           <div class="col-xl-4 col-lg-4 col-md-12">

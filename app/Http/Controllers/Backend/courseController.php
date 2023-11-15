@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\course;
+use App\Models\teacher;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -23,7 +24,8 @@ class courseController extends Controller
      */
     public function create()
     {
-        return view('admin.course_add');
+        $teachers = teacher::orderBy('id','DESC')->get();
+        return view('admin.course_add',compact('teachers'));
     }
 
     /**
@@ -33,6 +35,7 @@ class courseController extends Controller
     {
         $request->validate([
             'course_name' => 'required',
+            'teacher_id' => 'required',
             'course_description' => 'required',
             'course_price' => 'required',
             'reg_date' => 'required',
@@ -53,6 +56,7 @@ class courseController extends Controller
 
             $course = new course();
             $course->course_name = $request->course_name;
+            $course->teacher_id = $request->teacher_id;
             $course->course_description = $request->course_description;
             $course->course_price = $request->course_price;
             $course->reg_date = $request->reg_date;
@@ -86,7 +90,8 @@ class courseController extends Controller
     public function edit(string $id)
     {
         $course = course::find($id);
-        return view('admin.course_edit',compact('course'));
+        $teachers = teacher::orderBy('id','DESC')->get();
+        return view('admin.course_edit',compact('course','teachers'));
     }
 
     /**
@@ -97,6 +102,7 @@ class courseController extends Controller
         if ($request->course_image) {
         $request->validate([
             'course_name' => 'required',
+            'teacher_id' => 'required',
             'course_description' => 'required',
             'course_price' => 'required',
             'reg_date' => 'required',
@@ -119,6 +125,7 @@ class courseController extends Controller
             $course = course::find($id);
             unlink(public_path('uploads/course/') . $course->image);
             $course->course_name = $request->course_name;
+            $course->teacher_id = $request->teacher_id;
             $course->course_description = $request->course_description;
             $course->course_price = $request->course_price;
             $course->reg_date = $request->reg_date;
@@ -137,6 +144,7 @@ class courseController extends Controller
         }
         $request->validate([
             'course_name' => 'required',
+            'teacher_id' => 'required',
             'course_description' => 'required',
             'course_price' => 'required',
             'reg_date' => 'required',
@@ -148,6 +156,7 @@ class courseController extends Controller
 
             $course = course::find($id);
             $course->course_name = $request->course_name;
+            $course->teacher_id = $request->teacher_id;
             $course->course_description = $request->course_description;
             $course->course_price = $request->course_price;
             $course->reg_date = $request->reg_date;

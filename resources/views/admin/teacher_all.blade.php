@@ -25,6 +25,7 @@
                   <tr>
                       <th>Serial No</th>
                       <th>Teacher Name</th>
+                      <th>Designation</th>
                       <th>Phone</th>
                       <th>E-mail</th>
                       <th>Image</th>
@@ -38,6 +39,7 @@
                 <tr>
                     <td>{{ $i }}</td>
                     <td class="center">{{ $datas->name }}</td>
+                    <td class="center">{{ $datas->designation }}</td>
                     <td class="center">{{ $datas->phone }}</td>
                     <td class="center">{{ $datas->email }}</td>
                     <td>

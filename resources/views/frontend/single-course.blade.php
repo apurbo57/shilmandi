@@ -191,25 +191,19 @@
         <div class="col-xl-4 col-lg-4 col-md-12" id="mobile-fixed">
         <div class="sidebar-details"></div>
         <div class="pricing-details form-sticky" style="background: none" id="myHeader">
-        {{-- <div class="trainer-border text-center d-none" style="margin-bottom: 20px; padding: 5px;">
+        <div class="trainer-border text-center " style="margin-bottom: 20px; padding: 5px;">
         <div class="row">
         <div class="col-xl-12 col-lg-12 col-md-12">
         <div class="trainer-image text-center">
-        <img src="../public/trainer-images/171735082_2936766366646315_1672536929393607466_n.webp" style="width: 150px; height: 150px;" alt="Mir Rashedul Islam" loading="lazy">
-        <div style="color: #000; margin-bottom: -12px; margin-top: 10px;">Trainer</div>
-        <a href="../trainer-details/19/mir-rashedul-islam.html">
-        <h3>Mir Rashedul Islam</h3>
+        <img src="{{ asset('uploads/teacher/'. $course->teacher->image) }}" style="width: 150px; height: 150px;" alt="{{ $course->teacher->name }}" loading="lazy">
+        <div style="color: #000; margin-bottom: -12px; margin-top: 10px;">{{ $course->teacher->designation }}</div>
+        <a href="{{route('single-teacher',$course->teacher->id)}}" target="_blank">
+        <h3>{{ $course->teacher->name }}</h3>
         </a>
         </div>
-        <div class="trainer-social d-flex justify-content-center" style="margin-top: 10px;">
-        <abbr title="facebook"><a href="https://www.facebook.com/RashedulIslam" target="_blank"><i class="fab fa-facebook-f"></i></a></abbr>
-        <abbr title="twitter"><a href="https://www.twitter.com/RashedICT" target="_blank"><i class="fab fa-twitter"></i></a></abbr>
-        <abbr title="linkedin"><a href="https://www.linkedin.com/in/rashedict" target="_blank"><i class="fab fa-linkedin-in"></i></a></abbr>
-        <abbr title="E-mail"><a href="../cdn-cgi/l/email-protection.html#4f262129200f3d2e3c272a2b262c3b612c2022" target="_blank"><i class="fas fa-envelope"></i></a></abbr>
         </div>
         </div>
         </div>
-        </div> --}}
         <div style="background: #E6E6E6">
         <div class="price">
         <h6 class>
@@ -243,6 +237,28 @@
         </div>
         </div>
         </div>
+
+        {{-- teacher image --}}
+        {{-- <div style="background: #E6E6E6">
+        <div class="price">
+        
+        <div class="pricing-contact" style="background: #E6E6E6;padding-top:10px">
+        <a href="{{route('apply_course',$course->id)}}" style="color: white; text-decoration: none;">
+            
+        </a>
+        
+        <div class="single-widget">
+                <img style="width:250px" src="{{ asset('uploads/teacher/'. $course->teacher->image) }}" alt="Trainer Image">
+                <h4 >
+                    {{ $course->teacher->name }}
+                </h4>
+                <h5>
+                    {{ $course->teacher->designation }}
+                 </h5>
+        </div>
+        </div>
+        </div>
+        </div> --}}
 
         </div>
         </div>

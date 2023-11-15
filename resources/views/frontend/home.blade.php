@@ -140,26 +140,35 @@
                     display: block;
                     font-size: 12px;
                     line-height: 1;
+                    width: 65%;
                 }
               </style>
                 <div class="profile-wrapper">
                     <div class="inner-profile">
+                        @foreach ($chairman as $item)
                         <div class="profile-image">
-                            <img src="{{asset('images/kuddos.jpg')}}">
-                            </div>
-                            <div class="profile-details">
-                            <span class="designation">Chairman</span>
-                            <span class="profile-name">Abdul Kader</span>
-                            <span class="read-profile-about"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p></span>
-                            </div>
-                                <div class="profile-image">
-                                <img src="{{asset('images/kader.jpg')}}">
+                                <img src="{{ asset('uploads/teacher/'. $item->image) }}">
                                 </div>
                                 <div class="profile-details">
-                                <span class="designation">Principle</span>
-                                <span class="profile-name">Kuddos Ahmed</span>
-                                <span class="read-profile-about"><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it</p></span>
-                            </div>
+                                <span class="designation">Chairman</span>
+                                <span class="profile-name">{{$item->name}}</span>
+                                <span class="read-profile-about"><p>{!! substr(html_entity_decode($item->description), 0, 150) !!} <a href="{{route('single-teacher',$item->id)}}" style="color:blue">Read more...</a></p></span>
+                                </div>
+                        @endforeach
+                        @foreach ($principal as $item)
+                        <div class="profile-image">
+                                <img src="{{ asset('uploads/teacher/'. $item->image) }}">
+                                </div>
+                                <div class="profile-details">
+                                <span class="designation">Principal</span>
+                                <span class="profile-name">{{$item->name}}</span>
+                                {{-- @php
+                                        $s = html_entity_decode($item->description);
+                                        // $sub = substr($s, 0, 150);
+                                        @endphp --}}
+                                <span class="read-profile-about"><p>{!! substr(html_entity_decode($item->description), 0, 150) !!} <a href="{{route('single-teacher',$item->id)}}" style="color:blue">Read more...</a></p></span>
+                                </div>
+                        @endforeach
                     </div>
                     </div>
             {{-- <div class="two-profile-wrapper">
@@ -1038,25 +1047,13 @@
       
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
-                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460149/abof.png" class="img-fluid" alt="">
+                    <img src="{{asset('uploads/mou/mou1.png')}}" class="img-fluid" alt="">
                   </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
-                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460224/cropped-cropped-20170720-lucuLogo-squ2-e1500543540803.png" class="img-fluid" alt="">
-                  </div>
-                </div>
-              
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460269/104840a62d46c05d285762857fecb61a.png" class="img-fluid" alt="">
-                  </div>
-                </div>
-                
-                <div class="col-lg-3 col-md-4 col-xs-6">
-                  <div class="client-logo">
-                    <img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1559460358/client-4.png" class="img-fluid" alt="">
+                    <img src="{{asset('uploads/mou/mou2.png')}}" class="img-fluid" alt="">
                   </div>
                 </div>
       

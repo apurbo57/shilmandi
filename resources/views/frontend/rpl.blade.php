@@ -381,7 +381,7 @@
                 <div class="date_time d-flex justify-content-between">
                 <span>Start Date:
                     {{$course->ass_date}}</span>
-                <span>Duration: 40hours</span>
+                <span>Duration: 30hours</span>
                 <span class="course_info_hover">
                 <i class="fa fa-info-circle"></i>
                 <div class="course_info">
@@ -391,7 +391,7 @@
                 <li>
                 <i class="fas fa-user"></i>
                 <span>Trainer Name :</span>
-                <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+                <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                 </li>
                 <li>
                 <i class="fas fa-stopwatch"></i>
@@ -404,19 +404,6 @@
                 <li>
                 <i class="far fa-clock"></i>
                 <span>Registration Deadline :</span> {{$course->reg_date}}
-                </li>
-                <li>
-                <i class="fas fa-calendar-check"></i>
-                <span>Class Schedule :</span>
-                </li>
-                <li>
-                <div>Sat (07:30 PM-09:30 PM)</div>
-                </li>
-                <li>
-                <div>Mon (07:30 PM-09:30 PM)</div>
-                </li>
-                <li>
-                <div>Wed (07:30 PM-09:30 PM)</div>
                 </li>
                 </ul>
                 </div>
@@ -465,7 +452,7 @@
                     <div class="date_time d-flex justify-content-between">
                     <span>Start Date:
                         {{$course->ass_date}}</span>
-                    <span>Duration: 40hours</span>
+                    <span>Duration: 30hours</span>
                     <span class="course_info_hover">
                     <i class="fa fa-info-circle"></i>
                     <div class="course_info">
@@ -475,7 +462,7 @@
                     <li>
                     <i class="fas fa-user"></i>
                     <span>Trainer Name :</span>
-                    <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+                    <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                     </li>
                     <li>
                     <i class="fas fa-stopwatch"></i>
@@ -488,19 +475,6 @@
                     <li>
                     <i class="far fa-clock"></i>
                     <span>Registration Deadline :</span> {{$course->reg_date}}
-                    </li>
-                    <li>
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Class Schedule :</span>
-                    </li>
-                    <li>
-                    <div>Sat (07:30 PM-09:30 PM)</div>
-                    </li>
-                    <li>
-                    <div>Mon (07:30 PM-09:30 PM)</div>
-                    </li>
-                    <li>
-                    <div>Wed (07:30 PM-09:30 PM)</div>
                     </li>
                     </ul>
                     </div>
@@ -547,7 +521,7 @@
                     <div class="date_time d-flex justify-content-between">
                     <span>Start Date:
                         {{$course->ass_date}}</span>
-                    <span>Duration: 40hours</span>
+                    <span>Duration: 30hours</span>
                     <span class="course_info_hover">
                     <i class="fa fa-info-circle"></i>
                     <div class="course_info">
@@ -557,7 +531,7 @@
                     <li>
                     <i class="fas fa-user"></i>
                     <span>Trainer Name :</span>
-                    <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+                    <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                     </li>
                     <li>
                     <i class="fas fa-stopwatch"></i>
@@ -570,19 +544,6 @@
                     <li>
                     <i class="far fa-clock"></i>
                     <span>Registration Deadline :</span> {{$course->reg_date}}
-                    </li>
-                    <li>
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Class Schedule :</span>
-                    </li>
-                    <li>
-                    <div>Sat (07:30 PM-09:30 PM)</div>
-                    </li>
-                    <li>
-                    <div>Mon (07:30 PM-09:30 PM)</div>
-                    </li>
-                    <li>
-                    <div>Wed (07:30 PM-09:30 PM)</div>
                     </li>
                     </ul>
                     </div>

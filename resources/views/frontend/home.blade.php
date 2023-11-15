@@ -35,54 +35,6 @@
           </div>
           <div class="col-md-4">
               <style>
-                  /* .two-profile-wrapper {
-                        width: 100%;
-                        display: grid;
-                        grid-template-columns: 1fr;
-                        row-gap: 20px;
-                        box-sizing: border-box;
-                    }
-              .profile-wrapper {
-                    width: 100%;
-                    display: grid;
-                    grid-template-columns: 1fr 2.5fr;
-                    column-gap: 15px;
-                    align-items: center;
-                    background: #F5F4F4;
-                    overflow: hidden;
-                    border-radius: 14px;
-                    box-shadow: 1px 1px 7px -6px #000;
-                }
-                .profile-image {
-                    width: 100%;
-                    overflow: hidden;
-                }
-                .profile-image> img {
-                    width: 100%;
-                    margin-bottom: -11px;
-                }
-                .profile-details {
-                    width: 100%;
-                    overflow: hidden;
-                    box-sizing: border-box;
-                    padding: 7px;
-                }
-                span.designation {
-                    display: block;
-                    font-size: 22px;
-                    color: #FF5722;
-                    font-weight: bold;
-                }
-                span.profile-name {
-                    font-size: 16px;
-                }
-                span.read-profile-about> a {
-                    display: block;
-                    text-decoration: none;
-                    color: blue;
-                } */
-
-
                 .profile-wrapper {
                     width: 100%;
                     display: grid;
@@ -171,29 +123,6 @@
                         @endforeach
                     </div>
                     </div>
-            {{-- <div class="two-profile-wrapper">
-							
-                    <div class="profile-wrapper">
-                        <div class="profile-image">
-                        <img src="{{asset('images/kuddos.jpg')}}">
-                        </div>
-                        <div class="profile-details">
-                        <span class="designation">Chairman</span>
-                        <span class="profile-name">Abdul Kader</span>
-                        <span class="read-profile-about"><a href="#">Read More...</a></span>
-                        </div>
-                        </div>
-                             <div class="profile-wrapper">
-                            <div class="profile-image">
-                            <img src="{{asset('images/kader.jpg')}}">
-                            </div>
-                            <div class="profile-details">
-                            <span class="designation">Principle</span>
-                            <span class="profile-name">Kuddos Ahmed</span>
-                            <span class="read-profile-about"><a href="#">Read More...</a></span>
-                            </div>
-                            </div>
-                    </div> --}}
           </div>
         </div>
       </div>
@@ -628,23 +557,6 @@
     <div class="col-12 col-lg-10">
     
     <ul id="tab_buttons" class="nav" role="tablist">
-    {{-- <li class="nav-item dropdown">
-    <a class="nav-link dropdown_button" href="#all_courses" role="button"> <span>All Courses</span><i class="fas fa-chevron-down"></i>
-    </a>
-    <div class="dropdown_menu_wrapper">
-    <div class="dropdown-menu" id="allcourse_dropdown_menu">
-    <div class="filter-button-group">
-    <a class="dropdown-item all_course_filter_btn" id="all_course_filter_all" href="javascript:void(0)">All Courses</a>
-    <a class="dropdown-item all_course_filter_btn" id="15" href="javascript:void(0)">Design</a>
-    <a class="dropdown-item all_course_filter_btn" id="16" href="javascript:void(0)">Front End Development</a>
-    <a class="dropdown-item all_course_filter_btn" id="17" href="javascript:void(0)">IT Security</a>
-    <a class="dropdown-item all_course_filter_btn" id="18" href="javascript:void(0)">Management</a>
-    <a class="dropdown-item all_course_filter_btn" id="19" href="javascript:void(0)">Mobile Application Development</a>
-    <a class="dropdown-item all_course_filter_btn" id="20" href="javascript:void(0)">Web Development</a>
-    </div>
-    </div>
-    </div>
-    </li> --}}
     <li class="nav-item"><a class="nav-link " href="#all_courses">All Course</a></li>
     <li class="nav-item"><a class="nav-link active" href="#upcoming_course">Upcoming Courses</a></li>
     <li class="nav-item"><a class="nav-link" href="#ongoing_course">Ongoing Courses</a></li>
@@ -671,7 +583,7 @@
             <div class="date_time d-flex justify-content-between">
             <span>Start Date:
                 {{$course->ass_date}}</span>
-            <span>Duration: 40hours</span>
+            <span>Duration: 30hours</span>
             <span class="course_info_hover">
             <i class="fa fa-info-circle"></i>
             <div class="course_info">
@@ -681,7 +593,7 @@
             <li>
             <i class="fas fa-user"></i>
             <span>Trainer Name :</span>
-            <a href="#">A.H.M Mohsin</a>
+            <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
             </li>
             <li>
             <i class="fas fa-stopwatch"></i>
@@ -695,7 +607,7 @@
             <i class="far fa-clock"></i>
             <span>Registration Deadline :</span> {{$course->reg_date}}
             </li>
-            <li>
+            {{-- <li>
             <i class="fas fa-calendar-check"></i>
             <span>Class Schedule :</span>
             </li>
@@ -707,7 +619,7 @@
             </li>
             <li>
             <div>Wed (07:30 PM-09:30 PM)</div>
-            </li>
+            </li> --}}
             </ul>
             </div>
             </div>
@@ -756,7 +668,7 @@
                 <div class="date_time d-flex justify-content-between">
                 <span>Start Date:
                     {{$course->ass_date}}</span>
-                <span>Duration: 40hours</span>
+                <span>Duration: 30hours</span>
                 <span class="course_info_hover">
                 <i class="fa fa-info-circle"></i>
                 <div class="course_info">
@@ -766,7 +678,7 @@
                 <li>
                 <i class="fas fa-user"></i>
                 <span>Trainer Name :</span>
-                <a href="#">A.H.M Mohsin</a>
+                <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                 </li>
                 <li>
                 <i class="fas fa-stopwatch"></i>
@@ -780,7 +692,7 @@
                 <i class="far fa-clock"></i>
                 <span>Registration Deadline :</span> {{$course->reg_date}}
                 </li>
-                <li>
+                {{-- <li>
                 <i class="fas fa-calendar-check"></i>
                 <span>Class Schedule :</span>
                 </li>
@@ -792,7 +704,7 @@
                 </li>
                 <li>
                 <div>Wed (07:30 PM-09:30 PM)</div>
-                </li>
+                </li> --}}
                 </ul>
                 </div>
                 </div>
@@ -838,7 +750,7 @@
                 <div class="date_time d-flex justify-content-between">
                 <span>Start Date:
                     {{$course->ass_date}}</span>
-                <span>Duration: 40hours</span>
+                <span>Duration: 30hours</span>
                 <span class="course_info_hover">
                 <i class="fa fa-info-circle"></i>
                 <div class="course_info">
@@ -848,7 +760,7 @@
                 <li>
                 <i class="fas fa-user"></i>
                 <span>Trainer Name :</span>
-                <a href="https://www.pencilbox.edu.bd/trainer-details/39/39">A.H.M Mohsin</a>
+                <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                 </li>
                 <li>
                 <i class="fas fa-stopwatch"></i>
@@ -862,7 +774,7 @@
                 <i class="far fa-clock"></i>
                 <span>Registration Deadline :</span> {{$course->reg_date}}
                 </li>
-                <li>
+                {{-- <li>
                 <i class="fas fa-calendar-check"></i>
                 <span>Class Schedule :</span>
                 </li>
@@ -874,7 +786,7 @@
                 </li>
                 <li>
                 <div>Wed (07:30 PM-09:30 PM)</div>
-                </li>
+                </li> --}}
                 </ul>
                 </div>
                 </div>
@@ -920,7 +832,7 @@
                 <div class="date_time d-flex justify-content-between">
                 <span>Start Date:
                     {{$upcoming->ass_date}}</span>
-                <span>Duration: 20 hours</span>
+                <span>Duration: 30 hours</span>
                 <span class="course_info_hover">
                 <i class="fa fa-info-circle"></i>
                 <div class="course_info">
@@ -930,7 +842,7 @@
                 <li>
                 <i class="fas fa-user"></i>
                 <span>Trainer Name :</span>
-                <a href="https://www.pencilbox.edu.bd/trainer-details/19/mir-rashedul-islam">Mir Rashedul Islam</a>
+                <a href="#" style="color:#DB1E37">{{ $course->teacher->name }}</a>
                 </li>
                 <li>
                 <i class="fas fa-stopwatch"></i>
@@ -944,7 +856,7 @@
                 <i class="far fa-clock"></i>
                 <span>Registration Deadline :</span> {{$upcoming->reg_date}}
                 </li>
-                <li>
+                {{-- <li>
                 <i class="fas fa-calendar-check"></i>
                 <span>Class Schedule :</span>
                 </li>
@@ -953,7 +865,7 @@
                 </li>
                 <li>
                 <div>Wed (07:30 PM-09:30 PM)</div>
-                </li>
+                </li> --}}
                 </ul>
                 </div>
                 </div>

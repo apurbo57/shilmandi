@@ -20,7 +20,7 @@ class siteController extends Controller
         $sliders = slider::all();
         $chairman = teacher::where('designation', '=', 'Chairman')->get();
         $principal = teacher::where('designation', '=', 'Principal')->get();
-        $courses = course::latest()->get();
+        $courses = course::with('teacher')->latest()->get();
         $count = Countdown::find(1);
         return view('frontend.home',compact('sliders','courses','count','chairman','principal'));
     }

@@ -383,6 +383,13 @@
 								<li><a class="submenu" href="{{route('admin.manage-teacher')}}"><i class="icon-user"></i><span class="hidden-tablet"> All Teacher</span></a></li>
 							</ul>	
 						</li>
+                        <li>
+							<a class="dropmenu" href="#"><i class="icon-file"></i><span class="hidden-tablet"> Certificate</span></a>
+							<ul>
+								<li><a class="submenu" href="{{route('admin.add-certificate')}}"><i class="icon-file"></i><span class="hidden-tablet"> Add Certificate</span></a></li>
+								<li><a class="submenu" href="{{route('admin.manage-certificate')}}"><i class="icon-file"></i><span class="hidden-tablet"> All Certificate</span></a></li>
+							</ul>	
+						</li>
 						<li><a href="{{route('admin.message')}}"><i class="icon-envelope"></i><span class="hidden-tablet">Message</span></a></li>
 						<li><a href="calendar.html"><i class="icon-calendar"></i><span class="hidden-tablet"> Calendar</span></a></li>
 						<li><a href="file-manager.html"><i class="icon-folder-open"></i><span class="hidden-tablet"> File Manager</span></a></li>

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Forntend\siteController;
 use App\Http\Controllers\adminController;
+use App\Http\Controllers\Backend\CertificateController;
 use App\Http\Controllers\Backend\CountDownController;
 use App\Http\Controllers\Backend\courseController;
 use App\Http\Controllers\Backend\sliderController;
@@ -108,6 +109,15 @@ Route::prefix('admin')->name('admin.')->group(function () {
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::get('/message', [messageController::class,'index'])->name('message');
     Route::delete('/delete-message/{id}', [messageController::class,'destroy'])->name('delete-message');
+});
+// Certificate route 
+Route::prefix('admin')->name('admin.')->group(function () {
+    Route::get('/add-certificate', [CertificateController::class,'create'])->name('add-certificate');
+    Route::post('/save-certificate', [CertificateController::class,'store'])->name('save-certificate');
+    Route::get('/manage-certificate', [CertificateController::class,'index'])->name('manage-certificate');
+    Route::get('/edit-certificate/{id}', [CertificateController::class,'edit'])->name('edit-certificate');
+    Route::put('/update-certificate/{id}', [CertificateController::class,'update'])->name('update-certificate');
+    Route::delete('/delete-certificate/{id}', [CertificateController::class,'destroy'])->name('delete-certificate');
 });
 
 

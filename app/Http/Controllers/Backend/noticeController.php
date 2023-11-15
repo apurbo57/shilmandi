@@ -15,7 +15,7 @@ class noticeController extends Controller
     public function index()
     {
         $data = notice::orderBy('id','DESC')->get();
-        return view('admin.notice_all', compact('data'));
+        return view('admin.notice_all', compact('data')); 
     }
 
     /**
@@ -40,7 +40,7 @@ class noticeController extends Controller
         $data->notice = $request->notice;
         $data->save();
 
-        session::flash('success', 'Slider Add Successfully !');
+        session::flash('success', 'Notice Add Successfully !');
 
         return back();
     }
@@ -76,7 +76,7 @@ class noticeController extends Controller
         $data->notice = $request->notice;
         $data->update();
 
-        session::flash('success', 'Slider Update Successfully !');
+        session::flash('success', 'Notice Update Successfully !');
 
         return back();
     }

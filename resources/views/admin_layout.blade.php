@@ -1,7 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Mirrored from bootstrapmaster.com/live/metro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:56:12 GMT -->
 <head>
 	
 	<!-- start: Meta -->
@@ -24,21 +22,11 @@
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&amp;subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
 	<!-- end: CSS -->
 	
-
-	<!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	  	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js')}}"></script>
-		<link id="ie-style" href="{{asset('backend/css/ie.css')}}" rel="stylesheet">
-	<![endif]-->
-	
-	<!--[if IE 9]>
-		<link id="ie9style" href="{{asset('backend/css/ie9.css')}}" rel="stylesheet">
-	<![endif]-->
 	<link href="https://fonts.maateen.me/siyam-rupali/font.css" rel="stylesheet">
 
 		
 	<!-- start: Favicon -->
-	<link rel="shortcut icon" href="{{asset('backend/img/favicon.ico')}}">
+	<link rel="shortcut icon" href="{{asset('backend/img/favicon.png')}}">
 	<!-- end: Favicon -->
 	
 		
@@ -440,8 +428,8 @@
 	<footer>
 
 		<p>
-			<span style="text-align:left;float:left">&copy; 2013 <a href="http://bootstrapmaster.com/" alt="Bootstrap Themes">creativeLabs</a></span>
-			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://admintemplates.co/" alt="Bootstrap Admin Templates">Metro</a></span>
+			<span style="text-align:left;float:left">&copy; 2023 <a href="http://facebook.com/apurbo57" alt="Bootstrap Themes">apurbo57</a></span>
+			<span class="hidden-phone" style="text-align:right;float:right">Powered by: <a href="http://www.facebook.com/apurbo57" alt="Bootstrap Admin Templates">@purbo57</a></span>
 		</p>
 
 	</footer>
@@ -505,6 +493,4 @@
 	<!-- end: JavaScript-->
 	
 </body>
-
-<!-- Mirrored from bootstrapmaster.com/live/metro/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 08 Jan 2018 16:56:47 GMT -->
 </html>

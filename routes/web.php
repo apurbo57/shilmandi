@@ -10,6 +10,7 @@ use App\Http\Controllers\Backend\galleryController;
 use App\Http\Controllers\Backend\messageController;
 use App\Http\Controllers\Backend\noticeController;
 use App\Http\Controllers\Backend\TeacherController;
+use App\Http\Controllers\Forntend\certifiController;
 use App\Http\Controllers\Forntend\CourseController as ForntendCourseController;
 use Illuminate\Support\Facades\Route;
 
@@ -37,6 +38,10 @@ Route::post('/course/enroll-this-course', [ForntendCourseController::class,'enro
 Route::get('/course/form-download/{key}', [ForntendCourseController::class,'form_download'])->name('form-download');
 Route::get('/generate-pdf', [ForntendCourseController::class,'generate_pdf'])->name('generate-pdf');
 Route::get('/download-pdf', [ForntendCourseController::class,'download_pdf'])->name('download-pdf');
+// certificate download route
+Route::get('/regular-certificate', [certifiController::class,'index'])->name('regular-certificate');
+Route::get('/certificate-download/{id}', [certifiController::class,'regular_download'])->name('certificate-download');
+Route::get("search",[certifiController::class,'search']);
 
 
 

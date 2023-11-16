@@ -20,7 +20,7 @@
             <ul class="thumb_post">
                 @foreach ($notices as $item)                     
                 <li>
-                <img src="{{asset('images/6533c7d6604ee-2023-Oct-Sat-12-45-10.Computer%20Operation.webp')}}" alt="Notice">
+                <img src="{{asset('images/notice.jpg')}}" alt="Notice">
                 <h4><a href="{{route('single-notice',$item->id)}}">{{$item->title}}</a></h4>
                 <p class="post-date">{{ $item->created_at->format('d-m-Y') }}</p>
                 </li>

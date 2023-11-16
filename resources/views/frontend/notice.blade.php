@@ -36,7 +36,7 @@ element.style {
     flex: 1;
     text-align: center;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
 }
 .notice-read-div a {
     display: inline-block;
@@ -48,6 +48,21 @@ element.style {
     box-sizing: border-box;
     padding: 2px 13px;
     border-radius: 10px;
+}
+.notice-read-div a:hover {
+    background: red;
+}
+@media only screen and (max-width: 767px) {
+
+
+    .notice-date-div, .notice-title-div, .notice-read-div {
+    flex: 1;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
 }
 </style>
 <div class="container">

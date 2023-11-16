@@ -23,7 +23,7 @@
         </div>
     <div class="col-xl-7 col-lg-7 col-md-12">
     <div class="about-content single-sidebar">
-    <img src="images/about-us.jpg" alt="about-us -image">
+    <img style="max-height: 600px;" src="images/about-us.jpg" alt="about-us -image">
     </div>
     </div>
       <div class="col-xl-5 col-lg-5 col-md-12">
@@ -102,6 +102,7 @@
             @if ($item->designation == 'Chairman')
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="profile-wrapper">
+                    <a href="{{route('single-teacher',$item->id)}}">
                     <div class="inner-profile">
                         <div class="profile-image">
                             <img src="{{asset('uploads/teacher/'. $item->image)}}">
@@ -111,6 +112,7 @@
                             <span class="designation">Chairman</span>
                           </div>
                     </div>
+                    </a>
                 </div>
              </div>
             @endif
@@ -121,6 +123,7 @@
             @if ($item->designation == 'Director'||$item->designation == 'Director (Admin)'||$item->designation == 'Director (Training)'||$item->designation == 'Director (Finance)')
             <div class="col-xl-4 col-lg-4 col-md-12">
                 <div class="profile-wrapper">
+                    <a href="{{route('single-teacher',$item->id)}}">
                     <div class="inner-profile">
                         <div class="profile-image">
                             <img src="{{asset('uploads/teacher/'. $item->image)}}">
@@ -130,6 +133,7 @@
                             <span class="designation">{{$item->designation}}</span>
                           </div>
                     </div>
+                    </a>
                 </div>
              </div>
             @endif
@@ -147,6 +151,7 @@
             @if ($item->designation == 'Principal')
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="profile-wrapper">
+                    <a href="{{route('single-teacher',$item->id)}}">
                     <div class="inner-profile">
                         <div class="profile-image">
                             <img src="{{asset('uploads/teacher/'. $item->image)}}">
@@ -156,6 +161,7 @@
                             <span class="designation">Principle</span>
                           </div>
                     </div>
+                    </a>
                 </div>
              </div>
             @endif

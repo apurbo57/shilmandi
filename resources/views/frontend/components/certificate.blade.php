@@ -15,6 +15,15 @@
         /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.ttf")format("truetype"),*/
         /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.svg#ITC Edwardian Script W04 Reg")format("svg");*/
         /*}*/
+        @font-face {
+            font-family: 'ITC Edwardian Script W04 Reg';
+            font-style: normal;
+            font-weight: normal;
+            src: url("../storage/fonts/ITC Edwardian Script W04 Reg.ttf") format('truetype');
+            }
+            .edwardian {
+            font-family: 'ITC Edwardian Script W04 Reg';
+            }
 
         * {
             margin: 0;
@@ -40,17 +49,14 @@
         </div>
         <div class="details" style="margin-top: 20rem; ">
 
-            <h2 style="text-align:center"> In Refrigeration & Airconditioning</h2>
-            <h1 style="text-align:center">Student Name</h1>
-            <div style="margin-left: 10rem; margin-right:10rem;margin-top:1rem; font-size:1.3rem">
-                <p>This is to certify that Tohin Ujjaman Masum son of Khokan Miah & Marjiya has successfully
-                    completed (360) hours long training course on Refrigeration and Air conditioning trade from
-                    01 January 2023 to 30 April 2023 at Shilmandi Youth Development Training Center,
-                    Narsingdi.</p>
+            <h2 style="text-align:center"> {{$data->course_name}}</h2>
+            <h1 class="edwardian" style="text-align:center">{{$data->student_name}}</h1>
+            <div style="margin-left: 9.5rem; margin-right:9.5rem;margin-top:1rem; font-size:1.2rem">
+                <p>{{$data->description}}</p>
             </div>
             <div style="margin-top:11.5rem; text-align:center">
-                <p>Reg No: Sydtc-20180127</p>
-                <p>Certificate No: 0127</p>
+                <p>Reg No: Sydtc-{{$data->reg_id}}</p>
+                <p>Certificate No: 0{{$data->id}}</p>
             </div>
 
 

@@ -61,9 +61,9 @@
             Download
             </a>
         <ul class="dropdown-menu">
-            <li><a class="{{ Request::routeIs('regular-certificate') ? 'active' : '' }}" href="{{route('regular-certificate')}}">Regular</a></li>
-            <li><a href="#">RPL cer.</a></li>
-            <li><a href="#">Academic</a></li>
+            <li><a class="{{ Request::routeIs('regular-certificate') ? 'active' : '' }} text-primary" href="{{route('regular-certificate')}}">Regular</a></li>
+            <li><a class="text-primary" href="#">RPL cer.</a></li>
+            <li><a class="text-primary" href="#">Academic</a></li>
 
         </ul>
     </li>

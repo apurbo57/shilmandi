@@ -42,7 +42,12 @@ class CourseController extends Controller
     public function apply_course(string $id)
     {
         $course = course::find($id);
-        return view('frontend.apply',compact('course'));
+        if ($course->course_type == 1) {
+            return view('frontend.regular_apply',compact('course'));
+        } else {
+            return view('frontend.rpl_apply',compact('course'));
+        }
+        
     }
     /**
      * Store Enroll course Details.

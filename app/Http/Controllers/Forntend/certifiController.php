@@ -38,7 +38,7 @@ class certifiController extends Controller
             //     storage_path('fonts'),
             // ]);
 
-        return $pdf->stream( 'Certificate.pdf' );
+        return $pdf->download( 'Certificate.pdf' );
         }
         return redirect()->back();
     }
@@ -55,27 +55,29 @@ class certifiController extends Controller
         $output='';
     if(count($data)>0){
 
-         $output ='
-            <table class="table">
-            <thead class="notice-board-header">
+         $output ="
+            <table class='table'>
+            <thead class='notice-board-header'>
             <tr>
-                <th scope="col">Regestration No.</th>
-                <th scope="col">Student Name</th>
-                <th scope="col">Course Name</th>
-                <th scope="col">Download</th>
+                <th scope='col'>Regestration No.</th>
+                <th scope='col'>Student Name</th>
+                <th scope='col'>Course Name</th>
+                <th scope='col'>Download</th>
             </tr>
             </thead>
-            <tbody>';
+            <tbody>";
 
                 foreach($data as $row){
-                    $output .='
+                    $route = route('certificate-download',$row->id);
+
+                    $output .="
                     <tr>
-                    <th scope="row">'.$row->reg_id.'</th>
-                    <td>'.$row->student_name.'</td>
-                    <td>'.$row->course_name.'</td>
-                    <td><a class="btn-primary p-1 rounded" href="{{route(certificate-download,'.$row->id.')}}">Download</a></td>
+                    <th scope='row'>$row->reg_id</th>
+                    <td>$row->student_name</td>
+                    <td>$row->course_name</td>
+                    <td><a class='btn-primary p-1 rounded' href='$route'>Download</a></td>
                     </tr>
-                    ';
+                    ";
                 }
 
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use App\Models\notice;
+use App\Models\Timeline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 
@@ -15,7 +16,7 @@ class noticeController extends Controller
     public function index()
     {
         $data = notice::orderBy('id','DESC')->get();
-        return view('admin.notice_all', compact('data')); 
+        return view('admin.notice_all', compact('data'));
     }
 
     /**
@@ -90,6 +91,29 @@ class noticeController extends Controller
         $notice->delete();
 
         session::flash('success', 'Notice Delete Successfully !');
+
+        return back();
+    }
+
+    public function timelineIndex()
+    {
+        $timeline = Timeline::first();
+        return view('admin.timeline-update',compact('timeline'));
+    }
+
+    public  function updateIndex(Request $request){
+        $request->validate([
+            'timeline' => 'required',
+        ]);
+        $timeline = Timeline::first();
+
+        if(!$timeline){
+            $timeline = new Timeline();
+        }
+        $timeline->timeline = $request->timeline;
+        $timeline->save();
+
+        session::flash('success', 'Timeline Update Successfully !');
 
         return back();
     }

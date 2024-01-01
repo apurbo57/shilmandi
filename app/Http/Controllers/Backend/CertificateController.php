@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\certificate;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use Barryvdh\DomPDF\Facade\Pdf;
 
 class CertificateController extends Controller
 {
@@ -52,9 +53,17 @@ class CertificateController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+     public function stream(string $id)
     {
-        //
+        $data = certificate::find($id);
+        if ($data) {
+            $pdf  = Pdf::loadView( 'frontend.components.certificate',compact('data') )
+            ->setPaper( 'a4', 'landscape' )
+            ->setOption( ['dpi' => 350, 'defaultFont' => 'sans-serif'] );
+
+        return $pdf->stream( 'Certificate.pdf' );
+        }
+        return redirect()->back();
     }
 
     /**

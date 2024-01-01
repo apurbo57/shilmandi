@@ -38,19 +38,21 @@ class TeacherController extends Controller
             'phone' => 'required|max:11',
             'email' => 'required',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'type' => 'required'
         ]);
-        
+
         // single image uplode
 
         $image = $request->file('image');
         $fileEx = $image->getClientOriginalExtension();
         $fileName = date('Ydmhis.').$fileEx;
         $request->image->move(public_path('uploads/teacher'), $fileName);
-        
+
         try {
 
             $course = new teacher();
             $course->name = $request->name;
+            $course->type = $request->type;
             $course->designation = $request->designation;
             $course->description = $request->description;
             $course->phone = $request->phone;
@@ -60,7 +62,7 @@ class TeacherController extends Controller
             $course->save();
             session::flash('success', 'Teacher Add Successfully !');
           } catch (\Exception $e) {
-          
+
               return $e->getMessage();
           }
 
@@ -89,7 +91,8 @@ class TeacherController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        if ($request->course_image) {
+
+        if ($request->image) {
             $request->validate([
                 'name' => 'required',
                 'designation' => 'required',
@@ -97,31 +100,33 @@ class TeacherController extends Controller
                 'phone' => 'required|max:11',
                 'email' => 'required',
                 'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+                'type' => 'required'
             ]);
-            
+
             // single image uplode
-    
-            $image = $request->file('course_image');
+
+            $image = $request->file('image');
             $fileEx = $image->getClientOriginalExtension();
             $fileName = date('Ydmhis.').$fileEx;
-            $request->course_image->move(public_path('uploads/teacher'), $fileName);
-    
-            
+            $request->image->move(public_path('uploads/teacher'), $fileName);
+
+
             try {
-    
+
                 $course = teacher::find($id);
                 unlink(public_path('uploads/teacher/') . $course->image);
                 $course->name = $request->name;
+                $course->type = $request->type;
                 $course->designation = $request->designation;
                 $course->description = $request->description;
                 $course->phone = $request->phone;
                 $course->email = $request->email;
                 $course->image = $fileName;
-    
+
                 $course->update();
                 session::flash('success', 'Teacher Update Successfully !');
               } catch (\Exception $e) {
-              
+
                   return $e->getMessage();
               }
             }
@@ -133,21 +138,22 @@ class TeacherController extends Controller
                 'email' => 'required',
             ]);
             try {
-    
+
                 $course = teacher::find($id);
                 $course->name = $request->name;
+                $course->type = $request->type;
                 $course->designation = $request->designation;
                 $course->description = $request->description;
                 $course->phone = $request->phone;
                 $course->email = $request->email;
-    
+
                 $course->update();
                 session::flash('success', 'Teacher Update Successfully !');
               } catch (\Exception $e) {
-              
+
                   return $e->getMessage();
               }
-    
+
             return back();
     }
 
@@ -159,7 +165,7 @@ class TeacherController extends Controller
         $course = teacher::find($id);
 
         unlink(public_path('uploads/teacher/') . $course->image);
-        
+
         $course->delete();
 
         session::flash('success', 'Teacher Delete Successfully !');

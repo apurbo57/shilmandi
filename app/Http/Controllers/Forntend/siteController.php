@@ -10,6 +10,7 @@ use App\Models\gallery;
 use App\Models\notice;
 use App\Models\slider;
 use App\Models\teacher;
+use App\Models\Timeline;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Session;
@@ -18,11 +19,12 @@ class siteController extends Controller
 {
     public function index(){
         $sliders = slider::all();
-        $chairman = teacher::where('designation', '=', 'Chairman')->get();
-        $principal = teacher::where('designation', '=', 'Principal')->get();
+        $chairman = teacher::where('type', '=', 'chairman')->get();
+        $principal = teacher::where('type', '=', 'principle')->get();
         $courses = course::with('teacher')->latest()->get();
-        $count = Countdown::find(1);
-        return view('frontend.home',compact('sliders','courses','count','chairman','principal'));
+        $count = Countdown::first();
+        $timeline = Timeline::first();
+        return view('frontend.home',compact('sliders','courses','count','chairman','principal','timeline'));
     }
 
     public function gallery(){
@@ -49,8 +51,28 @@ class siteController extends Controller
     }
 
     public function about_us(){
-        $data = teacher::paginate(20);
-        return view('frontend.about-us',compact('data'));
+
+         $data = teacher::query();
+
+         $customData = $data->get();
+
+         $instructors = (clone $data)->whereIn('type',['instructor','staff'])->orderBy('type','ASC')->paginate(15);
+
+        $chairman = (clone $customData)->reject(function ($item) {
+            return $item->type != 'chairman';
+        })->first();
+
+        $directors = (clone $customData)->reject(function ($item) {
+            return $item->type != 'director';
+        });
+
+        $principle = (clone $customData)->reject(function ($item) {
+            return $item->type != 'principle';
+        })->first();
+
+
+
+        return view('frontend.about-us',compact('chairman','directors','principle','instructors'));
     }
 
     public function single_teacher(string $id){
@@ -92,12 +114,12 @@ class siteController extends Controller
     // {
     //     App::setLocale($request->lang);
     //     session()->put('locale', $request->lang);
-  
+
     //     return redirect()->back();
     // }
-    
 
-    
 
-    
+
+
+
 }

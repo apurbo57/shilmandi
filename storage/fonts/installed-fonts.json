@@ -1,5 +1,17 @@
 {
     "itc edwardian script w04 reg": {
-        "normal": "itc_edwardian_script_w04_reg_normal_d6feaa4274b694b80c8d01807bc621b1"
+        "normal": "itc_edwardian_script_w04_reg_normal_d7b2f2dc0c0ea565181c6f74cdbac75a"
+    },
+    "my-custom-font": {
+        "normal": "my_custom_font_normal_7467cf63d803d42f8cfeb975beee66e6"
+    },
+    "sutonnymj": {
+        "normal": "sutonnymj_normal_7467cf63d803d42f8cfeb975beee66e6"
+    },
+    "sutonnyomj": {
+        "normal": "sutonnyomj_normal_d5a5fea9c265d84baf870dfa196a367a"
+    },
+    "edwardian": {
+        "normal": "edwardian_normal_7bde001ef87171c7de8334a44182c7f2"
     }
 }

@@ -43,6 +43,7 @@
                         <form action="{{route('admin.delete-certificate',$datas->id)}}" method="post">
                             @method('DELETE')
                             @csrf
+                            <a  target="_blank" class="btn btn-info"  href="{{route('admin.stream-certificate',$datas->id)}}">View</a>
                             <a class="btn btn-info" href="{{route('admin.edit-certificate',$datas->id)}}"><i class="halflings-icon white edit"></i></a>
                             <a class="btn btn-danger" onclick="event.preventDefault(); this.closest('form').submit()" href="{{route('admin.delete-certificate',$datas->id)}}">
                                 <i class="halflings-icon white trash"></i> 

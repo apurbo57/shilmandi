@@ -27,10 +27,10 @@
                             <h5>{{$slider->title}}</h5>
                             <p>@php
                                 echo html_entity_decode($slider->description);
-                            @endphp</p>    
+                            @endphp</p>
                         </div>
                 </div>
-                @endforeach            
+                @endforeach
               </div>
           </div>
           <div class="col-md-4">
@@ -112,7 +112,7 @@
                                 <img src="{{ asset('uploads/teacher/'. $item->image) }}">
                                 </div>
                                 <div class="profile-details">
-                                <span class="designation">Principal</span>
+                                <span class="designation">Principle</span>
                                 <span class="profile-name">{{$item->name}}</span>
                                 {{-- @php
                                         $s = html_entity_decode($item->description);
@@ -128,26 +128,26 @@
       </div>
       <script>
         $(document).ready(function() {
-         
+
          $("#owl-demo").owlCarousel({
              slideSpeed : 100,
              paginationSpeed : 1000,
              autoPlay: true,
-             items : 1, 
+             items : 1,
              itemsDesktop : false,
              itemsDesktopSmall : false,
              itemsTablet: false,
              itemsMobile : false
-        
+
          });
-        
+
         });
         </script>
         <div class="container mb-5">
                 <div class="row">
                     <div class="alert alert-info alert-dismissible" role="alert">
                     <button type="button" onclick="this.parentNode.parentNode.removeChild(this.parentNode);" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-                    <strong><i class="fa fa-warning"></i> News!</strong> <marquee><p style="font-family: Impact, siyamrupali; font-size: 18pt; padding:5px;">Shilmandi Training Institiute Norshingdi শিলমান্দী যুব উন্নয়ন প্রশিক্ষন কেন্দ্র , নরসিংদি। সকল ধরনের কোর্স এখানে করানো হয়। Shilmandi Training Institiute Norshingdi</p></marquee>
+                    <strong><i class="fa fa-warning"></i> News!</strong> <marquee><p style="font-family: Impact, siyamrupali; font-size: 18pt; padding:5px;">{{$timeline->timeline}}</p></marquee>
                     </div>
                 </div>
             </div>
@@ -199,7 +199,7 @@
 </div>
 
     {{-- courses  --}}
-       
+
     <style>
         .pb_course_page_container {
             background-color: #FCFCFC;
@@ -207,51 +207,51 @@
         .all_courses_tab {
             padding: 70px 0;
         }
-    
+
         .all_courses_tab ul.nav>li {
             flex-grow: 1;
         }
-    
+
         .all_courses_tab ul.nav li.dropdown .dropdown_menu_wrapper .dropdown-menu {
             top: 97%;
             padding: 4px 5px;
         }
-    
+
         .all_courses_tab ul.nav li.dropdown .dropdown_menu_wrapper .dropdown-menu>div {
             box-shadow: 0px 1px 5px 2px rgb(53 52 52 / 20%);
             width: 100%;
             /* margin: auto; */
         }
-    
+
         .all_courses_tab ul.nav li.dropdown .dropdown_menu_wrapper .dropdown-menu>div>.dropdown-item:hover,
         .all_courses_tab ul.nav li.dropdown .dropdown_menu_wrapper .dropdown-menu>div>.dropdown-item.active,
         .all_courses_tab ul.nav li.dropdown .dropdown_menu_wrapper .dropdown-menu>div>.dropdown-item:active {
             color: #fff !important;
             background-color: #DB1E37 !important;
         }
-    
+
         .all_courses_tab ul.nav li.dropdown a.nav-link.dropdown_button.dropdown_active~.dropdown_menu_wrapper .dropdown-menu {
             display: flex;
             justify-content: center;
         }
-    
+
         .all_courses_tab .dropdown-menu .dropdown-item {
             width: 280px;
             white-space: unset;
             border-bottom: 1px solid rgba(149, 149, 149, 0.2);
         }
-    
+
         .all_course_tab_content h3 {
             font-weight: 600;
             text-transform: uppercase;
         }
-    
+
         .all_course_tab_content p {
             font-size: 14px;
             font-weight: 400;
             margin-left: 0;
         }
-    
+
         .all_courses_tab ul.nav li a.nav-link {
             border-top: 1px solid rgba(149, 149, 149, 0.5);
             border-bottom: 1px solid rgba(149, 149, 149, 0.5);
@@ -263,43 +263,43 @@
             font-size: 16px;
             font-weight: 500;
         }
-    
+
         .all_courses_tab ul.nav li:last-child a.nav-link {
             border-right: 1px solid rgba(149, 149, 149, 0.5);
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
         }
-    
+
         .all_courses_tab ul.nav li:first-child a.nav-link {
             border-top-left-radius: 10px;
             border-bottom-left-radius: 10px;
         }
-    
+
         .all_courses_tab ul.nav li a.nav-link:hover,
         .all_courses_tab ul.nav li a.nav-link.active {
             background: #DB1E37;
             /* background: linear-gradient(to bottom, #DB1E37, #DB1E37); */
             color: #fff !important;
         }
-    
+
         .all_courses_tab ul#tab_buttons li a.nav-link.dropdown_button i {
             margin-left: 10px;
             font-size: 14px;
             transform: rotate(0deg);
             transition: transform .2s ease-in-out;
         }
-    
+
         .all_courses_tab ul#tab_buttons li a.nav-link.dropdown_button.dropdown_active i {
             transform: rotate(180deg);
             transition: transform .2s ease-in-out;
         }
-    
+
         .wrapper .pb_single_course_box {
             border: 1px solid #A9A9A9;
             border-radius: 10px;
             margin-bottom: 30px;
         }
-    
+
         .pb_single_course_col,
         .pb_single_course_col_old,
         .pb_single_course_col_ongoing,
@@ -307,22 +307,22 @@
         .pb_single_course_col_colla {
             display: none;
         }
-    
+
         .wrapper .pb_single_course_box img {
             object-fit: contain;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
         }
-    
+
         .wrapper .pb_single_course_box .pb_single_course_content {
             padding: 10px;
         }
-    
+
         .wrapper .pb_single_course_box .pb_single_course_content .date_time span {
             font-size: 12px;
             color: #AEAEAE;
         }
-    
+
         .wrapper .pb_single_course_box .pb_single_course_content h6 {
             font-weight: 700;
             padding-top: 12px;
@@ -331,13 +331,13 @@
             display: flex;
             align-items: center;
         }
-    
+
         .wrapper .pb_single_course_box .pb_single_course_content .pb_single_course_price {
             color: #DB1E37;
             font-size: 14px;
             font-weight: 700;
         }
-    
+
         .wrapper .pb_single_course_box .pb_single_course_content .pb_single_course_apply_button {
             background-color: #DB1E37;
             padding: 6px 20px;
@@ -346,7 +346,7 @@
             border-radius: 6px;
             font-weight: 500;
         }
-    
+
         .all_courses_tab #ViewMore,
         .all_courses_tab .ViewMore {
             display: inline-block;
@@ -355,36 +355,36 @@
             padding: 5px 30px;
             border-radius: 5px;
         }
-    
+
         .pb_course_page_container section.all_courses_tab .tab-content {
             border-bottom: 2px solid rgba(166, 166, 166, 0.5);
             padding-bottom: 70px;
         }
-    
+
         /* ====== ongoing course section======== */
         .ongoing_course_box {
             border-bottom: 2px solid rgba(166, 166, 166, 0.5);
             padding-bottom: 70px;
         }
-    
+
         .ongoing_course_wrapper {
             border: 1px solid hsl(0, 0%, 53%, 0.3);
             padding: 20px;
             background-color: #fff;
         }
-    
+
         #ongoing_course_tab_item {
             border: 1px solid hsl(0, 0%, 53%, 0.3);
         }
-    
+
         .ongoing_courses_tab_slider .slick-slider .slick-list {
             width: 100%;
         }
-    
+
         .ongoing_courses_tab_slider .slick-slider {
             height: 308px;
         }
-    
+
         .ongoing_courses_tab_slider .slick-slider .slide a {
             background-color: rgb(255, 255, 255);
             color: #000000 !important;
@@ -396,62 +396,62 @@
             display: flex;
             flex-direction: column;
         }
-    
+
         .ongoing_courses_tab_slider .slick-slider .slide.slick-current a {
             color: #fff !important;
             background-color: #DB1E37;
         }
-    
+
         .ongoing_courses_tab_slider .slick-slider .slide .ongoing_course_slider_img {
             display: none;
             z-index: 9;
         }
-    
+
         .ongoing_course_slider_time {
             font-size: 10px;
             font-weight: 300;
         }
-    
+
         /* ====== recent completed course section======== */
         .recent_completed_courses {
             padding-top: 70px;
             padding-bottom: 70px;
         }
-    
+
         .recent_completed_courses_wrapper {
             border: 1px solid hsl(0, 0%, 53%, 0.3);
             padding: 15px 20px 20px 20px;
             background-color: #fff;
         }
-    
+
         .r_c_single_course_img {
             width: 22%;
         }
-    
+
         .r_c_single_course_img img {
             width: 100%;
             height: auto;
         }
-    
+
         .r_c_single_course_content {
             width: 78%;
             background-color: #F3F3F3;
             padding: 5px 15px;
             margin-left: 5px;
         }
-    
+
         .r_c_single_course_content .r_c_title {
             color: #000;
             font-weight: 600;
             line-height: 1.2;
             font-size: 16px;
         }
-    
+
         .r_c_single_course_content .r_c_completing_time {
             font-size: 11px;
             color: #707070;
         }
-    
+
         .recent_completed_courses_wrapper .r_c_courses {
             height: 67px;
             margin-top: 5px;
@@ -468,16 +468,16 @@
                 flex-direction: column;
                 align-items: center;
             }
-    
+
             .r_c_single_course_img {
                 width: 100%;
             }
-    
+
             .r_c_single_course_content {
                 width: 100%;
                 margin: 0;
             }
-    
+
             .recent_completed_courses_wrapper .slick-slide {
                 height: 280px;
             }
@@ -488,25 +488,25 @@
                 border-radius: 10px;
             }
         }
-    
+
         @media  screen and (max-width: 767px) {
             .recent_completed_courses_wrapper .slick-slide {
                 height: 212px;
             }
-    
+
             .ongoing_courses_tab_slider .slick-slider {
                 height: 150px;
             }
-    
+
             .ongoing_courses_tab_slider .slick-slider .slide a {
                 font-size: 12px;
             }
-    
+
             .r_c_single_course_content .r_c_title {
                 font-size: 14px;
             }
         }
-    
+
         @media  screen and (max-width: 480px) {
             .r_c_single_course_content .r_c_title {
                 font-size: 12px;
@@ -545,7 +545,7 @@
     <div class="row justify-content-center">
     <div class="col-12 col-md-7">
     <div class="all_course_tab_content">
-    
+
     <p class="text-center">
     </p>
     </div>
@@ -555,7 +555,7 @@
     <div id="all_course_tabs" class="col-12">
     <div class="row justify-content-center">
     <div class="col-12 col-lg-10">
-    
+
     <ul id="tab_buttons" class="nav" role="tablist">
     <li class="nav-item"><a class="nav-link " href="#all_courses">All Course</a></li>
     <li class="nav-item"><a class="nav-link active" href="#upcoming_course">Upcoming Courses</a></li>
@@ -566,10 +566,10 @@
     </div>
     <div class="row">
     <div class="col-12">
-    
+
     <div class="tab-content">
     <div id="all_courses"><br>
-    
+
     <div class="wrapper">
     <div class="row" id="all_course_filter_">
     @foreach ($courses as $course)
@@ -652,9 +652,9 @@
     </div>
     {{-- all course end --}}
     {{-- upcoming_course start --}}
-    
+
     <div id="upcoming_course" class="active"><br>
-    
+
     <div class="wrapper">
     <div class="row">
             @foreach ($courses as $course)
@@ -727,16 +727,16 @@
                 </div>
             @endif
         @endforeach
-    
+
     </div>
     </div>
-    
+
     </div>
     {{-- upcoming course end --}}
     {{-- ongoing course --}}
 
     <div id="ongoing_course" class=""><br>
-    
+
     <div class="wrapper">
     <div class="row">
             @foreach ($courses as $course)
@@ -809,10 +809,10 @@
                 </div>
             @endif
         @endforeach
-    
+
     </div>
     </div>
-    
+
     </div>
     {{-- ongoing course end --}}
 
@@ -893,34 +893,34 @@
     <a id="old" class="ViewMore" href="javascript:void(0)">View More</a>
     </div>
     </div>
-    
+
     </div>
     </div>
-    
-    </div>
-    </div>
-    </div>
+
     </div>
     </div>
     </div>
     </div>
-    </section> 
+    </div>
+    </div>
+    </div>
+    </section>
     {{-- course section end --}}
 
-    
+
 {{-- client area --}}
 <style>
 
     #clients {
         padding: 60px 0;
-        
+
     }
     #clients .clients-wrap {
         border-top: 1px solid #d6eaff;
         border-left: 1px solid #d6eaff;
         margin-bottom: 30px;
     }
-    
+
     #clients .client-logo {
         padding: 64px;
         display: -webkit-box;
@@ -941,38 +941,38 @@
         background: #fff;
         height: 160px;
     }
-    
+
     #clients img {
         transition: all 0.4s ease-in-out;
     }
-    
+
     </style>
     <section id="clients" class="section-bg">
-    
+
             <div class="container">
-      
+
               <div class="section-header">
                 <h2>MoU Signed Companies</h2>
               </div>
-      
+
               <div class="row no-gutters clients-wrap clearfix wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">
-      
+
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
                     <img src="{{asset('uploads/mou/mou1.png')}}" class="img-fluid" alt="">
                   </div>
                 </div>
-                
+
                 <div class="col-lg-3 col-md-4 col-xs-6">
                   <div class="client-logo">
                     <img src="{{asset('uploads/mou/mou2.png')}}" class="img-fluid" alt="">
                   </div>
                 </div>
-      
+
               </div>
-      
+
             </div>
-      
+
           </section>
 
 @endsection

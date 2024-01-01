@@ -98,30 +98,27 @@
             <h2>Board of Director</h2>
         </div>
         <div class="row blog">
-            @foreach ($data as $item)
-            @if ($item->designation == 'Chairman')
+
+
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="profile-wrapper">
-                    <a href="{{route('single-teacher',$item->id)}}">
+                    <a href="{{route('single-teacher',$chairman->id)}}">
                     <div class="inner-profile">
                         <div class="profile-image">
-                            <img src="{{asset('uploads/teacher/'. $item->image)}}">
+                            <img src="{{asset('uploads/teacher/'. $chairman->image)}}">
                         </div>
                           <div class="profile-details">
-                            <span class="profile-name">{{$item->name}}</span>
+                            <span class="profile-name">{{$chairman->name}}</span>
                             <span class="designation">Chairman</span>
                           </div>
                     </div>
                     </a>
                 </div>
              </div>
-            @endif
-           @endforeach
         </div>
         <div class="row blog">
-            @foreach ($data as $item)
-            @if ($item->designation == 'Director'||$item->designation == 'Director (Admin)'||$item->designation == 'Director (Training)'||$item->designation == 'Director (Finance)')
-            <div class="col-xl-4 col-lg-4 col-md-12">
+            @foreach ($directors as $item)
+                        <div class="col-xl-4 col-lg-4 col-md-12">
                 <div class="profile-wrapper">
                     <a href="{{route('single-teacher',$item->id)}}">
                     <div class="inner-profile">
@@ -136,7 +133,7 @@
                     </a>
                 </div>
              </div>
-            @endif
+
            @endforeach
          </div>
     </div>
@@ -147,30 +144,28 @@
             <h2>Instructor's Pannel</h2>
         </div>
         <div class="row blog">
-            @foreach ($data as $item)
-            @if ($item->designation == 'Principal')
+
             <div class="col-xl-12 col-lg-12 col-md-12">
                 <div class="profile-wrapper">
-                    <a href="{{route('single-teacher',$item->id)}}">
+                    <a href="{{route('single-teacher',$principle->id)}}">
                     <div class="inner-profile">
                         <div class="profile-image">
-                            <img src="{{asset('uploads/teacher/'. $item->image)}}">
+                            <img src="{{asset('uploads/teacher/'. $principle->image)}}">
                         </div>
                           <div class="profile-details">
-                            <span class="profile-name">{{$item->name}}</span>
+                            <span class="profile-name">{{$principle->name}}</span>
                             <span class="designation">Principle</span>
                           </div>
                     </div>
                     </a>
                 </div>
              </div>
-            @endif
-           @endforeach
+
         </div>
         <div class="row blog">
-            @foreach ($data as $item)
+            @foreach ($instructors as $item)
             @if ($item->designation == 'Chairman'||$item->designation == 'Principal'||$item->designation == 'Director'||$item->designation == 'Director (Admin)'||$item->designation == 'Director (Training)'||$item->designation == 'Director (Finance)')
-            
+
             @else
             <div class="col-xl-3 col-lg-3 col-md-12">
               <div class="profile-wrapper float-right">
@@ -191,7 +186,7 @@
             @endforeach
          </div>
          <div class="pagination">
-            <div class="align-center">{{ $data->links('pagination::bootstrap-4') }} </div>
+            <div class="align-center">{{ $instructors->links('pagination::bootstrap-4') }} </div>
     </div>
     </div>
 

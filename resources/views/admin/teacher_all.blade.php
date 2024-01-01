@@ -9,7 +9,7 @@
     <li><a href="#">All Teachers</a></li>
 </ul>
 @include('includes.message')
-<div class="row-fluid sortable">		
+<div class="row-fluid sortable">
     <div class="box span12">
         <div class="box-header" data-original-title>
             <h2><i class="halflings-icon user"></i><span class="break"></span>All Teachers List</h2>
@@ -26,20 +26,22 @@
                       <th>Serial No</th>
                       <th>Teacher Name</th>
                       <th>Designation</th>
+                      <th>Type</th>
                       <th>Phone</th>
                       <th>E-mail</th>
                       <th>Image</th>
                       <th>Actions</th>
                   </tr>
-              </thead>   
+              </thead>
               <tbody>
                 @php($i=1)
                 @foreach ($data as $datas)
-                    
+
                 <tr>
                     <td>{{ $i }}</td>
                     <td class="center">{{ $datas->name }}</td>
                     <td class="center">{{ $datas->designation }}</td>
+                    <td class="center" style="text-transform: capitalize">{{ $datas->type }}</td>
                     <td class="center">{{ $datas->phone }}</td>
                     <td class="center">{{ $datas->email }}</td>
                     <td>
@@ -51,7 +53,7 @@
                             @csrf
                             <a class="btn btn-info" href="{{route('admin.edit-teacher',$datas->id)}}"><i class="halflings-icon white edit"></i></a>
                             <a class="btn btn-danger" onclick="event.preventDefault(); this.closest('form').submit()" href="{{route('admin.delete-teacher',$datas->id)}}">
-                                <i class="halflings-icon white trash"></i> 
+                                <i class="halflings-icon white trash"></i>
                             </a>
                         </form>
                     </td>
@@ -59,7 +61,7 @@
                 @php($i++)
                 @endforeach
               </tbody>
-          </table>            
+          </table>
         </div>
     </div><!--/span-->
 

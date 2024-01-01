@@ -9,6 +9,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
     <title>Application Form</title>
+
     <style>
         * {
             margin: 0;
@@ -21,7 +22,7 @@
             background-position: center;
         }
         .padding-top-1{
-            padding-top: .5rem !important;
+            padding-top: .3rem !important;
         }
 
         @font-face{
@@ -41,9 +42,9 @@
             <td width="90%">
                 <table>
                     <tr>
-                        <td><h3 style="margin: 10rem;margin-left: 16rem; font-size: 1.3rem">Regular Batch Form</h3></td>
+                        <td><h3 style="margin: 10rem;margin-left: 17rem; font-size: 1.3rem">RPL Batch Form</h3></td>
                         @php
-                        $image = base_path('public/uploads/regular/'.$regularStudent->image);
+                        $image = base_path('public/uploads/rpl/'.$regularStudent->image);
                          @endphp
                         <td><img style="width: 550px;height: 550px;margin-top: 6rem" src="data:image/svg+xml;base64,<?php echo base64_encode(file_get_contents($image)); ?>"></td>
                     </tr>
@@ -90,21 +91,26 @@
                         <td class="padding-top-1 bangla-font">&nbsp;{{$regularStudent->motherNameB}}</td>
                     </tr>
                     <tr>
-                        <td class="padding-top-1">Gender</td>
+                        <td class="padding-top-1">Guardian Name</td>
                         <td class="padding-top-1">:</td>
-                        <td class="padding-top-1">&nbsp;{{$regularStudent->gender}}</td>
+                        <td class="padding-top-1">&nbsp;{{$regularStudent->Gname}}</td>
                     </tr>
+
                     <tr>
                         <td class="padding-top-1">Nid No. / Birth Cer. No. </td>
                         <td class="padding-top-1">:</td>
                         <td class="padding-top-1">&nbsp;{{$regularStudent->national_id}}</td>
                     </tr>
                     <tr>
+                        <td class="padding-top-1">Gender</td>
+                        <td class="padding-top-1">:</td>
+                        <td class="padding-top-1">&nbsp;{{$regularStudent->gender}}</td>
+                    </tr>
+                    <tr>
                         <td class="padding-top-1">Birth Date</td>
                         <td class="padding-top-1">:</td>
                         <td class="padding-top-1">&nbsp;{{$regularStudent->birthday}}</td>
                     </tr>
-
 
                     <tr>
                         <td class="padding-top-1">Mobile Number</td>
@@ -127,32 +133,52 @@
                         <td class="padding-top-1">&nbsp;{{$regularStudent->email}}</td>
                     </tr>
                     <tr>
-                        <td class="padding-top-1">Shift</td>
-                        <td class="padding-top-1">:</td>
-                        <td class="padding-top-1">&nbsp;{{$regularStudent->shift}}</td>
-                    </tr>
-                    <tr>
                         <td>Present Address</td>
                         <td>:</td>
                         <td>
                             <table>
                                 <tr>
-                                    <td class="padding-top-1">Village: {{$regularStudent->present_address}},</td>
-                                    <td class="padding-top-1">&nbsp;&nbsp;&nbsp;Upazila: {{$regularStudent->present_sub_district}},</td>
-                                    <td class="padding-top-1">&nbsp;&nbsp;&nbsp;Post Code: {{$regularStudent->present_postal_code}},</td>
+                                    <td class="padding-top-1">&nbsp;Village: {{$regularStudent->present_address}},</td>
+                                    <td class="padding-top-1">&nbsp;&nbsp;Upazila: {{$regularStudent->present_sub_district}},</td>
+
                                 </tr>
                                 <tr>
-                                    <td class="padding-top-1">&nbsp;&nbsp;&nbsp;District: {{$regularStudent->present_per_district}},</td>
+                                    <td class="padding-top-1">&nbsp;Post Office: {{$regularStudent->present_post_office}},</td>
+                                    <td class="padding-top-1">&nbsp;&nbsp;Post Code: {{$regularStudent->present_postal_code}},</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="padding-top-1">&nbsp;&nbsp;District: {{$regularStudent->present_per_district}},</td>
                                     <td class="padding-top-1">&nbsp;&nbsp;&nbsp;Division: {{$regularStudent->present_division}},</td>
                                 </tr>
                             </table>
                         </td>
                     </tr>
+
                     <tr>
-                        <td class="padding-top-1">Employment Status</td>
-                        <td class="padding-top-1">:</td>
-                        <td class="padding-top-1">&nbsp;{{$regularStudent->employment_status}}</td>
+                        <td>Permanent Address</td>
+                        <td>:</td>
+                        <td>
+                            <table style="padding-top: .4rem">
+                                <tr>
+                                    <td class="padding-top-1">&nbsp;Village: {{$regularStudent->permanent_address}},</td>
+                                    <td class="padding-top-1">&nbsp;&nbsp;Upazila: {{$regularStudent->permanent_sub_district}},</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="padding-top-1">&nbsp;Post Office: {{$regularStudent->permanent_post_office}},</td>
+                                    <td class="padding-top-1">&nbsp;&nbsp;Post Code: {{$regularStudent->permanent_postal_code}},</td>
+
+                                </tr>
+                                <tr>
+                                    <td class="padding-top-1">&nbsp;&nbsp;District: {{$regularStudent->permanent_per_district}},</td>
+                                    <td class="padding-top-1">&nbsp;&nbsp;&nbsp;Division: {{$regularStudent->permanent_division}},</td>
+                                </tr>
+                            </table>
+
+                        </td>
                     </tr>
+
 
                     <tr>
                         <td class="padding-top-1">Level of Education</td>
@@ -164,15 +190,26 @@
                         <td class="padding-top-1">:</td>
                         <td class="padding-top-1">&nbsp;{{$regularStudent->institute_name}}</td>
                     </tr>
-                    <tr>
-                        <td class="padding-top-1">Subject</td>
-                        <td class="padding-top-1">:</td>
-                        <td class="padding-top-1">&nbsp;{{$regularStudent->subject}}</td>
-                    </tr>
+
                     <tr>
                         <td class="padding-top-1">Passing Year</td>
                         <td class="padding-top-1">:</td>
                         <td class="padding-top-1">&nbsp;{{$regularStudent->passing_year}}</td>
+                    </tr>
+                    <tr>
+                        <td class="padding-top-1">CGPA</td>
+                        <td class="padding-top-1">:</td>
+                        <td class="padding-top-1">&nbsp;{{$regularStudent->cgpa}}</td>
+                    </tr>
+                    <tr>
+                        <td class="padding-top-1">Occupation</td>
+                        <td class="padding-top-1">:</td>
+                        <td class="padding-top-1">&nbsp;{{$regularStudent->occupation}}</td>
+                    </tr>
+                    <tr>
+                        <td class="padding-top-1">Experience Year</td>
+                        <td class="padding-top-1">:</td>
+                        <td class="padding-top-1">&nbsp;{{$regularStudent->experience_year}}</td>
                     </tr>
                 </table>
 

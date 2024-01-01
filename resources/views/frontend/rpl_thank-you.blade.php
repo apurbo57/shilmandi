@@ -15,8 +15,8 @@
                             </div>
                             <div class="text-center">
                                 <h1>Thank You !</h1>
-                                <p><p class="font-weight-bold">{{$regularStudent->nameE}}</p> for Applying Our Course. We've send the Apply form Download link to you. Please Download it and Visit Our Office. </p>
-                                <a class="btn btn-outline-success" href="{{route('regular.form.download',[$regularStudent->id])}}">Download Form</a>
+                                <p><p class="font-weight-bold">{{$rplStudent->nameE}}</p> for Applying Our Course. We've send the Apply form Download link to you. Please Download it and Visit Our Office. </p>
+                                <a class="btn btn-outline-success" href="{{route('rpl.form.download',[$rplStudent->id])}}">Download Form</a>
                             </div>
                         </div>
                     </div>

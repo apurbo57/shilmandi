@@ -1,31 +1,17 @@
-<!DOCTYPE HTML>
-<html lang="en-US">
-
+<!doctype html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <style type="text/css" media="screen">
-        /*	@font-face {*/
-        /*    font-family: "ITC Edwardian Script W04 Reg";*/
-        /*    src: url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.eot");*/
-        /*    src: url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.eot?#iefix")format("embedded-opentype"),*/
-        /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.woff2")format("woff2"),*/
-        /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.woff")format("woff"),*/
-        /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.ttf")format("truetype"),*/
-        /*    url("https://db.onlinewebfonts.com/t/0db512de6cc55ce96eb449022d2bc7c9.svg#ITC Edwardian Script W04 Reg")format("svg");*/
-        /*}*/
-        @font-face {
-            font-family: 'ITC Edwardian Script W04 Reg';
-            font-style: normal;
-            font-weight: normal;
-            src: url("../storage/fonts/ITC Edwardian Script W04 Reg.ttf") format('truetype');
-            }
-            .edwardian {
-            font-family: 'ITC Edwardian Script W04 Reg';
-            }
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 
-        * {
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <title>Certificate</title>
+    <style>
+
+        *,p {
             margin: 0;
             padding: 0;
         }
@@ -37,24 +23,31 @@
             background-size: cover;
             background-position: center;
         }
+
+        @font-face{
+            font-family: "Edwardian";
+            font-style: normal;
+            font-weight: normal;
+            src : url("{{base_path('public/fonts/Edwardian.ttf')}}") format('truetype');;
+        }
+
+        .edwardian{
+            font-family: "Edwardian";
+        }
     </style>
 </head>
 
 <body>
     <div class="certificate_bg">
-        <div class="image">
 
-
-
-        </div>
         <div class="details" style="margin-top: 20rem; ">
 
             <h2 style="text-align:center"> {{$data->course_name}}</h2>
-            <h1 class="edwardian" style="text-align:center">{{$data->student_name}}</h1>
-            <div style="margin-left: 9.5rem; margin-right:9.5rem;margin-top:1rem; font-size:1.2rem">
+            <p class="edwardian" style="text-align:center;font-size: 4rem;padding-top: -20px">{{$data->student_name}}</p>
+            <div style="margin-left: 9.5rem; margin-right:9.5rem; font-size:1.2rem">
                 <p>{{$data->description}}</p>
             </div>
-            <div style="margin-top:11.5rem; text-align:center">
+            <div style="margin-top:8.6rem; text-align:center">
                 <p>Reg No: Sydtc-{{$data->reg_id}}</p>
                 <p>Certificate No: 0{{$data->id}}</p>
             </div>

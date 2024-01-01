@@ -5,7 +5,7 @@
         <li>
             <i class="icon-home"></i>
             <a href="{{route('dashboard')}}">Dashboard</a>
-            <i class="icon-angle-right"></i> 
+            <i class="icon-angle-right"></i>
         </li>
         <li>
             <i class="icon-edit"></i>
@@ -66,13 +66,26 @@
                   </div>
                 </div>
 
-                
+                  <div class="control-group">
+                      <label class="control-label" for="typeahead">Type</label>
+                      <div class="controls">
+                          <select name="type" id="type" class="form-control">
+                              <option {{ old('type',$teacher->type) == 'chairman' ? 'selected' :''  }} value="chairman">Chairman</option>
+                              <option {{ old('type',$teacher->type) == 'director' ? 'selected' :''  }} value="director">Director</option>
+                              <option {{ old('type',$teacher->type) == 'principle' ? 'selected' :''  }} value="principle">Principle</option>
+                              <option {{ old('type',$teacher->type) == 'instructor' ? 'selected' :''  }} value="instructor">Instructor</option>
+                              <option {{ old('type',$teacher->type) == 'staff' ? 'selected' :''  }} value="staff">Staff</option>
+                          </select>
+                      </div>
+                  </div>
+
+
                 <div class="form-actions">
                   <button type="submit" class="btn btn-primary">Update Teacher</button>
                   <a href="{{ url()->previous() }}" class="btn">Cancle</a>
                 </div>
               </fieldset>
-            </form>   
+            </form>
 
         </div>
     </div><!--/span-->

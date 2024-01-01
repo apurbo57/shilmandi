@@ -5,7 +5,7 @@
         <li>
             <i class="icon-home"></i>
             <a href="{{route('dashboard')}}">Dashboard</a>
-            <i class="icon-angle-right"></i> 
+            <i class="icon-angle-right"></i>
         </li>
         <li>
             <i class="icon-edit"></i>
@@ -63,12 +63,24 @@
                     <input type="file" class="span6 typeahead" name="image" id="typeahead" value="{{Request::old('image')}}" >
                   </div>
                 </div>
+                  <div class="control-group">
+                      <label class="control-label" for="typeahead">Type</label>
+                      <div class="controls">
+                          <select name="type" id="type" class="form-control">
+                              <option {{ old('type') == 'chairman' ? 'selected' :''  }} value="chairman">Chairman</option>
+                              <option {{ old('type') == 'director' ? 'selected' :''  }} value="director">Director</option>
+                              <option {{ old('type') == 'principle' ? 'selected' :''  }} value="principle">Principle</option>
+                              <option {{ old('type') == 'instructor' ? 'selected' :''  }} value="instructor">Instructor</option>
+                              <option {{ old('type') == 'staff' ? 'selected' :''  }} value="staff">Staff</option>
+                          </select>
+                      </div>
+                  </div>
                 <div class="form-actions">
                   <button type="submit" class="btn btn-primary">Add Teacher</button>
                   <a href="{{ url()->previous() }}" class="btn">Cancle</a>
                 </div>
               </fieldset>
-            </form>   
+            </form>
 
         </div>
     </div><!--/span-->

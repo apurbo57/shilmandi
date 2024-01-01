@@ -88,13 +88,14 @@
     <div class="row">
     <div class="col-lg-10 col-xl-8 col-md-12" style="box-sizing:content-box; margin:0 auto;">
     <div class="copyright-content " >
-    <p>Copyright {{ date('Y') }} © <a href="https://ssti.edu.bd" target="_blank"> Shilmandi Youth Development Training Center Narsingdi.</a> All Rights Reserved. </p>
+    <p>Copyright {{ date('Y') }} © <a href="https://stti.com.bd" target="_blank"> Shilmandi Youth Development Training Center Narsingdi.</a> All Rights Reserved. </p>
     <p>is registered as a Skills Training Provider under section 16 (1) of NSDA Act, 2018. Certificate No: STP-NAR-000223</p>
     </div>
     </div>
-    <div class="col-lg-2 col-xl-3 col-md-12" style="box-sizing:content-box;margin: 10px auto;">
+    <div class="col-lg-2 col-xl-3 col-md-12" style="box-sizing:content-box;margin:0 auto;">
         <div class="copyright-content " >
-        <p>Developed By: <a href="https://ssti.edu.bd" target="_blank">Anowar Hossain Apurbo</a></p>
+        <p>Developed By: <a href="https://www.facebook.com/apurbo57" target="_blank">Anowar Hossain Apurbo</a></p>
+        <p>Designed By: <a href="https://www.facebook.com/md.naimulislam.sharon" target="_blank">Naimul Islam Sharon</a></p>
         </div>
         </div>
     </div>
